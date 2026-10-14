@@ -178,7 +178,7 @@ def work(run_id):
   with transaction() as c:existing=c.execute('SELECT 1 FROM rmu.findings f JOIN rmu.analyses a ON a.workspace_id=f.workspace_id AND a.id=f.analysis_id WHERE a.run_id=%s',(UUID(run_id),)).fetchone()
   if not existing:synthesise(run,items)
   from .approved_panels import populate
-  populate(run_id)
+  populate(run_id,heartbeat=lambda:stage('synthesising'))
   stage('ready')
  except Exception as e:
   message=str(e) if isinstance(e,pipeline.Conflict) else 'The '+type(e).__name__+' check stopped this run. Retained data is safe; no automatic paid retry was sent.'
