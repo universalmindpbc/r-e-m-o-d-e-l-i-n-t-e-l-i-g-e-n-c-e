@@ -22,7 +22,8 @@ class ResponseRecovery(unittest.TestCase):
   env={'OPENAI_API_KEY':'test-only','RMU_MODEL_MAX_CALLS':'60','RMU_MODEL_BUDGET_MICROUSD':'30000000','RMU_MODEL_INPUT_MICROUSD_PER_TOKEN':'12.5','RMU_MODEL_OUTPUT_MICROUSD_PER_TOKEN':'50','RMU_WORKSPACE_ID':'test'}
   with tempfile.TemporaryDirectory() as directory:
    root=Path(directory);(root/'private').write_text('File prevents archive directory creation')
-   with patch.dict(inference.os.environ,env),patch.object(inference,'current_pricing',return_value=True),patch.object(inference,'transaction',tx),patch.object(inference,'BASE',root),patch.object(inference,'urlopen',return_value=io.StringIO(json.dumps(payload))):
-    with self.assertRaises(FileExistsError):inference.request_model({'instructions':'Test','input':'Source text','max_output_tokens':100},[{'record_id':'a','text':'Source text'}],'run')
+   with patch.dict(inference.os.environ,env),patch.object(inference,'current_pricing',return_value=True),patch.object(inference,'transaction',tx),patch.object(inference,'BASE',root),patch.object(inference,'urlopen',return_value=io.StringIO(json.dumps(payload))) as provider:
+    with self.assertRaises(FileExistsError):inference.request_model({'instructions':'Test','input':'Source text','max_output_tokens':100},[{'record_id':'a','text':'Source text'}],'run',full_collection=True)
+    self.assertEqual(provider.call_args.kwargs['timeout'],900)
   self.assertEqual(len(writes),1)
   self.assertIn('response_payload',writes[0][0]);self.assertEqual(writes[0][1][2].obj,payload)
