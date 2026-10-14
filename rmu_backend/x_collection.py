@@ -13,13 +13,14 @@ from .db import transaction
 from .pipeline import Conflict,workspace,normalize,insert_observation,digest
 from .budget import reserve,uncertain
 from .cohorts import classify_author
+from .pricing import current as current_pricing
 
 
 def configuration():
     if os.environ.get('RMU_X_COLLECTION_ENABLED')!='true':
         raise Conflict('Paid X collection is not activated')
-    if os.environ.get('RMU_X_PRICE_VERIFIED_ON')!=datetime.now(timezone.utc).date().isoformat():
-        raise Conflict('Verify endpoint pricing for today before collecting')
+    if not current_pricing(os.environ.get('RMU_X_PRICE_VERIFIED_ON')):
+        raise Conflict('X price verification has expired; refresh the monthly rate configuration')
     price=int(os.environ.get('RMU_X_POST_PRICE_MICROUSD','0'))
     if price<=0 or not os.environ.get('X_API_BEARER_TOKEN'):
         raise Conflict('X pricing and authentication must be configured')

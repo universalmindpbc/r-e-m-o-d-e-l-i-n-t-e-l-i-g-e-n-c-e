@@ -8,6 +8,7 @@ from uuid import uuid4
 from psycopg.types.json import Jsonb
 from .pipeline import digest,Conflict
 from .db import transaction
+from .pricing import current as current_pricing
 
 MODEL='gpt-6-astra'
 THEMES={'climate_justice':'Equity, frontline communities and structural climate burdens','sustainability':'Environmental sustainability and sustainable practices','community_resilience':'Preparedness, recovery and community resilience','accountability':'Evidence of delivery, transparency and substantiation'}
@@ -69,8 +70,8 @@ def request_model(body,records,run_id):
     cap=int(os.environ.get('RMU_MODEL_MAX_CALLS','0'))
     if not 1<=cap<=100:raise Conflict('Model call allowance exhausted or unset')
     if len(body['input'].encode())>40000:raise ValueError('Batch exceeds input size bound')
-    if os.environ.get('RMU_MODEL_PRICE_VERIFIED_ON')!=datetime.now(timezone.utc).date().isoformat():
-        raise Conflict('Verify model pricing for today')
+    if not current_pricing(os.environ.get('RMU_MODEL_PRICE_VERIFIED_ON')):
+        raise Conflict('Model price verification has expired; refresh the monthly rate configuration')
     input_rate=Decimal(os.environ.get('RMU_MODEL_INPUT_MICROUSD_PER_TOKEN','0'))
     output_rate=Decimal(os.environ.get('RMU_MODEL_OUTPUT_MICROUSD_PER_TOKEN','0'))
     budget=int(os.environ.get('RMU_MODEL_BUDGET_MICROUSD','0'))

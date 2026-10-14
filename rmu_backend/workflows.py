@@ -47,10 +47,11 @@ def list_all():
  with transaction() as c:return [dict(r) for r in c.execute("SELECT r.id,r.campaign,r.starts_on,r.ends_on,r.created_at,jsonb_build_object('state',w.state,'error',w.error) workflow FROM rmu.workflows w JOIN rmu.runs r ON r.id=w.run_id AND r.workspace_id=w.workspace_id ORDER BY r.created_at DESC LIMIT 50")]
 
 def get(run_id):
- with transaction() as c:w=c.execute('SELECT state,error,updated_at,lease_until FROM rmu.workflows WHERE run_id=%s',(UUID(run_id),)).fetchone()
+ with transaction() as c:w=c.execute('SELECT state,error,updated_at,lease_until,codebook_version FROM rmu.workflows WHERE run_id=%s',(UUID(run_id),)).fetchone()
  if not w:return None
  result=pipeline.get_run(run_id);result['workflow']=dict(w)
- result['codebook']=THEMES;result['codebook_version']=VERSION
+ from .inference import THEMES as CLF_THEMES
+ result['codebook_version']=w['codebook_version'];result['codebook']=THEMES if w['codebook_version']==VERSION else CLF_THEMES
  return result
 
 def resume(run_id):
@@ -99,8 +100,10 @@ def classify(items,run):
   c.execute("UPDATE rmu.model_requests SET state='validated' WHERE id=%s",(rid,))
 
 def synthesise(run,all_records):
+ from .inference import THEMES as CLF_THEMES
+ version=run.get('_codebook',VERSION);themes=THEMES if version==VERSION else CLF_THEMES
  with transaction() as c:
-  codes=list(c.execute('SELECT cl.* FROM rmu.classifications cl JOIN rmu.run_observations ro ON ro.workspace_id=cl.workspace_id AND ro.observation_id=cl.observation_id WHERE ro.run_id=%s AND cl.codebook_version=%s',(run['id'],VERSION)))
+  codes=list(c.execute('SELECT cl.* FROM rmu.classifications cl JOIN rmu.run_observations ro ON ro.workspace_id=cl.workspace_id AND ro.observation_id=cl.observation_id WHERE ro.run_id=%s AND cl.codebook_version=%s',(run['id'],version)))
   metric=c.execute('SELECT * FROM rmu.analyses WHERE run_id=%s ORDER BY created_at DESC LIMIT 1',(run['id'],)).fetchone()
  # Deterministic varied evidence selection prioritises dissent, then relevant, then uncertainty.
  lookup={r['record_id']:r for r in all_records};selected=[]
@@ -113,9 +116,9 @@ def synthesise(run,all_records):
   if len(items)>=20:break
   if len(json.dumps(items+[record]).encode())<=28000:items.append(record)
  if not items:items=selected[:1]
- counts={t:{s:sum(x['theme']==t and x['stance']==s for x in codes) for s in ['support','opposition','mixed','no_clear_position']} for t in THEMES}
+ counts={t:{s:sum(x['theme']==t and x['stance']==s for x in codes) for s in ['support','opposition','mixed','no_clear_position']} for t in themes}
  instruction=prompt()+'\nPrepare seven human-readable intelligence panels. Describe what we see, evidence supporting/challenging it, limitations, a concrete change, and a feasible test. The talent panel requires posts from a resolved talent identity for personal-position claims. Public discussion is not verified fandom. Audience and societal needs require validation; Prolific is pending. Shared values are proposed messaging hypotheses. No numerical alignment, causal effects, private motives or survey findings. supports/challenges contain supplied record IDs only. Every panel must include limitations. Observation requires supporting IDs. All outputs draft.'
- data={'campaign':run['campaign'],'window':[str(run['starts_on']),str(run['ends_on'])],'records':items,'sample_metrics':metric['result'],'machine_stance_counts':counts,'codebook':THEMES,'classification_review':'pending','selection':'Up to 20 source posts prioritising opposition, mixed, support, then unclear; not representative','prolific':'pending'}
+ data={'campaign':run['campaign'],'window':[str(run['starts_on']),str(run['ends_on'])],'records':items,'sample_metrics':metric['result'],'machine_stance_counts':counts,'codebook':themes,'classification_review':'pending','selection':'Up to 20 source posts prioritising opposition, mixed, support, then unclear; not representative','prolific':'pending'}
  output,rid,meta,res=call({'instructions':instruction,'input':json.dumps(data,default=str),'text':{'format':{'type':'json_schema','name':'campaign_findings','strict':True,'schema':object_schema({p:ITEM for p in PANELS})}}},items,str(run['id']))
  from .synthesis import validate_findings
  validate_findings(output,items,panels=PANELS)
@@ -132,6 +135,7 @@ def work(run_id):
   with transaction() as c:
    row=c.execute("UPDATE rmu.workflows SET lease_token=%s,lease_until=now()+interval '10 minutes' WHERE run_id=%s AND state NOT IN ('ready','empty','needs_attention') AND (lease_until IS NULL OR lease_until<now()) RETURNING *",(token,UUID(run_id))).fetchone()
    if not row:return
+   version=row['codebook_version']
    if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated'",(UUID(run_id),)).fetchone():raise pipeline.Conflict('An interrupted model request needs reconciliation before retrying; no duplicate charge was sent.')
   def stage(value):
    with transaction() as c:
@@ -146,11 +150,13 @@ def work(run_id):
   with transaction() as c:items=records(c,UUID(run_id))
   if not items:
    stage('empty');return
+  run['_codebook']=version
   stage('measuring');pipeline.queue_measurement(run_id);pipeline.process_one(run_id)
   stage('classifying')
   with transaction() as c:
-   coded={str(r['observation_id']) for r in c.execute('SELECT cl.observation_id FROM rmu.classifications cl JOIN rmu.run_observations ro ON ro.workspace_id=cl.workspace_id AND ro.observation_id=cl.observation_id WHERE ro.run_id=%s AND cl.codebook_version=%s GROUP BY cl.observation_id HAVING count(DISTINCT theme)=%s',(UUID(run_id),VERSION,len(THEMES)))}
+   coded={str(r['observation_id']) for r in c.execute('SELECT cl.observation_id FROM rmu.classifications cl JOIN rmu.run_observations ro ON ro.workspace_id=cl.workspace_id AND ro.observation_id=cl.observation_id WHERE ro.run_id=%s AND cl.codebook_version=%s GROUP BY cl.observation_id HAVING count(DISTINCT theme)=%s',(UUID(run_id),version,len(THEMES) if version==VERSION else 4))}
   pending=[r for r in items if r['record_id'] not in coded]
+  if pending and version!=VERSION:raise pipeline.Conflict('Retained classifications are incomplete; start a new brief to reanalyse with the current codebook.')
   batch=[]
   for record in pending:
    if batch and (len(batch)>=20 or len(json.dumps(batch+[record]).encode())>30000):

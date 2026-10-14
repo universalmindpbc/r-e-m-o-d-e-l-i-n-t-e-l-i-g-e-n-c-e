@@ -69,7 +69,7 @@ def application(environ, start_response):
     try:
         if method == "GET" and path == "/v1/status":
             result = {"stage": "storage_pipeline", "database_configured": bool(os.environ.get("DATABASE_URL")),
-                      "database_verified": False, "collection_enabled": False, "inference_enabled": os.environ.get("RMU_MODEL_ENABLED")=="true" and bool(os.environ.get("OPENAI_API_KEY"))}
+                      "database_verified": False, "collection_enabled": os.environ.get("RMU_X_COLLECTION_ENABLED")=="true" and bool(os.environ.get("X_API_BEARER_TOKEN")), "inference_enabled": os.environ.get("RMU_MODEL_ENABLED")=="true" and bool(os.environ.get("OPENAI_API_KEY"))}
             if result["database_configured"]:
                 result.update(db.status())
             return reply("200 OK", result)
