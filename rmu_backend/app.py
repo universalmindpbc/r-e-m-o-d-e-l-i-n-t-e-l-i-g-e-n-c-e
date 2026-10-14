@@ -74,6 +74,14 @@ def application(environ, start_response):
             return reply("200 OK", result)
         if method == "GET" and path == "/v1/runs":
             return reply("200 OK", {"runs": pipeline.list_runs()})
+        workflow_match=re.fullmatch(r"/v1/workflows/([0-9a-f-]{36})(?:/(resume))?",path)
+        if method=="GET" and path=="/v1/workflows":
+            from .workflows import list_all
+            return reply("200 OK",{"runs":list_all()})
+        if method=="GET" and workflow_match and not workflow_match[2]:
+            from .workflows import get
+            data=get(workflow_match[1])
+            return reply("200 OK" if data else "404 Not Found",data or {"error":"Run not found"})
         csv_match=re.fullmatch(r"/v1/runs/([0-9a-f-]{36})/export\.csv",path)
         if method=="GET" and csv_match:
             from .exports import export_run
@@ -85,7 +93,7 @@ def application(environ, start_response):
         if match and method == "GET" and match[2] is None:
             data = pipeline.get_run(match[1])
             return reply("200 OK" if data else "404 Not Found", data or {"error": "Run not found"})
-        allowed_post = path in ("/v1/collection-preview", "/v1/runs", "/v1/jobs/process-one") or (match and match[2])
+        allowed_post = path in ("/v1/workflows", "/v1/collection-preview", "/v1/runs", "/v1/jobs/process-one") or (match and match[2]) or (workflow_match and workflow_match[2])
         if method == "POST" and allowed_post:
             if environ.get("CONTENT_TYPE", "").split(";")[0] != "application/json":
                 return reply("415 Unsupported Media Type", {"error": "Use application/json"})
@@ -95,6 +103,16 @@ def application(environ, start_response):
             payload = json.loads(environ["wsgi.input"].read(size))
             if not isinstance(payload, dict):
                 raise ValueError("Expected a JSON object")
+            if path=="/v1/workflows":
+                from .workflows import start
+                return reply("202 Accepted",start(payload))
+            if workflow_match and workflow_match[2]=="resume":
+                if payload:raise ValueError("Unexpected resume fields")
+                from .workflows import get,kick
+                data=get(workflow_match[1])
+                if not data:return reply("404 Not Found",{"error":"Run not found"})
+                kick(workflow_match[1])
+                return reply("202 Accepted",data)
             if path == "/v1/collection-preview":
                 return reply("200 OK", collection_preview(payload))
             if path == "/v1/runs":
@@ -127,3 +145,10 @@ def application(environ, start_response):
         logging.error("Pipeline operation failed: method=%s path=%s", method, path)
         return reply("503 Service Unavailable", {"error": "Pipeline temporarily unavailable"})
     return reply("404 Not Found", {"error": "No such endpoint"})
+
+# One recovery scanner in the configured single-worker service; database leases
+# enforce exclusive work even across a rolling process overlap.
+if os.environ.get('RMU_WORKFLOW_ENABLED')=='true':
+    import threading
+    from .workflows import recover_loop
+    threading.Thread(target=recover_loop,daemon=True).start()

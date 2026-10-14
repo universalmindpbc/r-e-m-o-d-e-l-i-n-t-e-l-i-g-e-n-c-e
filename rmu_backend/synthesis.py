@@ -11,8 +11,9 @@ ITEM=object_schema({'status':{'type':'string','enum':['observation','hypothesis'
 SCHEMA=object_schema({key:ITEM for key in PANELS})
 
 
-def validate_findings(output,records):
-    if not isinstance(output,dict) or set(output)!=set(PANELS):raise ValueError('All lightbox panels must be present')
+def validate_findings(output,records,panels=None):
+    panels=PANELS if panels is None else panels
+    if not isinstance(output,dict) or set(output)!=set(panels):raise ValueError('All lightbox panels must be present')
     ids={r['record_id'] for r in records}
     for item in output.values():
         if not isinstance(item,dict) or set(item)!=set(ITEM['properties']):raise ValueError('Invalid finding fields')

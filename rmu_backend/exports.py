@@ -16,14 +16,17 @@ def safe_cell(value):
 def render_csv(run,records,classifications):
  by_record={}
  for item in classifications:by_record.setdefault(str(item['observation_id']),[]).append(item)
- fields=BASE_COLUMNS+[theme+'_'+field for theme in THEMES for field in THEME_COLUMNS]
+ from .workflows import THEMES as GENERIC,VERSION
+ generic=any(c['codebook_version']==VERSION for c in classifications)
+ themes=GENERIC if generic else THEMES;version=VERSION if generic else CODEBOOK_VERSION
+ fields=BASE_COLUMNS+[theme+'_'+field for theme in themes for field in THEME_COLUMNS]
  stream=io.StringIO(newline='');writer=csv.DictWriter(stream,fieldnames=fields,quoting=csv.QUOTE_ALL);writer.writeheader()
  exported=datetime.now(timezone.utc).isoformat()
  for post in records:
-  codes=by_record.get(str(post['id']),[]);current=[c for c in codes if c['codebook_version']==CODEBOOK_VERSION]
-  status='not_classified' if not codes else ('researcher_approved' if len(current)==len(THEMES) and {c['theme'] for c in current}==set(THEMES) and all(c['review_state']=='approved' for c in current) else 'requires_review')
-  row=dict(exported_at_utc=exported,run_id=run['id'],campaign_name=run['campaign'].get('name',''),source_type=run['source_type'],evidence_lane=run['evidence_lane'],collection_query=run['query'],analysis_start=run['starts_on'],analysis_end=run['ends_on'],post_id=post['post_id'],post_url=post['source_url'],author_id=post['author_id'],published_at_utc=post['created_at'],retrieved_at_utc=post['retrieved_at'],post_type=post['post_type'],language=post['language'],post_text=post['text_content'],post_text_json=json.dumps(post['text_content'],ensure_ascii=False),inferred_cohort=post['cohort'],cohort_evidence_json=json.dumps(post['cohort_evidence'],ensure_ascii=False,default=str),public_metrics_json=json.dumps(post['metrics'],ensure_ascii=False,default=str),codebook_version=CODEBOOK_VERSION,classification_status=status,all_classifications_json=json.dumps(codes,ensure_ascii=False,default=str))
-  for theme in THEMES:
+  codes=by_record.get(str(post['id']),[]);current=[c for c in codes if c['codebook_version']==version]
+  status='not_classified' if not codes else ('researcher_approved' if len(current)==len(themes) and {c['theme'] for c in current}==set(themes) and all(c['review_state']=='approved' for c in current) else 'requires_review')
+  row=dict(exported_at_utc=exported,run_id=run['id'],campaign_name=run['campaign'].get('name',''),source_type=run['source_type'],evidence_lane=run['evidence_lane'],collection_query=run['query'],analysis_start=run['starts_on'],analysis_end=run['ends_on'],post_id=post['post_id'],post_url=post['source_url'],author_id=post['author_id'],published_at_utc=post['created_at'],retrieved_at_utc=post['retrieved_at'],post_type=post['post_type'],language=post['language'],post_text=post['text_content'],post_text_json=json.dumps(post['text_content'],ensure_ascii=False),inferred_cohort=post['cohort'],cohort_evidence_json=json.dumps(post['cohort_evidence'],ensure_ascii=False,default=str),public_metrics_json=json.dumps(post['metrics'],ensure_ascii=False,default=str),codebook_version=version,classification_status=status,all_classifications_json=json.dumps(codes,ensure_ascii=False,default=str))
+  for theme in themes:
    matches=[c for c in current if c['theme']==theme]
    if len(matches)!=1:continue
    c=matches[0];provenance=c['provenance']

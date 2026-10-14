@@ -22,20 +22,21 @@ classification=object_schema({'record_id':STR,'theme':{'type':'string','enum':li
 SCHEMA=object_schema({'classifications':{'type':'array','items':classification}})
 
 
-def validate_classifications(result,records):
+def validate_classifications(result,records,themes=None):
+    themes=THEMES if themes is None else themes
     if not isinstance(result,dict) or set(result)!={'classifications'} or not isinstance(result['classifications'],list):raise ValueError('Invalid classification response')
     texts={r['record_id']:r['text'] for r in records};seen=set()
     for item in result['classifications']:
         if not isinstance(item,dict) or set(item)!=set(classification['properties']):raise ValueError('Invalid classification fields')
         ident,theme=item['record_id'],item['theme']
-        if ident not in texts or theme not in THEMES or (ident,theme) in seen:raise ValueError('Unknown or duplicate evidence/theme')
+        if ident not in texts or theme not in themes or (ident,theme) in seen:raise ValueError('Unknown or duplicate evidence/theme')
         seen.add((ident,theme))
         if item['relevance'] not in ('relevant','not_relevant','uncertain') or item['stance'] not in ('support','opposition','mixed','no_clear_position'):raise ValueError('Invalid label')
         span=item['evidence_span']
         if span is not None and (not isinstance(span,str) or not span.strip() or span not in texts[ident]):raise ValueError('Evidence span not in source')
         if item['stance']!='no_clear_position' and (not span or item['relevance']!='relevant'):raise ValueError('Stance requires relevant source span')
         if not isinstance(item['reason'],str) or not item['reason'].strip():raise ValueError('Reason required')
-    if seen!={(r['record_id'],t) for r in records for t in THEMES}:raise ValueError('Incomplete classification coverage')
+    if seen!={(r['record_id'],t) for r in records for t in themes}:raise ValueError('Incomplete classification coverage')
     return result
 
 

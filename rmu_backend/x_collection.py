@@ -89,7 +89,13 @@ def collect_one(run_id,fetch=fetch_page):
             if page['state']!='reserved': raise Conflict('Page state changed')
             for post in normal:
                 insert_observation(conn,ws,current,post,'X API developer agreement; operator takedown and 30-day demo retention')
-                cohort=classify_author(profiles.get(post['author_id'],{'id':post['author_id']}),post['text'],identities)
+                profile=profiles.get(post['author_id'],{'id':post['author_id']})
+                if conn.execute('SELECT 1 FROM rmu.workflows WHERE run_id=%s',(current['id'],)).fetchone():
+                    handle=current['campaign'].get('talent','').lstrip('@').lower()
+                    resolved=bool(profile.get('username')) and profile['username'].lower()==handle
+                    cohort={'label':'talent' if resolved else 'uncertain','rule_version':'campaign-identity-v1','reason':'Exact requested handle matched to returned X user ID' if resolved else 'Fan relationship is not established','resolved_user_id':profile.get('id') if resolved else None,'review_status':'pending','limitations':['Public discussion is not verified fandom; Prolific pending.']}
+                else:
+                    cohort=classify_author(profile,post['text'],identities)
                 cohort['profile_retrieved_at']=retrieved
                 conn.execute("UPDATE rmu.observations SET cohort=%s,cohort_evidence=%s WHERE workspace_id=%s AND provider='x' AND source_type='observed' AND post_id=%s AND retrieved_at=%s",(cohort['label'],Jsonb(cohort),ws,post['id'],post['retrieved_at']))
             checkpoint={'next_token':cursor,'returned_posts':len(posts),'returned_profiles':len(profiles),'estimated_cost_microusd':len(posts)*price+len(profiles)*user_price,'price_microusd':price,'retrieved_at':retrieved,'response_hash':digest(payload)}
