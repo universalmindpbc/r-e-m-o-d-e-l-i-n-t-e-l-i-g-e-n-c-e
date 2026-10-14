@@ -99,6 +99,6 @@ def collect_one(run_id,fetch=fetch_page):
             coverage={'complete_for_query':not bool(cursor),'budget_limited':bool(cursor) and finished,'sample_only':True,'billing_reconciled':False}
             conn.execute('UPDATE rmu.runs SET status=%s,coverage=%s WHERE id=%s',('complete' if finished else 'running',Jsonb(coverage),UUID(run_id)))
         return {'page_id':page_id,'stored_posts':len(posts),'has_next_page':bool(cursor),'run_complete':finished,'billing_reconciled':False}
-    except Exception:
-        uncertain(page_id)
+    except Exception as error:
+        uncertain(page_id,{"error_type":type(error).__name__,"http_status":getattr(error,"code",None)})
         raise Conflict('Collection outcome needs reconciliation; reservation retained and automatic retries blocked')

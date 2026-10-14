@@ -31,6 +31,8 @@ def restore_snapshot(conn,path):
     payload=json.loads(Path(path).read_text())
     if payload['format']!='rmu-workspace-v1' or digest(payload['tables'])!=payload['sha256']:
         raise ValueError('Snapshot integrity check failed')
+    # Migration 002 added a ledger; older snapshots have no model calls.
+    payload['tables'].setdefault('model_requests',[])
     if payload['tables']['deletion_register']:
         raise Conflict('Deletion register must be applied before restoring this snapshot')
     for t in TABLES:

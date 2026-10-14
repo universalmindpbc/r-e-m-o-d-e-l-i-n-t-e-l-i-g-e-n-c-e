@@ -6,15 +6,19 @@ from rmu_backend.operations import export_snapshot
 b=pathlib.Path(__file__).parent;mfile=b/'private/campaign-2022-runs.json';m=json.loads(mfile.read_text())
 for l in (b.parent/'.env.local').read_text().splitlines():
  if l.startswith('X_API_BEARER_TOKEN='):os.environ['X_API_BEARER_TOKEN']=l.split('=',1)[1].strip().strip('\"\'')
-# Keep the failed broad query's reservation held. Move only its unused allowance.
+# Reuse only unspent allocations; completed lanes and the ambiguous page keep their held maximum.
 for r in m['runs']:
- if r['lane']=='cause':r['cap_cents']=1497
- if r['lane']=='diagnostic':r['cap_cents']=1000
+ if r['lane']!='diagnostic':
+  saved=pipeline.get_run(r['run_id'])
+  if saved['status'] not in ('complete','needs_reconciliation'):raise SystemExit('Finish existing lane before reallocating')
+  r['cap_cents']=saved['reserved_cents']+saved['charged_cents']
+for r in m['runs']:
+ if r['lane']=='diagnostic':r['cap_cents']=5000-3-sum(x['cap_cents'] for x in m['runs'] if x['lane']!='diagnostic')
 with transaction() as c:
  for r in m['runs']:c.execute('UPDATE rmu.runs SET budget_cents=%s WHERE id=%s',(r['cap_cents'],r['run_id']))
 assert sum(r['cap_cents'] for r in m['runs'])+3==5000
 mfile.write_text(json.dumps(m,indent=2))
-os.environ.update(RMU_X_COLLECTION_ENABLED='true',RMU_X_PRICE_VERIFIED_ON=datetime.datetime.now(datetime.timezone.utc).date().isoformat(),RMU_X_POST_PRICE_MICROUSD='5000',RMU_X_USER_PRICE_MICROUSD='10000',RMU_X_PAGE_SIZE='10',RMU_X_IDENTITIES=json.dumps(json.loads((b/'private/account-resolution.json').read_text())['identities']))
+os.environ.update(RMU_X_COLLECTION_ENABLED='true',RMU_X_PRICE_VERIFIED_ON=datetime.datetime.now(datetime.timezone.utc).date().isoformat(),RMU_X_POST_PRICE_MICROUSD='5000',RMU_X_USER_PRICE_MICROUSD='10000',RMU_X_PAGE_SIZE='100',RMU_X_IDENTITIES=json.dumps(json.loads((b/'private/account-resolution.json').read_text())['identities']))
 for r in m['runs']:
  if r['lane']=='cause':continue
  run=pipeline.get_run(r['run_id'])

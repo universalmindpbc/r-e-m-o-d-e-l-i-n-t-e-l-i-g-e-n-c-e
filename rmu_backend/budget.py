@@ -2,6 +2,7 @@
 from uuid import uuid4,UUID
 from .db import transaction
 from .pipeline import Conflict,workspace
+from psycopg.types.json import Jsonb
 
 
 def reserve(run_id,request_key,cents):
@@ -24,10 +25,10 @@ def reserve(run_id,request_key,cents):
         return str(page_id)
 
 
-def uncertain(page_id):
+def uncertain(page_id,diagnostic=None):
     with transaction() as conn:
         page=conn.execute('SELECT * FROM rmu.collection_pages WHERE id=%s FOR UPDATE',(UUID(str(page_id)),)).fetchone()
         if not page or page['state']!='reserved':
             raise Conflict('Reservation cannot be changed')
-        conn.execute("UPDATE rmu.collection_pages SET state='uncertain' WHERE id=%s",(page['id'],))
+        conn.execute("UPDATE rmu.collection_pages SET state='uncertain',checkpoint=checkpoint || %s WHERE id=%s",(Jsonb(diagnostic or {}),page['id']))
         conn.execute("UPDATE rmu.runs SET status='needs_reconciliation' WHERE id=%s",(page['run_id'],))
