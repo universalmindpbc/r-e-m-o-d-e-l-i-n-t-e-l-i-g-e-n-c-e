@@ -63,6 +63,16 @@ def resume(run_id):
  kick(run_id)
  return get(run_id)
 
+def map_approved(run_id):
+ with transaction() as c:
+  ident=UUID(run_id)
+  if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated'",(ident,)).fetchone():raise pipeline.Conflict('Reconcile the existing model request before mapping fields.')
+  if c.execute("SELECT 1 FROM rmu.analyses WHERE run_id=%s AND metric_version='approved-panels-v1'",(ident,)).fetchone():return get(run_id)
+  c.execute("UPDATE rmu.workflows SET state='queued',error=NULL,lease_until=NULL WHERE run_id=%s AND state IN ('ready','needs_attention')",(ident,))
+ kick(run_id)
+ return get(run_id)
+
+
 def kick(run_id):
  threading.Thread(target=work,args=(run_id,),daemon=True).start()
 
@@ -166,6 +176,8 @@ def work(run_id):
   stage('synthesising')
   with transaction() as c:existing=c.execute('SELECT 1 FROM rmu.findings f JOIN rmu.analyses a ON a.workspace_id=f.workspace_id AND a.id=f.analysis_id WHERE a.run_id=%s',(UUID(run_id),)).fetchone()
   if not existing:synthesise(run,items)
+  from .approved_panels import populate
+  populate(run_id)
   stage('ready')
  except Exception as e:
   message=str(e) if isinstance(e,pipeline.Conflict) else 'The '+type(e).__name__+' check stopped this run. Retained data is safe; no automatic paid retry was sent.'

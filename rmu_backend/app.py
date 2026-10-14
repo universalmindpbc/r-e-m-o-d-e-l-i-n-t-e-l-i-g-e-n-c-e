@@ -75,7 +75,7 @@ def application(environ, start_response):
             return reply("200 OK", result)
         if method == "GET" and path == "/v1/runs":
             return reply("200 OK", {"runs": pipeline.list_runs()})
-        workflow_match=re.fullmatch(r"/v1/workflows/([0-9a-f-]{36})(?:/(resume))?",path)
+        workflow_match=re.fullmatch(r"/v1/workflows/([0-9a-f-]{36})(?:/(resume|map-approved))?",path)
         if method=="GET" and path=="/v1/workflows":
             from .workflows import list_all
             return reply("200 OK",{"runs":list_all()})
@@ -107,6 +107,10 @@ def application(environ, start_response):
             if path=="/v1/workflows":
                 from .workflows import start
                 return reply("202 Accepted",start(payload))
+            if workflow_match and workflow_match[2]=="map-approved":
+                if payload!={'confirm_paid_analysis':True}:raise ValueError('Explicit paid analysis confirmation required')
+                from .workflows import map_approved
+                return reply("202 Accepted",map_approved(workflow_match[1]))
             if workflow_match and workflow_match[2]=="resume":
                 if payload:raise ValueError("Unexpected resume fields")
                 from .workflows import get,resume

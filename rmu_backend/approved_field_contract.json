@@ -1,0 +1,38 @@
+{
+  "Talent0": {
+    "title": "Make a promise the team can stand behind",
+    "question": "Which objectives and commitments has Rihanna\u2019s team approved?"
+  },
+  "Talent1": {
+    "title": "Show the proof behind the claim",
+    "question": "What has been announced, funded and independently evidenced?"
+  },
+  "Talent2": {
+    "title": "Set realistic limits",
+    "question": "What can the talent and partners sustain beyond the launch?"
+  },
+  "Audience0": {
+    "title": "Help people understand the action",
+    "question": "Can people explain what participation achieves?"
+  },
+  "Audience1": {
+    "title": "Make participation possible",
+    "question": "What gets in the way: cost, access, time or the process itself?"
+  },
+  "Audience2": {
+    "title": "Earn trust with specifics",
+    "question": "What makes this message credible or raises doubts?"
+  },
+  "Society0": {
+    "title": "Start with community priorities",
+    "question": "What do affected communities identify as the priority?"
+  },
+  "Society1": {
+    "title": "Connect participation to a real benefit",
+    "question": "Who benefits, through what activity, and how will progress be known?"
+  },
+  "Society2": {
+    "title": "Surface trade-offs before launch",
+    "question": "Could the proposed message or action create burdens or misrepresent people?"
+  }
+}
