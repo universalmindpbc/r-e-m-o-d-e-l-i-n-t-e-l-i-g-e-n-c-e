@@ -27,3 +27,9 @@ class ApprovedMapping(unittest.TestCase):
    self.assertEqual(theme['stance'],[0,0,0,1])
    self.assertEqual((theme['relevantAccounts'],theme['notDiscussedAccounts'],theme['uncertainRelevanceAccounts']),(1,1,1))
    self.assertEqual(sum(theme['stance'])+theme['notDiscussedAccounts']+theme['uncertainRelevanceAccounts'],result['fanAccounts'])
+ def test_post_framing_counted_once_not_once_per_theme_or_as_cause_support(self):
+  rows=[{'record_id':'a','cohort':'uncertain','author_id':'u'},{'record_id':'b','cohort':'talent','author_id':'t'}]
+  codes=[{'observation_id':r['record_id'],'theme':t,'stance':'no_clear_position','evidence_span':None,'review_state':'pending','provenance':{'relevance':'not_relevant','reason':'Praise is about another target','context':{'format':'news_report','framing':'favourable'}}} for r in rows for t in THEMES]
+  result=aggregate(rows,codes)
+  self.assertEqual(result['framing']['total'],1);self.assertEqual(result['framing']['favourable'],1);self.assertEqual(result['framing']['newsPosts'],1)
+  self.assertTrue(all(t['stance']==[0,0,0,0] for t in result['themes']))
