@@ -74,6 +74,13 @@ def application(environ, start_response):
             return reply("200 OK", result)
         if method == "GET" and path == "/v1/runs":
             return reply("200 OK", {"runs": pipeline.list_runs()})
+        csv_match=re.fullmatch(r"/v1/runs/([0-9a-f-]{36})/export\.csv",path)
+        if method=="GET" and csv_match:
+            from .exports import export_run
+            export=export_run(csv_match[1])
+            if export is None:return reply("404 Not Found",{'error':'Run not found'})
+            start_response("200 OK",[("Content-Type","text/csv; charset=utf-8"),("Content-Disposition",'attachment; filename="'+export['filename']+'"'),("Cache-Control","no-store"),("X-Content-Type-Options","nosniff"),("X-RMU-Row-Count",str(export['rows']))])
+            return [export['content']]
         match = re.fullmatch(r"/v1/runs/([0-9a-f-]{36})(?:/(fixtures|measure|collect-page|classify))?", path)
         if match and method == "GET" and match[2] is None:
             data = pipeline.get_run(match[1])
