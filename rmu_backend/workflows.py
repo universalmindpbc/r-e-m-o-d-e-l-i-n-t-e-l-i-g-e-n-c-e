@@ -67,7 +67,8 @@ def map_approved(run_id):
  with transaction() as c:
   ident=UUID(run_id)
   if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated'",(ident,)).fetchone():raise pipeline.Conflict('Reconcile the existing model request before mapping fields.')
-  if c.execute("SELECT 1 FROM rmu.analyses WHERE run_id=%s AND metric_version='approved-panels-v1'",(ident,)).fetchone():return get(run_id)
+  mapped=c.execute("SELECT result FROM rmu.analyses WHERE run_id=%s AND metric_version='approved-panels-v1'",(ident,)).fetchone()
+  if mapped and all(mapped['result']['messaging']['shared'].values()) and all(mapped['result']['messaging']['actions'].values()):return get(run_id)
   c.execute("UPDATE rmu.workflows SET state='queued',error=NULL,lease_until=NULL WHERE run_id=%s AND state IN ('ready','needs_attention')",(ident,))
  kick(run_id)
  return get(run_id)
