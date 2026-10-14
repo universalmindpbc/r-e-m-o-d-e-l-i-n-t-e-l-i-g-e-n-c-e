@@ -12,6 +12,6 @@ owner=os.environ['DATABASE_URL_UNPOOLED']
 with psycopg.connect(owner,autocommit=True) as conn:conn.execute(sql.SQL('CREATE DATABASE {}').format(sql.Identifier(name)))
 u=urlsplit(owner);target=urlunsplit((u.scheme,u.netloc,'/'+name,u.query,u.fragment))
 with psycopg.connect(target,row_factory=dict_row) as conn:
- conn.execute((root/'migrations/001_pipeline.sql').read_text())
+ for migration in sorted((root/'migrations').glob('*.sql')):conn.execute(migration.read_text())
  print('Restore:',restore_snapshot(conn,backup))
 print('Recovery database:',name,'(synthetic-only pre-collection snapshot)')

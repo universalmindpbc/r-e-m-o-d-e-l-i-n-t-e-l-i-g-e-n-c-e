@@ -8,7 +8,7 @@ from psycopg.types.json import Jsonb
 from .db import transaction
 from .pipeline import Conflict,digest
 
-TABLES=['runs','posts','observations','run_observations','jobs','collection_pages','analyses','classifications','findings','finding_evidence','review_events','embeddings','deletion_register']
+TABLES=['runs','posts','observations','run_observations','jobs','collection_pages','analyses','classifications','findings','finding_evidence','review_events','embeddings','deletion_register','model_requests']
 
 def export_snapshot(path):
     path=Path(path)

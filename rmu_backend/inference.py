@@ -1,5 +1,7 @@
 """Bounded Astra classification adapter. No public execution route or automatic retries."""
 import json,os,hashlib
+from datetime import datetime,timezone
+from decimal import Decimal,ROUND_CEILING
 from pathlib import Path
 from urllib.request import Request,urlopen
 from uuid import uuid4
@@ -47,27 +49,34 @@ def request_classifications(records,run_id):
     body={'model':MODEL,'reasoning':{'effort':'high'},'store':False,'max_output_tokens':12000,
           'instructions':instructions,'input':json.dumps({'codebook_version':CODEBOOK_VERSION,'codebook':THEMES,'records':records}),
           'text':{'format':{'type':'json_schema','name':'rmu_classification','strict':True,'schema':SCHEMA}}}
-    identity=digest(body);folder=BASE/'private/model-requests';folder.mkdir(parents=True,exist_ok=True,mode=0o700)
-    receipt=folder/(identity+'.json')
-    if receipt.exists():raise Conflict('Request already recorded; inspect receipt instead of retrying')
-    # An operator must set a finite call limit and input budget; high effort can be costly.
+    identity=digest(body)
     cap=int(os.environ.get('RMU_MODEL_MAX_CALLS','0'))
-    if not 1<=cap<=100 or len(list(folder.glob('*.json')))>=cap:raise Conflict('Model call allowance exhausted or unset')
+    if not 1<=cap<=100:raise Conflict('Model call allowance exhausted or unset')
     if len(body['input'].encode())>40000:raise ValueError('Batch exceeds input size bound')
-    input_rate=int(os.environ.get('RMU_MODEL_INPUT_MICROUSD_PER_TOKEN','0'))
-    output_rate=int(os.environ.get('RMU_MODEL_OUTPUT_MICROUSD_PER_TOKEN','0'))
+    if os.environ.get('RMU_MODEL_PRICE_VERIFIED_ON')!=datetime.now(timezone.utc).date().isoformat():
+        raise Conflict('Verify model pricing for today')
+    input_rate=Decimal(os.environ.get('RMU_MODEL_INPUT_MICROUSD_PER_TOKEN','0'))
+    output_rate=Decimal(os.environ.get('RMU_MODEL_OUTPUT_MICROUSD_PER_TOKEN','0'))
     budget=int(os.environ.get('RMU_MODEL_BUDGET_MICROUSD','0'))
-    reserve=(len(json.dumps(body).encode())+2048)*input_rate+body['max_output_tokens']*output_rate
-    held=sum(json.loads(p.read_text()).get('reserved_microusd',0) for p in folder.glob('*.json'))
-    if input_rate<=0 or output_rate<=0 or budget<=0 or held+reserve>budget:
-        raise Conflict('Verified model pricing and sufficient separate budget required')
-    with receipt.open('x') as f:
-        os.chmod(receipt,0o600);json.dump({'state':'reserved','reserved_microusd':reserve,'run_id':run_id,'request_hash':identity,'model':MODEL,'prompt_hash':hashlib.sha256(instructions.encode()).hexdigest()},f)
+    if not input_rate.is_finite() or not output_rate.is_finite() or input_rate<=0 or output_rate<=0 or budget<=0:
+        raise Conflict('Verified model pricing and a separate monetary allowance required')
+    reserve=int(((len(json.dumps(body).encode())+2048)*input_rate+body['max_output_tokens']*output_rate).to_integral_value(rounding=ROUND_CEILING))
+    request_id=uuid4();metadata={'prompt_hash':hashlib.sha256(instructions.encode()).hexdigest()}
+    with transaction() as conn:
+        ws=os.environ['RMU_WORKSPACE_ID']
+        conn.execute('SELECT id FROM rmu.workspaces WHERE id=%s FOR UPDATE',(ws,))
+        previous=conn.execute('SELECT coalesce(sum(reserved_microusd),0) AS held,count(*) AS n FROM rmu.model_requests').fetchone()
+        if previous['held']+reserve>budget or previous['n']>=cap:raise Conflict('Model allowance exhausted')
+        if conn.execute('SELECT 1 FROM rmu.model_requests WHERE request_hash=%s',(identity,)).fetchone():raise Conflict('Model request already recorded; no retry')
+        # Bind all provided evidence IDs and exact text to this run before sending it.
+        known={str(r['id']):r['text_content'] for r in conn.execute('SELECT o.id,o.text_content FROM rmu.observations o JOIN rmu.run_observations ro ON ro.workspace_id=o.workspace_id AND ro.observation_id=o.id WHERE ro.run_id=%s',(run_id,))}
+        if any(known.get(r['record_id'])!=r['text'] for r in records):raise ValueError('Input does not match stored run evidence')
+        conn.execute("INSERT INTO rmu.model_requests(workspace_id,id,run_id,request_hash,prompt_hash,model,state,reserved_microusd) VALUES(%s,%s,%s,%s,%s,%s,'reserved',%s)",(ws,request_id,run_id,identity,metadata['prompt_hash'],MODEL,reserve))
     req=Request('https://api.openai.com/v1/responses',data=json.dumps(body).encode(),headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},method='POST')
     # Failure retains reservation. No automatic retry, including incomplete/refused output.
     with urlopen(req,timeout=180) as response:payload=json.load(response)
-    metadata=json.loads(receipt.read_text());metadata.update(state='received',provider_response_id=payload.get('id'),usage=payload.get('usage'))
-    receipt.write_text(json.dumps(metadata));
+    with transaction() as conn:
+        conn.execute("UPDATE rmu.model_requests SET state='received',response_id=%s,usage=%s WHERE id=%s",(payload.get('id'),Jsonb(payload.get('usage')),request_id))
     if payload.get('status')!='completed':raise Conflict('Model output incomplete; inspect request receipt')
     parts=[c['text'] for o in payload.get('output',[]) if o.get('type')=='message' for c in o.get('content',[]) if c.get('type')=='output_text']
     result=validate_classifications(json.loads(''.join(parts)),records)
@@ -75,5 +84,5 @@ def request_classifications(records,run_id):
         ws=os.environ['RMU_WORKSPACE_ID']
         for item in result['classifications']:
             conn.execute('''INSERT INTO rmu.classifications(workspace_id,id,observation_id,codebook_version,theme,stance,evidence_span,provenance) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)''',(ws,uuid4(),item['record_id'],CODEBOOK_VERSION,item['theme'],item['stance'],item['evidence_span'],Jsonb({'model':MODEL,'reasoning':'high','prompt_hash':metadata['prompt_hash'],'request_hash':identity,'response_id':payload.get('id'),'relevance':item['relevance'],'reason':item['reason'],'review_required':True})))
-    metadata['state']='validated_and_stored';receipt.write_text(json.dumps(metadata))
+        conn.execute("UPDATE rmu.model_requests SET state='validated' WHERE id=%s",(request_id,))
     return {'stored':len(result['classifications']),'review_status':'pending','usage':payload.get('usage')}
