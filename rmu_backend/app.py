@@ -6,6 +6,7 @@ import os
 from datetime import date, datetime, timezone
 import re
 import logging
+import traceback
 from . import db, pipeline
 
 MAX_BODY = 262144
@@ -142,6 +143,7 @@ def application(environ, start_response):
     except Exception as error:
         # Do not echo SQL, credentials, evidence or provider responses to a client or logs.
         logging.error("Pipeline operation failed: method=%s path=%s type=%s", method, path,type(error).__name__)
+        logging.error("Failure frames: %s",[(f.name,f.lineno) for f in traceback.extract_tb(error.__traceback__)])
         return reply("503 Service Unavailable", {"error": "Pipeline temporarily unavailable"})
     return reply("404 Not Found", {"error": "No such endpoint"})
 
