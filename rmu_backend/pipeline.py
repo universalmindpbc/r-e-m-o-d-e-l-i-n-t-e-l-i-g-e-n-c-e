@@ -126,6 +126,9 @@ def get_run(run_id):
         result['evidence_count']=conn.execute('SELECT count(*) AS n FROM rmu.run_observations WHERE run_id=%s',(run_id,)).fetchone()['n']
         result['analyses']=[dict(r) for r in conn.execute('SELECT id,metric_version,input_hash,result,created_at FROM rmu.analyses WHERE run_id=%s ORDER BY created_at DESC',(run_id,))]
         result['jobs']=[dict(r) for r in conn.execute('SELECT id,kind,state,attempts,error_code FROM rmu.jobs WHERE run_id=%s',(run_id,))]
+        result['evidence']=[dict(r) for r in conn.execute('''SELECT DISTINCT ON(o.post_id) o.id,o.post_id,o.text_content,o.source_url,o.cohort,o.cohort_evidence,o.post_type,o.language,o.retrieved_at,p.created_at FROM rmu.run_observations ro JOIN rmu.observations o ON o.workspace_id=ro.workspace_id AND o.id=ro.observation_id JOIN rmu.posts p ON p.workspace_id=o.workspace_id AND p.provider=o.provider AND p.source_type=o.source_type AND p.post_id=o.post_id WHERE ro.run_id=%s ORDER BY o.post_id,o.retrieved_at DESC LIMIT 25''',(run_id,))]
+        result['collection_receipt']=dict(conn.execute('''SELECT count(*) AS pages,coalesce(sum((checkpoint->>'returned_posts')::int),0) AS returned_posts,coalesce(sum((checkpoint->>'returned_profiles')::int),0) AS returned_profiles,coalesce(sum((checkpoint->>'estimated_cost_microusd')::bigint),0) AS estimated_microusd,bool_and(state='reconciled') AS billing_reconciled FROM rmu.collection_pages WHERE run_id=%s''',(run_id,)).fetchone())
+        result['classification_count']=conn.execute('SELECT count(*) AS n FROM rmu.classifications c JOIN rmu.run_observations ro ON ro.workspace_id=c.workspace_id AND ro.observation_id=c.observation_id WHERE ro.run_id=%s',(run_id,)).fetchone()['n']
         return result
 
 
@@ -190,6 +193,9 @@ def measure(rows,source):
         'eligible_original_reply_quote_posts':len(eligible),'unique_authors':len({r['author_id'] for r in rows}),
         'missing_text':sum(not r['text_content'] for r in rows),'reposts':sum(r['post_type']=='repost' for r in rows),
         'metric_coverage':{key:{'known':sum(r['metrics'].get(key) is not None for r in rows),'denominator':len(rows),'sum':sum(r['metrics'].get(key) or 0 for r in rows) if any(r['metrics'].get(key) is not None for r in rows) else None} for key in ['like_count','reply_count','retweet_count','quote_count','impression_count']},
+        'cohort_counts':{key:len({r['author_id'] for r in rows if r.get('cohort','uncertain')==key}) for key in ['talent','organisation','inferred_fan','uncertain']},
+        'cohort_note':'Unique authors per heuristic label; a changing profile may appear in more than one group. Inferred fans are not verified fandom.',
+        'prolific':{'status':'pending','responses':None,'note':'Survey responses have not been supplied; no survey results inferred.'},
         'alignment':None,'audience_stance':None,'publication_status':'unpublished',
         'limitations':['Collected sample only; not a representative audience estimate.','Engagement totals are retrieval snapshots, not unique people or causal impact.','Theme and stance proportions require reviewed classifications.'],
         'panels':{key:{'status':'insufficient_evidence','seeing':None,'supports':[],'challenges':[],'change':None,'test':'Add and review the evidence required for this panel.'} for key in ['rihanna','fans','alignment','talent_needs','societal_needs','audience_needs','shared_values']}}

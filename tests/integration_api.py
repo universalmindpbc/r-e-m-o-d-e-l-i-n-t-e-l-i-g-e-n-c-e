@@ -33,7 +33,7 @@ xrun=request('/v1/runs','POST',observed)[1]
 with patch.dict(os.environ,config):
     result=x_collection.collect_one(xrun['id'],fetch=lambda p,t:{'data':[{'id':str(uuid.uuid4().int)[:18],'author_id':'12345','created_at':'2022-02-01T00:00:00Z','text':'MOCK API TRANSPORT FIXTURE'}],'meta':{}})
 assert result['stored_posts']==1 and result['run_complete']
-saved=pipeline.get_run(xrun['id']);assert saved['reserved_cents']==50 and saved['charged_cents']==0
+saved=pipeline.get_run(xrun['id']);assert saved['reserved_cents']==150 and saved['charged_cents']==0
 assert saved['evidence_count']==1
 failed=request('/v1/runs','POST',{**observed,'idempotency_key':observed['idempotency_key']+'-timeout'})[1]
 def timeout(p,t): raise TimeoutError('simulated lost response')

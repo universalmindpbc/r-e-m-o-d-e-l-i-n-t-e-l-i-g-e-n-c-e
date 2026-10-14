@@ -1,0 +1,13 @@
+{
+  "version": "gemini-fan-heuristic-v1-reviewed-boundaries",
+  "source": "https://app.notion.com/p/3f37b9c99c56802ca9c5de6d24186736",
+  "talent_username": "rihanna",
+  "talent_aliases": ["rih", "badgalriri", "robyn"],
+  "fandom_keywords": ["navy", "rihanna navy", "fenty", "fentycorp"],
+  "bio_keyword_points": 2,
+  "text_alias_points": 1,
+  "threshold": 2,
+  "positive_label": "inferred_fan",
+  "fallback_label": "uncertain",
+  "limitations": ["Heuristic, not verified fandom or representative sampling.", "Navy and Fenty can have unrelated meanings; review false positives.", "Current profiles may not describe membership at the historical post date.", "Talent identity requires a resolved stable ID; aliases alone do not establish identity.", "Prolific survey evidence is separate and pending."]
+}
