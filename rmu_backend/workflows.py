@@ -150,7 +150,7 @@ def work(run_id):
    if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated' AND resolution IS NULL",(UUID(run_id),)).fetchone():raise pipeline.Conflict('An interrupted model request needs reconciliation before retrying; no duplicate charge was sent.')
   def stage(value):
    with transaction() as c:
-    if not c.execute("UPDATE rmu.workflows SET state=%s,lease_until=now()+interval '10 minutes',updated_at=now() WHERE run_id=%s AND lease_token=%s RETURNING run_id",(value,UUID(run_id),token)).fetchone():raise pipeline.Conflict('Workflow lease changed')
+    if not c.execute("UPDATE rmu.workflows SET state=%s,lease_until=now()+interval '20 minutes',updated_at=now() WHERE run_id=%s AND lease_token=%s RETURNING run_id",(value,UUID(run_id),token)).fetchone():raise pipeline.Conflict('Workflow lease changed')
   from .x_collection import collect_one
   stage('collecting')
   while True:
