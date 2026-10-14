@@ -18,7 +18,7 @@ def render_csv(run,records,classifications):
  for item in classifications:by_record.setdefault(str(item['observation_id']),[]).append(item)
  from .workflows import THEMES as GENERIC,VERSION,GENERIC_VERSIONS
  generic=any(c['codebook_version'] in GENERIC_VERSIONS for c in classifications)
- themes=GENERIC if generic else THEMES;version=(VERSION if any(c['codebook_version']==VERSION for c in classifications) else 'campaign-evidence-v1') if generic else CODEBOOK_VERSION
+ themes=GENERIC if generic else THEMES;version=(VERSION if any(c['codebook_version']==VERSION for c in classifications) else 'campaign-evidence-v1') if generic else (CODEBOOK_VERSION if any(c['codebook_version']==CODEBOOK_VERSION for c in classifications) else 'clf-proposed-v1')
  fields=BASE_COLUMNS+[theme+'_'+field for theme in themes for field in THEME_COLUMNS]
  stream=io.StringIO(newline='');writer=csv.DictWriter(stream,fieldnames=fields,quoting=csv.QUOTE_ALL);writer.writeheader()
  exported=datetime.now(timezone.utc).isoformat()

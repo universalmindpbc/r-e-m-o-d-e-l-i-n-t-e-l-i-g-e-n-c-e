@@ -12,7 +12,7 @@ from .pricing import current as current_pricing
 
 MODEL='gpt-6-astra'
 THEMES={'climate_justice':'Equity, frontline communities and structural climate burdens','sustainability':'Environmental sustainability and sustainable practices','community_resilience':'Preparedness, recovery and community resilience','accountability':'Evidence of delivery, transparency and substantiation'}
-CODEBOOK_VERSION='clf-proposed-v1'
+CODEBOOK_VERSION='clf-proposed-v2'
 BASE=Path(__file__).parents[1]
 
 
@@ -45,6 +45,7 @@ def validate_classifications(result,records,themes=None,contextual=False):
 
 
 def request_classifications(records,run_id):
+    from .contextual import schema as contextual_schema
     key=os.environ.get('OPENAI_API_KEY')
     if not key:raise Conflict('OpenAI API key not available; no model request sent')
     if not 1<=len(records)<=20:raise ValueError('Use 1–20 records per batch')
@@ -53,13 +54,13 @@ def request_classifications(records,run_id):
     instructions=prompt+'\nTASK: classification only. Return every record/theme combination. All labels remain unreviewed. Use the supplied codebook, not new themes.'
     body={'model':MODEL,'reasoning':{'effort':'high'},'store':False,'service_tier':'default','max_output_tokens':18000,
           'instructions':instructions,'input':json.dumps({'codebook_version':CODEBOOK_VERSION,'codebook':THEMES,'records':records}),
-          'text':{'format':{'type':'json_schema','name':'rmu_classification','strict':True,'schema':SCHEMA}}}
+          'text':{'format':{'type':'json_schema','name':'rmu_classification','strict':True,'schema':contextual_schema(THEMES)}}}
     output,request_id,metadata,payload=request_model(body,records,run_id)
-    result=validate_classifications(output,records)
+    result=validate_classifications(output,records,contextual=True)
     with transaction() as conn:
         ws=os.environ['RMU_WORKSPACE_ID']
         for item in result['classifications']:
-            conn.execute('''INSERT INTO rmu.classifications(workspace_id,id,observation_id,codebook_version,theme,stance,evidence_span,provenance) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)''',(ws,uuid4(),item['record_id'],CODEBOOK_VERSION,item['theme'],item['stance'],item['evidence_span'],Jsonb({'model':MODEL,'reasoning':'high','prompt_hash':metadata['prompt_hash'],'request_hash':metadata['request_hash'],'response_id':payload.get('id'),'relevance':item['relevance'],'reason':item['reason'],'review_required':True})))
+            conn.execute('''INSERT INTO rmu.classifications(workspace_id,id,observation_id,codebook_version,theme,stance,evidence_span,provenance) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)''',(ws,uuid4(),item['record_id'],CODEBOOK_VERSION,item['theme'],item['stance'],item['evidence_span'],Jsonb({'model':MODEL,'reasoning':'high','prompt_hash':metadata['prompt_hash'],'request_hash':metadata['request_hash'],'response_id':payload.get('id'),'relevance':item['relevance'],'reason':item['reason'],'review_required':True,'context':item['context'],'opinion_contract':'contextual-opinion-v1'})))
         conn.execute("UPDATE rmu.model_requests SET state='validated' WHERE id=%s",(request_id,))
     return {'stored':len(result['classifications']),'review_status':'pending','usage':payload.get('usage')}
 

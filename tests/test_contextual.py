@@ -26,3 +26,18 @@ class ContextContract(unittest.TestCase):
  def test_schema_requires_separate_context(self):
   properties=schema(['new topic'])['properties']['classifications']['items']['properties']
   self.assertIn('context',properties);self.assertIn('news_report',properties['context']['properties']['format']['enum'])
+ def test_legacy_entrypoint_also_uses_contextual_contract(self):
+  import os
+  from unittest.mock import patch,MagicMock
+  from rmu_backend import inference
+  rows=[{'record_id':'a','text':'Excellent climate action'}]
+  result={'classifications':[]}
+  for theme in inference.THEMES:
+   row=self.record(rows[0]['text']);row['theme']=theme;result['classifications'].append(row)
+  conn=MagicMock();transaction=MagicMock();transaction.return_value.__enter__.return_value=conn
+  with patch.dict(os.environ,{'OPENAI_API_KEY':'test-only','RMU_WORKSPACE_ID':'test-workspace'}),patch.object(inference,'transaction',transaction),patch.object(inference,'request_model',return_value=(result,'receipt',{'prompt_hash':'test','request_hash':'test'},{'id':'response','usage':{}})) as request:
+   inference.request_classifications(rows,'test-run')
+   body=request.call_args.args[0]
+   self.assertIn('context',body['text']['format']['schema']['properties']['classifications']['items']['properties'])
+   self.assertIn('Format is independent of stance',body['instructions'])
+   self.assertEqual(conn.execute.call_count,5)
