@@ -49,6 +49,21 @@ def request_classifications(records,run_id):
     body={'model':MODEL,'reasoning':{'effort':'high'},'store':False,'max_output_tokens':12000,
           'instructions':instructions,'input':json.dumps({'codebook_version':CODEBOOK_VERSION,'codebook':THEMES,'records':records}),
           'text':{'format':{'type':'json_schema','name':'rmu_classification','strict':True,'schema':SCHEMA}}}
+    output,request_id,metadata,payload=request_model(body,records,run_id)
+    result=validate_classifications(output,records)
+    with transaction() as conn:
+        ws=os.environ['RMU_WORKSPACE_ID']
+        for item in result['classifications']:
+            conn.execute('''INSERT INTO rmu.classifications(workspace_id,id,observation_id,codebook_version,theme,stance,evidence_span,provenance) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)''',(ws,uuid4(),item['record_id'],CODEBOOK_VERSION,item['theme'],item['stance'],item['evidence_span'],Jsonb({'model':MODEL,'reasoning':'high','prompt_hash':metadata['prompt_hash'],'request_hash':metadata['request_hash'],'response_id':payload.get('id'),'relevance':item['relevance'],'reason':item['reason'],'review_required':True})))
+        conn.execute("UPDATE rmu.model_requests SET state='validated' WHERE id=%s",(request_id,))
+    return {'stored':len(result['classifications']),'review_status':'pending','usage':payload.get('usage')}
+
+
+def request_model(body,records,run_id):
+    key=os.environ.get('OPENAI_API_KEY')
+    if not key:raise Conflict('OpenAI API key not available; no model request sent')
+    if not 1<=len(records)<=20 or len({r['record_id'] for r in records})!=len(records):raise ValueError('Use 1–20 distinct records')
+    instructions=body['instructions']
     identity=digest(body)
     cap=int(os.environ.get('RMU_MODEL_MAX_CALLS','0'))
     if not 1<=cap<=100:raise Conflict('Model call allowance exhausted or unset')
@@ -61,7 +76,7 @@ def request_classifications(records,run_id):
     if not input_rate.is_finite() or not output_rate.is_finite() or input_rate<=0 or output_rate<=0 or budget<=0:
         raise Conflict('Verified model pricing and a separate monetary allowance required')
     reserve=int(((len(json.dumps(body).encode())+2048)*input_rate+body['max_output_tokens']*output_rate).to_integral_value(rounding=ROUND_CEILING))
-    request_id=uuid4();metadata={'prompt_hash':hashlib.sha256(instructions.encode()).hexdigest()}
+    request_id=uuid4();metadata={'prompt_hash':hashlib.sha256(instructions.encode()).hexdigest(),'request_hash':identity}
     with transaction() as conn:
         ws=os.environ['RMU_WORKSPACE_ID']
         conn.execute('SELECT id FROM rmu.workspaces WHERE id=%s FOR UPDATE',(ws,))
@@ -79,10 +94,4 @@ def request_classifications(records,run_id):
         conn.execute("UPDATE rmu.model_requests SET state='received',response_id=%s,usage=%s WHERE id=%s",(payload.get('id'),Jsonb(payload.get('usage')),request_id))
     if payload.get('status')!='completed':raise Conflict('Model output incomplete; inspect request receipt')
     parts=[c['text'] for o in payload.get('output',[]) if o.get('type')=='message' for c in o.get('content',[]) if c.get('type')=='output_text']
-    result=validate_classifications(json.loads(''.join(parts)),records)
-    with transaction() as conn:
-        ws=os.environ['RMU_WORKSPACE_ID']
-        for item in result['classifications']:
-            conn.execute('''INSERT INTO rmu.classifications(workspace_id,id,observation_id,codebook_version,theme,stance,evidence_span,provenance) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)''',(ws,uuid4(),item['record_id'],CODEBOOK_VERSION,item['theme'],item['stance'],item['evidence_span'],Jsonb({'model':MODEL,'reasoning':'high','prompt_hash':metadata['prompt_hash'],'request_hash':identity,'response_id':payload.get('id'),'relevance':item['relevance'],'reason':item['reason'],'review_required':True})))
-        conn.execute("UPDATE rmu.model_requests SET state='validated' WHERE id=%s",(request_id,))
-    return {'stored':len(result['classifications']),'review_status':'pending','usage':payload.get('usage')}
+    return json.loads(''.join(parts)),request_id,metadata,payload
