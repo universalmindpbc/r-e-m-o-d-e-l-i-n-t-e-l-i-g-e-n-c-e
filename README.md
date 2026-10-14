@@ -61,3 +61,11 @@ Live generative inference, embedding generation, named reviewer authentication, 
 - The web API still cannot initiate paid collection/inference through the staging proxy. Admin displays evidence and research status; no model findings or synthetic headline scores are published automatically.
 
 Model ledger migration 002 is applied in Neon. A mocked Responses API proof stored pending labels and blocked duplicate requests without contacting OpenAI. Exact-span and evidence-ID validation are tested. The synthesis adapter persists seven draft panel contracts only after all eligible evidence has researcher-approved classifications. Its transport is tested with mocks; live OpenAI access and actual interpretation remain pending.
+
+## Dedicated OpenAI activation
+
+RMU now uses its own private OpenAI project key. GPT-6 Astra, High reasoning, standard service tier. The local operator and API share an atomic US$25 model allowance; validated usage is accounted conservatively at the verified cache-write/input ceiling and output rate. Reservations remain held for unvalidated or interrupted requests. This is a cost estimate, not invoice reconciliation.
+
+`POST /v1/runs/{id}/classify` requires `{"confirm_paid_analysis":true}` and explicit server activation. It returns a durable job receipt while an in-process worker codes the retained run. Repeated dispatch and concurrent worker claims do not repeat the job. The free demo service is not an always-on worker: keep the Admin panel open for progress; an interrupted/stale job needs operator review and never blindly retries a paid request. No new paid hosting service was introduced.
+
+Live five-post verification passed with 20 persisted, pending theme labels. Admin shows exact supporting passages and reasoning, plus draft finding contracts when reviewed coding permits synthesis. Prompt approval does not approve these labels. Prolific remains pending. Provider keys never enter browser responses.

@@ -46,7 +46,7 @@ def request_classifications(records,run_id):
     prompt=(BASE/'rmu_backend/approved_prompt.md').read_text()
     prompt=prompt.split('## Exact draft prompt: Overview intelligence')[0]
     instructions=prompt+'\nTASK: classification only. Return every record/theme combination. All labels remain unreviewed. Use the supplied codebook, not new themes.'
-    body={'model':MODEL,'reasoning':{'effort':'high'},'store':False,'max_output_tokens':12000,
+    body={'model':MODEL,'reasoning':{'effort':'high'},'store':False,'service_tier':'default','max_output_tokens':18000,
           'instructions':instructions,'input':json.dumps({'codebook_version':CODEBOOK_VERSION,'codebook':THEMES,'records':records}),
           'text':{'format':{'type':'json_schema','name':'rmu_classification','strict':True,'schema':SCHEMA}}}
     output,request_id,metadata,payload=request_model(body,records,run_id)
@@ -80,7 +80,7 @@ def request_model(body,records,run_id):
     with transaction() as conn:
         ws=os.environ['RMU_WORKSPACE_ID']
         conn.execute('SELECT id FROM rmu.workspaces WHERE id=%s FOR UPDATE',(ws,))
-        previous=conn.execute('SELECT coalesce(sum(reserved_microusd),0) AS held,count(*) AS n FROM rmu.model_requests').fetchone()
+        previous=conn.execute("SELECT coalesce(sum(CASE WHEN state='validated' AND usage ? '_rmu_cost_ceiling_microusd' THEN (usage->>'_rmu_cost_ceiling_microusd')::bigint ELSE reserved_microusd END),0) AS held,count(*) AS n FROM rmu.model_requests").fetchone()
         if previous['held']+reserve>budget or previous['n']>=cap:raise Conflict('Model allowance exhausted')
         if conn.execute('SELECT 1 FROM rmu.model_requests WHERE request_hash=%s',(identity,)).fetchone():raise Conflict('Model request already recorded; no retry')
         # Bind all provided evidence IDs and exact text to this run before sending it.
@@ -89,9 +89,17 @@ def request_model(body,records,run_id):
         conn.execute("INSERT INTO rmu.model_requests(workspace_id,id,run_id,request_hash,prompt_hash,model,state,reserved_microusd) VALUES(%s,%s,%s,%s,%s,%s,'reserved',%s)",(ws,request_id,run_id,identity,metadata['prompt_hash'],MODEL,reserve))
     req=Request('https://api.openai.com/v1/responses',data=json.dumps(body).encode(),headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},method='POST')
     # Failure retains reservation. No automatic retry, including incomplete/refused output.
-    with urlopen(req,timeout=180) as response:payload=json.load(response)
+    with urlopen(req,timeout=300) as response:payload=json.load(response)
+    archive=BASE/'private';archive.mkdir(mode=0o700,exist_ok=True)
+    path=archive/('model-response-'+str(request_id)+'.json')
+    with path.open('x') as f:
+        os.chmod(path,0o600)
+        json.dump({'workspace_id':ws,'request_id':str(request_id),'run_id':run_id,'request_hash':identity,'response':payload},f,default=str)
+    usage=payload.get('usage')
+    if isinstance(usage,dict) and all(type(usage.get(k)) is int and usage[k]>=0 for k in ('input_tokens','output_tokens')):
+        usage={**usage,'_rmu_cost_ceiling_microusd':int((usage['input_tokens']*input_rate+usage['output_tokens']*output_rate).to_integral_value(rounding=ROUND_CEILING))}
     with transaction() as conn:
-        conn.execute("UPDATE rmu.model_requests SET state='received',response_id=%s,usage=%s WHERE id=%s",(payload.get('id'),Jsonb(payload.get('usage')),request_id))
+        conn.execute("UPDATE rmu.model_requests SET state='received',response_id=%s,usage=%s WHERE id=%s",(payload.get('id'),Jsonb(usage),request_id))
     if payload.get('status')!='completed':raise Conflict('Model output incomplete; inspect request receipt')
     parts=[c['text'] for o in payload.get('output',[]) if o.get('type')=='message' for c in o.get('content',[]) if c.get('type')=='output_text']
     return json.loads(''.join(parts)),request_id,metadata,payload

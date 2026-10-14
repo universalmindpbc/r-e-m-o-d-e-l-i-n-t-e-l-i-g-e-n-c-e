@@ -45,7 +45,7 @@ def request_draft(run_id):
     prompt=(BASE/'rmu_backend/approved_prompt.md').read_text()
     prompt+='\nReturn the seven requested panel objects. Shared Values is a proposed research message only. All outputs are draft, not approved publication. Do not infer survey results, private objectives or community delivery. This run is only one evidence lane; missing lanes must be explicit research questions.'
     data={'campaign':run['campaign'],'evidence_lane':run['evidence_lane'],'reviewed_evidence':records,'evidence_selection':'First 20 eligible posts in stable post-ID order; not a representative subsample','computed_metrics':metric['result'],'reviewed_post_stance_counts':counts,'eligible_post_denominator':len(rows),'prolific':{'status':'pending','responses':None}}
-    body={'model':MODEL,'reasoning':{'effort':'high'},'store':False,'max_output_tokens':12000,'instructions':prompt,'input':json.dumps(data,default=str),'text':{'format':{'type':'json_schema','name':'rmu_lightbox_draft','strict':True,'schema':SCHEMA}}}
+    body={'model':MODEL,'reasoning':{'effort':'high'},'store':False,'service_tier':'default','max_output_tokens':12000,'instructions':prompt,'input':json.dumps(data,default=str),'text':{'format':{'type':'json_schema','name':'rmu_lightbox_draft','strict':True,'schema':SCHEMA}}}
     output,request_id,metadata,response=request_model(body,records,run_id)
     validate_findings(output,records)
     with transaction() as c:

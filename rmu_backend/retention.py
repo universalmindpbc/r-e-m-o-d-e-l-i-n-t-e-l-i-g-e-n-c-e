@@ -34,7 +34,7 @@ def purge(post_ids,reason):
         result=purge_posts(conn,os.environ['RMU_WORKSPACE_ID'],post_ids,reason)
     # Raw local recovery copies must not survive a takedown; regenerate a clean one.
     root=Path(__file__).parents[1]/'private'
-    for file in list(root.glob('snapshot-*.json'))+list(root.glob('x-response-*.json')):
+    for file in list(root.glob('snapshot-*.json'))+list(root.glob('x-response-*.json'))+list(root.glob('model-response-*.json')):
         value=json.loads(file.read_text())
         if value.get('workspace_id')==os.environ['RMU_WORKSPACE_ID']:
             file.unlink()

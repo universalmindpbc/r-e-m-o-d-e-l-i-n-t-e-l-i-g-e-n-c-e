@@ -68,13 +68,13 @@ def application(environ, start_response):
     try:
         if method == "GET" and path == "/v1/status":
             result = {"stage": "storage_pipeline", "database_configured": bool(os.environ.get("DATABASE_URL")),
-                      "database_verified": False, "collection_enabled": False, "inference_enabled": False}
+                      "database_verified": False, "collection_enabled": False, "inference_enabled": os.environ.get("RMU_MODEL_ENABLED")=="true" and bool(os.environ.get("OPENAI_API_KEY"))}
             if result["database_configured"]:
                 result.update(db.status())
             return reply("200 OK", result)
         if method == "GET" and path == "/v1/runs":
             return reply("200 OK", {"runs": pipeline.list_runs()})
-        match = re.fullmatch(r"/v1/runs/([0-9a-f-]{36})(?:/(fixtures|measure|collect-page))?", path)
+        match = re.fullmatch(r"/v1/runs/([0-9a-f-]{36})(?:/(fixtures|measure|collect-page|classify))?", path)
         if match and method == "GET" and match[2] is None:
             data = pipeline.get_run(match[1])
             return reply("200 OK" if data else "404 Not Found", data or {"error": "Run not found"})
@@ -97,6 +97,9 @@ def application(environ, start_response):
                 if set(payload)-{"run_id"}:
                     raise ValueError("Unexpected worker fields")
                 return reply("200 OK", pipeline.process_one(payload.get("run_id")))
+            if match[2] == "classify":
+                from .model_jobs import queue
+                return reply("202 Accepted", queue(match[1],payload))
             if match[2] == "fixtures":
                 return reply("200 OK", pipeline.import_fixture(match[1], payload))
             if match[2] == "collect-page":
