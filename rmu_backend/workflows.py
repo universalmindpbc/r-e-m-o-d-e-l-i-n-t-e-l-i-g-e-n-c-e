@@ -44,7 +44,7 @@ def start(payload):
  return get(str(run['id']))
 
 def list_all():
- with transaction() as c:return [dict(r) for r in c.execute("SELECT r.id,r.campaign,r.starts_on,r.ends_on,r.created_at,jsonb_build_object('state',w.state,'error',w.error) workflow FROM rmu.workflows w JOIN rmu.runs r ON r.id=w.run_id AND r.workspace_id=w.workspace_id ORDER BY r.created_at DESC LIMIT 50")]
+ with transaction() as c:return [dict(r) for r in c.execute("SELECT r.id,r.campaign,r.starts_on,r.ends_on,r.created_at,jsonb_build_object('state',w.state,'error',w.error,'updated_at',w.updated_at) workflow FROM rmu.workflows w JOIN rmu.runs r ON r.id=w.run_id AND r.workspace_id=w.workspace_id ORDER BY r.created_at DESC LIMIT 50")]
 
 def get(run_id):
  with transaction() as c:w=c.execute('SELECT state,error,updated_at,lease_until,codebook_version FROM rmu.workflows WHERE run_id=%s',(UUID(run_id),)).fetchone()

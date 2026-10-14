@@ -65,7 +65,7 @@ def populate(run_id):
  known={r['record_id'] for r in items}
  for key in contract:
   if not set(out[key]['sources'])<=known:raise ValueError('Unknown supporting source')
-  if any(len(out[key][v])>500 for v in ['meaning','change','test','evidence']):raise ValueError('Reporting field exceeds approved space')
+  if any(not out[key][v].strip() or len(out[key][v])>500 for v in ['meaning','change','test','evidence']):raise ValueError('Reporting field is empty or exceeds approved space')
  result={'version':VERSION,'run_id':str(run_id),'overview':metrics,'messaging':out,'provenance':{**meta,'model':'gpt-6-astra','review':'pending','source_selection':'At most 20 retained posts selected from supporting/challenging source references. Not a representative sample.','total_posts':len(rows)}}
  with transaction() as c:
   c.execute('INSERT INTO rmu.analyses(workspace_id,id,run_id,metric_version,input_hash,result) VALUES(%s,%s,%s,%s,%s,%s) ON CONFLICT (workspace_id,run_id,metric_version,input_hash) DO UPDATE SET result=excluded.result',(run['workspace_id'],uuid4(),UUID(run_id),VERSION,pipeline.digest({'run':str(run_id),'version':VERSION}),Jsonb(result)))
