@@ -47,6 +47,7 @@ def expand_compact(output,records,themes):
    basis=label['basis']
    if basis not in ['explicit','contextual']+ABSENCES:raise ValueError('Invalid basis')
    expanded.append({'record_id':record['record_id'],**{k:label[k] for k in ('theme','relevance','stance','evidence_span')},'reason':record['reason'],'context':{**record['context'],'stance_basis':basis if basis in ('explicit','contextual') else 'no_position','no_position_reason':None if basis in ('explicit','contextual') else basis}})
+ if seen!={r['record_id'] for r in records}:raise ValueError('Unknown or missing compact record')
  from .inference import validate_classifications
  return validate_classifications({'classifications':expanded},records,themes=themes,contextual=True)
 

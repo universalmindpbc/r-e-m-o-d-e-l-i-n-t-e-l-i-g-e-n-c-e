@@ -102,8 +102,8 @@ def request_model(body,records,run_id,*,full_collection=False):
         conn.execute("INSERT INTO rmu.model_requests(workspace_id,id,run_id,request_hash,prompt_hash,model,state,reserved_microusd) VALUES(%s,%s,%s,%s,%s,%s,'reserved',%s)",(ws,request_id,run_id,identity,metadata['prompt_hash'],MODEL,reserve))
     req=Request('https://api.openai.com/v1/responses',data=json.dumps(body).encode(),headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},method='POST')
     # Failure retains reservation. No automatic retry, including incomplete/refused output.
-    # Full-collection High reasoning can exceed the five-minute batch timeout.
-    with urlopen(req,timeout=900 if full_collection else 300) as response:payload=json.load(response)
+    # High reasoning, including a 20-post batch, can exceed five minutes.
+    with urlopen(req,timeout=900) as response:payload=json.load(response)
     usage=payload.get('usage')
     if isinstance(usage,dict) and all(type(usage.get(k)) is int and usage[k]>=0 for k in ('input_tokens','output_tokens')):
         usage={**usage,'_rmu_cost_ceiling_microusd':int((usage['input_tokens']*input_rate+usage['output_tokens']*output_rate).to_integral_value(rounding=ROUND_CEILING))}
