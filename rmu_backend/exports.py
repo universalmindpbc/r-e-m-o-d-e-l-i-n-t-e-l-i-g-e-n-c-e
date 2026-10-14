@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 from uuid import UUID
 from .db import transaction
 from .inference import THEMES,CODEBOOK_VERSION
-BASE_COLUMNS=['exported_at_utc','run_id','campaign_name','source_type','evidence_lane','collection_query','analysis_start','analysis_end','post_id','post_url','author_id','published_at_utc','retrieved_at_utc','post_type','language','post_text','post_text_json','inferred_cohort','cohort_evidence_json','public_metrics_json','codebook_version','classification_status','all_classifications_json']
+BASE_COLUMNS=['exported_at_utc','run_id','campaign_name','source_type','evidence_lane','collection_query','analysis_start','analysis_end','post_id','post_url','author_id','published_at_utc','retrieved_at_utc','post_type','language','post_text','post_text_json','inferred_cohort','cohort_evidence_json','public_metrics_json','codebook_version','classification_status','all_classifications_json','post_format','post_framing','framing_target','framing_evidence','framing_codebook']
 THEME_COLUMNS=['relevance','stance','evidence_span','reason','review_state','model','reasoning_effort','prompt_hash','context_json']
 
 def safe_cell(value):
@@ -26,6 +26,10 @@ def render_csv(run,records,classifications):
   codes=by_record.get(str(post['id']),[]);current=[c for c in codes if c['codebook_version']==version]
   status='not_classified' if not codes else ('researcher_approved' if len(current)==len(themes) and {c['theme'] for c in current}==set(themes) and all(c['review_state']=='approved' for c in current) else 'requires_review')
   row=dict(exported_at_utc=exported,run_id=run['id'],campaign_name=run['campaign'].get('name',''),source_type=run['source_type'],evidence_lane=run['evidence_lane'],collection_query=run['query'],analysis_start=run['starts_on'],analysis_end=run['ends_on'],post_id=post['post_id'],post_url=post['source_url'],author_id=post['author_id'],published_at_utc=post['created_at'],retrieved_at_utc=post['retrieved_at'],post_type=post['post_type'],language=post['language'],post_text=post['text_content'],post_text_json=json.dumps(post['text_content'],ensure_ascii=False),inferred_cohort=post['cohort'],cohort_evidence_json=json.dumps(post['cohort_evidence'],ensure_ascii=False,default=str),public_metrics_json=json.dumps(post['metrics'],ensure_ascii=False,default=str),codebook_version=version,classification_status=status,all_classifications_json=json.dumps(codes,ensure_ascii=False,default=str))
+  contextual=[c for c in codes if isinstance(c['provenance'].get('context'),dict)]
+  if contextual:
+   selected=max(contextual,key=lambda c:c['codebook_version']=='approved-overview-v2');context=selected['provenance']['context']
+   row.update(post_format=context['format'],post_framing=context['framing'],framing_target=context['framing_target'],framing_evidence=context['framing_span'],framing_codebook=selected['codebook_version'])
   for theme in themes:
    matches=[c for c in current if c['theme']==theme]
    if len(matches)!=1:continue

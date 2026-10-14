@@ -41,3 +41,19 @@ class ContextContract(unittest.TestCase):
    self.assertIn('context',body['text']['format']['schema']['properties']['classifications']['items']['properties'])
    self.assertIn('Format is independent of stance',body['instructions'])
    self.assertEqual(conn.execute.call_count,5)
+ def test_compact_transport_is_lossless_and_checks_duplicates(self):
+  from rmu_backend.contextual import expand_compact
+  row=self.record('Excellent public transport plan')
+  compact={'records':[{'record_id':'a','context':{k:v for k,v in row['context'].items() if k not in ('stance_basis','no_position_reason')},'reason':row['reason'],'labels':[{**{k:row[k] for k in ('theme','relevance','stance','evidence_span')},'basis':'contextual'}]}]}
+  self.assertEqual(expand_compact(compact,[{'record_id':'a','text':'Excellent public transport plan'}],['public transport']),{'classifications':[row]})
+  compact['records'].append(copy.deepcopy(compact['records'][0]));self.assertRaises(ValueError,expand_compact,compact,[{'record_id':'a','text':'Excellent public transport plan'}],['public transport'])
+ def test_sparse_absence_is_explicit_and_complete(self):
+  from rmu_backend.contextual import expand_sparse
+  row=self.record('Excellent public transport plan')
+  data={'records':[{'record_id':'a','context':{k:v for k,v in row['context'].items() if k not in ('stance_basis','no_position_reason')},'reason':'Transport praise; no climate discussion','labels':[{'theme':'public transport','relevance':'relevant','stance':'support','evidence_span':'Excellent public transport plan','basis':'explicit'}],'not_discussed':['climate']}]}
+  records=[{'record_id':'a','text':'Excellent public transport plan'}]
+  result=expand_sparse(data,records,['public transport','climate'])['classifications']
+  self.assertEqual(result[1]['context']['no_position_reason'],'not_discussed')
+  self.assertEqual(result[0]['stance'],'support')
+  data['records'][0]['not_discussed']=[]
+  self.assertRaises(ValueError,expand_sparse,data,records,['public transport','climate'])
