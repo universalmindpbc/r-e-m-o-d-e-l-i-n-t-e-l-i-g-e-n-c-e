@@ -1,0 +1,22 @@
+# Backend service only. The RMU website retains its existing deployment.
+# Import only after a supported private source repository is connected.
+services:
+  - type: web
+    name: rmu-intelligence-demo-api
+    runtime: python
+    region: singapore
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 90 rmu_backend.app:application
+    healthCheckPath: /healthz
+    autoDeployTrigger: "off"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: RMU_SERVICE_TOKEN
+        generateValue: true
+      - key: RMU_WORKSPACE_ID
+        value: de000000-0000-4000-8000-000000000001
+      - key: DATABASE_URL
+        sync: false
+# No paid worker, cron service, Render database or automatic paid search.
