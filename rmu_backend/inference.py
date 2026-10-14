@@ -61,15 +61,16 @@ def request_classifications(records,run_id):
     return {'stored':len(result['classifications']),'review_status':'pending','usage':payload.get('usage')}
 
 
-def request_model(body,records,run_id):
+def request_model(body,records,run_id,*,full_collection=False):
     key=os.environ.get('OPENAI_API_KEY')
     if not key:raise Conflict('OpenAI API key not available; no model request sent')
-    if not 1<=len(records)<=20 or len({r['record_id'] for r in records})!=len(records):raise ValueError('Use 1–20 distinct records')
+    limit=500 if full_collection else 20
+    if not 1<=len(records)<=limit or len({r['record_id'] for r in records})!=len(records):raise ValueError('Evidence count exceeds bounded request size')
     instructions=body['instructions']
     identity=digest(body)
     cap=int(os.environ.get('RMU_MODEL_MAX_CALLS','0'))
     if not 1<=cap<=100:raise Conflict('Model call allowance exhausted or unset')
-    if len(body['input'].encode())>40000:raise ValueError('Batch exceeds input size bound')
+    if len(body['input'].encode())>(250000 if full_collection else 40000):raise ValueError('Batch exceeds input size bound')
     if not current_pricing(os.environ.get('RMU_MODEL_PRICE_VERIFIED_ON')):
         raise Conflict('Model price verification has expired; refresh the monthly rate configuration')
     input_rate=Decimal(os.environ.get('RMU_MODEL_INPUT_MICROUSD_PER_TOKEN','0'))

@@ -11,3 +11,10 @@ class ApprovedMapping(unittest.TestCase):
   rows=[{'record_id':'a','cohort':'inferred_fan','author_id':'fan'}]
   codes=[{'observation_id':'a','theme':t,'stance':'no_clear_position','evidence_span':None,'review_state':'pending','provenance':{'relevance':'uncertain','reason':'No explicit position'}} for t in THEMES]
   result=aggregate(rows,codes);self.assertEqual(result['themes'][0]['stance'],[0,0,0,1]);self.assertEqual(result['fanAccounts'],1)
+ def test_full_public_conversation_includes_uncertain_and_other_not_organisation(self):
+  rows=[{'record_id':str(i),'cohort':cohort,'author_id':author} for i,(cohort,author) in enumerate([('talent','t'),('organisation','o'),('inferred_fan','f'),('uncertain','u'),('uncertain','u'),('other','v')])]
+  codes=[{'observation_id':r['record_id'],'theme':t,'stance':'support','evidence_span':'quote','review_state':'pending','provenance':{'relevance':'relevant','reason':'test'}} for r in rows for t in THEMES]
+  result=aggregate(rows,codes)
+  self.assertEqual(result['fanPosts'],4);self.assertEqual(result['fanAccounts'],3)
+  self.assertEqual(result['organisationPosts'],1);self.assertEqual(result['inferredFanAccounts'],1)
+  self.assertEqual(result['themes'][0]['stance'],[3,0,0,0]);self.assertEqual(result['audienceScope'],'public_conversation')
