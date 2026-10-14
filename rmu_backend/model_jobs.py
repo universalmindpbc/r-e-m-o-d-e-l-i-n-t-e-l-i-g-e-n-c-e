@@ -18,7 +18,7 @@ def queue(run_id,payload):
   if not run or run['status']!='complete':raise Conflict('Complete collection and measurement before analysis')
   job=c.execute("SELECT id,state FROM rmu.jobs WHERE run_id=%s AND kind='classify'",(run_id,)).fetchone()
   if job:return {**job,'started':False}
-  if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated'",(run_id,)).fetchone():raise Conflict('Resolve earlier model requests before starting another job')
+  if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated' AND resolution IS NULL",(run_id,)).fetchone():raise Conflict('Resolve earlier model requests before starting another job')
   if not pending_records(c,run_id):return {'state':'complete','started':False}
   job_id=uuid4();c.execute("INSERT INTO rmu.jobs(workspace_id,id,run_id,kind) VALUES(%s,%s,%s,'classify')",(ws,job_id,run_id))
  threading.Thread(target=work,args=(str(job_id),str(run_id)),daemon=True).start()

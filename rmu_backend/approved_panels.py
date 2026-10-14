@@ -36,17 +36,21 @@ def populate(run_id,heartbeat=None):
   codes=list(c.execute('SELECT cl.* FROM rmu.classifications cl JOIN rmu.run_observations ro ON ro.observation_id=cl.observation_id AND ro.workspace_id=cl.workspace_id WHERE ro.run_id=%s AND cl.codebook_version=%s',(UUID(run_id),CODEBOOK)))
  relevant=rows # Every retained original post is coded; identity remains a separate attribute.
  coded={str(c['observation_id']) for c in codes};pending=[r for r in relevant if r['record_id'] not in coded]
- for offset in range(0,len(pending),20):
+ def classify_batch(batch):
   if heartbeat:heartbeat()
-  items=[{k:r[k] for k in ['record_id','text','cohort']} for r in pending[offset:offset+20]]
+  items=[{k:r[k] for k in ['record_id','text','cohort']} for r in batch]
   schema=object_schema({'classifications':{'type':'array','items':object_schema({'record_id':STR,'theme':{'type':'string','enum':list(THEMES)},'relevance':{'type':'string','enum':['relevant','not_relevant','uncertain']},'stance':{'type':'string','enum':STANCES},'evidence_span':{'type':['string','null']},'reason':STR})}})
-  out,rid,meta,res=call({'instructions':prompt()+'\nPopulate the exact approved three-theme chart. Return every record/theme pair exactly once. Quotes must be exact substrings; use null when unsupported. Reasons <=100 characters; evidence spans <=160 characters and exactly source-matched. No inferred position from celebrity enthusiasm.','input':json.dumps({'campaign':run['campaign'],'codebook':THEMES,'records':items}), 'text':{'format':{'type':'json_schema','name':'approved_chart_coding','strict':True,'schema':schema}}},items,str(run_id))
+  out,rid,meta,res=call({'instructions':prompt()+'\nPopulate the exact approved three-theme chart. Return every record/theme pair exactly once. Quotes must be short contiguous exact substrings; use null when unsupported. Never insert ellipses, paraphrase, or rewrite Unicode escapes. Reasons <=100 characters; evidence spans <=160 characters and exactly source-matched. No inferred position from celebrity enthusiasm.','input':json.dumps({'campaign':run['campaign'],'codebook':THEMES,'records':items}), 'text':{'format':{'type':'json_schema','name':'approved_chart_coding','strict':True,'schema':schema}}},items,str(run_id))
   validate_classifications(out,items,themes=THEMES)
   with transaction() as c:
    for x in out['classifications']:
     prov={**meta,'model':'gpt-6-astra','reasoning':'high','relevance':x['relevance'],'reason':x['reason'],'run_id':str(run_id),'response_id':res['id'],'review_required':True}
     row=c.execute('INSERT INTO rmu.classifications(workspace_id,id,observation_id,codebook_version,theme,stance,evidence_span,provenance) VALUES(%s,%s,%s,%s,%s,%s,%s,%s) RETURNING *',(run['workspace_id'],uuid4(),UUID(x['record_id']),CODEBOOK,x['theme'],x['stance'],x['evidence_span'],Jsonb(prov))).fetchone();codes.append(row)
    c.execute("UPDATE rmu.model_requests SET state='validated' WHERE id=%s",(rid,))
+ from concurrent.futures import ThreadPoolExecutor
+ # Bounded I/O concurrency; each request reserves budget atomically and persists independently.
+ with ThreadPoolExecutor(max_workers=3) as pool:
+  list(pool.map(classify_batch,[pending[i:i+20] for i in range(0,len(pending),20)]))
  metrics=aggregate(relevant,codes)
  contract=json.loads((__import__('pathlib').Path(__file__).parent/'approved_field_contract.json').read_text())
  items=[{k:r[k] for k in ['record_id','text','cohort']} for r in rows]

@@ -79,11 +79,11 @@ def request_model(body,records,run_id,*,full_collection=False):
     if not input_rate.is_finite() or not output_rate.is_finite() or input_rate<=0 or output_rate<=0 or budget<=0:
         raise Conflict('Verified model pricing and a separate monetary allowance required')
     reserve=int(((len(json.dumps(body).encode())+2048)*input_rate+body['max_output_tokens']*output_rate).to_integral_value(rounding=ROUND_CEILING))
-    request_id=uuid4();metadata={'prompt_hash':hashlib.sha256(instructions.encode()).hexdigest(),'request_hash':identity}
+    request_id=uuid4();metadata={'prompt_hash':hashlib.sha256(instructions.encode()).hexdigest(),'request_hash':identity,'input_record_count':len(records),'full_collection':full_collection}
     with transaction() as conn:
         ws=os.environ['RMU_WORKSPACE_ID']
         conn.execute('SELECT id FROM rmu.workspaces WHERE id=%s FOR UPDATE',(ws,))
-        previous=conn.execute("SELECT coalesce(sum(CASE WHEN state='validated' AND usage ? '_rmu_cost_ceiling_microusd' THEN (usage->>'_rmu_cost_ceiling_microusd')::bigint ELSE reserved_microusd END),0) AS held,count(*) AS n FROM rmu.model_requests").fetchone()
+        previous=conn.execute("SELECT coalesce(sum(CASE WHEN (state='validated' OR resolution IS NOT NULL) AND usage ? '_rmu_cost_ceiling_microusd' THEN (usage->>'_rmu_cost_ceiling_microusd')::bigint ELSE reserved_microusd END),0) AS held,count(*) AS n FROM rmu.model_requests").fetchone()
         if previous['held']+reserve>budget or previous['n']>=cap:raise Conflict('Model allowance exhausted')
         if conn.execute('SELECT 1 FROM rmu.model_requests WHERE request_hash=%s',(identity,)).fetchone():raise Conflict('Model request already recorded; no retry')
         # Bind all provided evidence IDs and exact text to this run before sending it.
@@ -93,16 +93,16 @@ def request_model(body,records,run_id,*,full_collection=False):
     req=Request('https://api.openai.com/v1/responses',data=json.dumps(body).encode(),headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},method='POST')
     # Failure retains reservation. No automatic retry, including incomplete/refused output.
     with urlopen(req,timeout=300) as response:payload=json.load(response)
+    usage=payload.get('usage')
+    if isinstance(usage,dict) and all(type(usage.get(k)) is int and usage[k]>=0 for k in ('input_tokens','output_tokens')):
+        usage={**usage,'_rmu_cost_ceiling_microusd':int((usage['input_tokens']*input_rate+usage['output_tokens']*output_rate).to_integral_value(rounding=ROUND_CEILING))}
+    with transaction() as conn:
+        conn.execute("UPDATE rmu.model_requests SET state='received',response_id=%s,usage=%s,response_payload=%s WHERE id=%s",(payload.get('id'),Jsonb(usage),Jsonb(payload),request_id))
     archive=BASE/'private';archive.mkdir(mode=0o700,exist_ok=True)
     path=archive/('model-response-'+str(request_id)+'.json')
     with path.open('x') as f:
         os.chmod(path,0o600)
         json.dump({'workspace_id':ws,'request_id':str(request_id),'run_id':run_id,'request_hash':identity,'response':payload},f,default=str)
-    usage=payload.get('usage')
-    if isinstance(usage,dict) and all(type(usage.get(k)) is int and usage[k]>=0 for k in ('input_tokens','output_tokens')):
-        usage={**usage,'_rmu_cost_ceiling_microusd':int((usage['input_tokens']*input_rate+usage['output_tokens']*output_rate).to_integral_value(rounding=ROUND_CEILING))}
-    with transaction() as conn:
-        conn.execute("UPDATE rmu.model_requests SET state='received',response_id=%s,usage=%s WHERE id=%s",(payload.get('id'),Jsonb(usage),request_id))
     if payload.get('status')!='completed':raise Conflict('Model output incomplete; inspect request receipt')
     parts=[c['text'] for o in payload.get('output',[]) if o.get('type')=='message' for c in o.get('content',[]) if c.get('type')=='output_text']
     return json.loads(''.join(parts)),request_id,metadata,payload

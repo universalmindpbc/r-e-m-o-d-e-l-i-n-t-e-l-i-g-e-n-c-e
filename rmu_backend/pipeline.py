@@ -135,7 +135,7 @@ def get_run(run_id):
         result['classifications']=[dict(r) for r in conn.execute('SELECT id,observation_id,codebook_version,theme,stance,evidence_span,review_state,provenance FROM rmu.classifications WHERE observation_id=ANY(%s) ORDER BY observation_id,theme',(evidence_ids,))] if evidence_ids else []
         result['model_analysis']=dict(conn.execute('''SELECT count(*) AS labels,count(DISTINCT c.observation_id) AS coded_posts,count(*) FILTER(WHERE review_state='approved') AS reviewed_labels FROM rmu.classifications c JOIN rmu.run_observations ro ON ro.workspace_id=c.workspace_id AND ro.observation_id=c.observation_id WHERE ro.run_id=%s''',(run_id,)).fetchone())
         result['model_requests']=[dict(r) for r in conn.execute('SELECT model,state,usage,created_at FROM rmu.model_requests WHERE run_id=%s ORDER BY created_at DESC',(run_id,))]
-        result['model_budget']={'cap_microusd':int(os.environ.get('RMU_MODEL_BUDGET_MICROUSD','0')),'accounted_microusd':int(conn.execute("SELECT coalesce(sum(CASE WHEN state='validated' AND usage ? '_rmu_cost_ceiling_microusd' THEN (usage->>'_rmu_cost_ceiling_microusd')::bigint ELSE reserved_microusd END),0) AS n FROM rmu.model_requests").fetchone()['n'])}
+        result['model_budget']={'cap_microusd':int(os.environ.get('RMU_MODEL_BUDGET_MICROUSD','0')),'accounted_microusd':int(conn.execute("SELECT coalesce(sum(CASE WHEN (state='validated' OR resolution IS NOT NULL) AND usage ? '_rmu_cost_ceiling_microusd' THEN (usage->>'_rmu_cost_ceiling_microusd')::bigint ELSE reserved_microusd END),0) AS n FROM rmu.model_requests").fetchone()['n'])}
         return result
 
 

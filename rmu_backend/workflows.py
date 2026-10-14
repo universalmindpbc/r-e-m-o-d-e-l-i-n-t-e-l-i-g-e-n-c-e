@@ -57,7 +57,7 @@ def get(run_id):
 def resume(run_id):
  with transaction() as c:
   ident=UUID(run_id)
-  if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated'",(ident,)).fetchone() or c.execute("SELECT 1 FROM rmu.collection_pages WHERE run_id=%s AND state IN ('reserved','uncertain')",(ident,)).fetchone():
+  if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated' AND resolution IS NULL",(ident,)).fetchone() or c.execute("SELECT 1 FROM rmu.collection_pages WHERE run_id=%s AND state IN ('reserved','uncertain')",(ident,)).fetchone():
    raise pipeline.Conflict('An earlier paid request has an uncertain result. It must be reconciled before another charge; retained data is available to download.')
   c.execute("UPDATE rmu.workflows SET state='queued',error=NULL,lease_until=NULL WHERE run_id=%s AND state='needs_attention'",(ident,))
  kick(run_id)
@@ -66,7 +66,7 @@ def resume(run_id):
 def map_approved(run_id):
  with transaction() as c:
   ident=UUID(run_id)
-  if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated'",(ident,)).fetchone():raise pipeline.Conflict('Reconcile the existing model request before mapping fields.')
+  if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated' AND resolution IS NULL",(ident,)).fetchone():raise pipeline.Conflict('Reconcile the existing model request before mapping fields.')
   mapped=c.execute("SELECT result FROM rmu.analyses WHERE run_id=%s AND metric_version='approved-panels-v2'",(ident,)).fetchone()
   if mapped and all(mapped['result']['messaging']['shared'].values()) and all(mapped['result']['messaging']['actions'].values()):return get(run_id)
   c.execute("UPDATE rmu.workflows SET state='queued',error=NULL,lease_until=NULL WHERE run_id=%s AND state IN ('ready','needs_attention')",(ident,))
@@ -147,7 +147,7 @@ def work(run_id):
    row=c.execute("UPDATE rmu.workflows SET lease_token=%s,lease_until=now()+interval '10 minutes' WHERE run_id=%s AND state NOT IN ('ready','empty','needs_attention') AND (lease_until IS NULL OR lease_until<now()) RETURNING *",(token,UUID(run_id))).fetchone()
    if not row:return
    version=row['codebook_version']
-   if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated'",(UUID(run_id),)).fetchone():raise pipeline.Conflict('An interrupted model request needs reconciliation before retrying; no duplicate charge was sent.')
+   if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated' AND resolution IS NULL",(UUID(run_id),)).fetchone():raise pipeline.Conflict('An interrupted model request needs reconciliation before retrying; no duplicate charge was sent.')
   def stage(value):
    with transaction() as c:
     if not c.execute("UPDATE rmu.workflows SET state=%s,lease_until=now()+interval '10 minutes',updated_at=now() WHERE run_id=%s AND lease_token=%s RETURNING run_id",(value,UUID(run_id),token)).fetchone():raise pipeline.Conflict('Workflow lease changed')
@@ -181,7 +181,7 @@ def work(run_id):
   populate(run_id,heartbeat=lambda:stage('synthesising'))
   stage('ready')
  except Exception as e:
-  message=str(e) if isinstance(e,pipeline.Conflict) else 'The '+type(e).__name__+' check stopped this run. Retained data is safe; no automatic paid retry was sent.'
+  message=str(e) if isinstance(e,(pipeline.Conflict,ValueError)) else 'The '+type(e).__name__+' check stopped this run. Retained data is safe; no automatic paid retry was sent.'
   with transaction() as c:c.execute("UPDATE rmu.workflows SET state='needs_attention',error=%s,updated_at=now() WHERE run_id=%s AND lease_token=%s",(message,UUID(run_id),token))
  finally:
   with transaction() as c:c.execute('UPDATE rmu.workflows SET lease_until=NULL,lease_token=NULL WHERE run_id=%s AND lease_token=%s',(UUID(run_id),token))
