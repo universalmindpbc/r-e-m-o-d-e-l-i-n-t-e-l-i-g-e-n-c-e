@@ -139,9 +139,9 @@ def application(environ, start_response):
         return reply("409 Conflict", {"error": str(error)})
     except (ValueError, UnicodeError) as error:
         return reply("400 Bad Request", {"error": str(error)})
-    except Exception:
+    except Exception as error:
         # Do not echo SQL, credentials, evidence or provider responses to a client or logs.
-        logging.error("Pipeline operation failed: method=%s path=%s", method, path)
+        logging.error("Pipeline operation failed: method=%s path=%s type=%s", method, path,type(error).__name__)
         return reply("503 Service Unavailable", {"error": "Pipeline temporarily unavailable"})
     return reply("404 Not Found", {"error": "No such endpoint"})
 
