@@ -6,8 +6,8 @@ from .db import transaction
 from . import pipeline
 from .inference import object_schema,STR,validate_classifications
 from .workflows import call,prompt
-VERSION='approved-panels-v2'
-CODEBOOK='approved-overview-v1'
+VERSION='approved-panels-v3'
+CODEBOOK='approved-overview-v2'
 THEMES={'Frontline communities':'Explicit reference to communities on the frontlines of climate burdens, including unequal exposure and community-led responses. General climate concern alone is insufficient.','Climate resilience':'Explicit preparedness, adaptation, recovery or resilience to climate impacts. Generic sustainability alone is insufficient.','Equitable funding':'Explicit allocation or access to climate funding/resources with fairness, underserved groups or grassroots recipients. Generic charity alone is insufficient.'}
 STANCES=['support','opposition','mixed','no_clear_position']
 
@@ -16,14 +16,20 @@ def aggregate(rows,codes):
  themes=[]
  for name in THEMES:
   n=sum(lookup[(r['record_id'],name)]['provenance']['relevance']=='relevant' for r in talent)
-  counts=[0]*4
+  counts=[0]*4;not_discussed=0;uncertain=0
   for author in authors:
-   stance={lookup[(r['record_id'],name)]['stance'] for r in fans if r['author_id']==author};clear=stance-{'no_clear_position'}
+   labels=[lookup[(r['record_id'],name)] for r in fans if r['author_id']==author]
+   relevant_labels=[c for c in labels if c['provenance']['relevance']=='relevant']
+   if not relevant_labels:
+    if any(c['provenance']['relevance']=='uncertain' for c in labels):uncertain+=1
+    else:not_discussed+=1
+    continue
+   stance={c['stance'] for c in relevant_labels};clear=stance-{'no_clear_position'}
    value='mixed' if 'mixed' in clear or {'support','opposition'}<=clear else next(iter(clear)) if clear else 'no_clear_position'
    counts[STANCES.index(value)]+=1
   evidence=[{'record_id':r['record_id'],'cohort':r['cohort'],'quote':lookup[(r['record_id'],name)]['evidence_span'],'stance':lookup[(r['record_id'],name)]['stance'],'reason':lookup[(r['record_id'],name)]['provenance']['reason']} for r in rows if lookup[(r['record_id'],name)]['evidence_span']]
-  themes.append({'name':name,'posts':n,'stance':counts,'interpretation':'Candidate shared priority to test' if n and counts[0] else 'Insufficient shared evidence; investigate the gap','evidence':evidence})
- return {'audienceScope':'public_conversation','organisationPosts':sum(r['cohort']=='organisation' for r in rows),'inferredFanAccounts':len({r['author_id'] for r in fans if r['cohort']=='inferred_fan'}),'talentPosts':len(talent),'fanPosts':len(fans),'fanAccounts':len(authors),'themes':themes,'priorities':sum(t['posts']>0 and t['stance'][0]>0 for t in themes),'reviewedLabels':sum(c['review_state']=='approved' for c in codes)}
+  themes.append({'name':name,'posts':n,'stance':counts,'relevantAccounts':sum(counts),'notDiscussedAccounts':not_discussed,'uncertainRelevanceAccounts':uncertain,'interpretation':'Candidate shared priority to test' if n and counts[0] else 'Insufficient shared evidence; investigate the gap','evidence':evidence})
+ return {'audienceScope':'public_conversation','organisationPosts':sum(r['cohort']=='organisation' for r in rows),'inferredFanAccounts':len({r['author_id'] for r in fans if r['cohort']=='inferred_fan'}),'talentPosts':len(talent),'fanPosts':len(fans),'fanAccounts':len(authors),'themes':themes,'priorities':sum(t['posts']>0 and t['stance'][0]>0 for t in themes),'aggregationVersion':'relevance-aware-v2','reviewedLabels':sum(c['review_state']=='approved' for c in codes)}
 
 def populate(run_id,heartbeat=None):
  with transaction() as c:
@@ -39,12 +45,13 @@ def populate(run_id,heartbeat=None):
  def classify_batch(batch):
   if heartbeat:heartbeat()
   items=[{k:r[k] for k in ['record_id','text','cohort']} for r in batch]
-  schema=object_schema({'classifications':{'type':'array','items':object_schema({'record_id':STR,'theme':{'type':'string','enum':list(THEMES)},'relevance':{'type':'string','enum':['relevant','not_relevant','uncertain']},'stance':{'type':'string','enum':STANCES},'evidence_span':{'type':['string','null']},'reason':STR})}})
+  from .contextual import schema as contextual_schema
+  schema=contextual_schema(THEMES)
   out,rid,meta,res=call({'instructions':prompt()+'\nPopulate the exact approved three-theme chart. Return every record/theme pair exactly once. Quotes must be short contiguous exact substrings; use null when unsupported. Never insert ellipses, paraphrase, or rewrite Unicode escapes. Reasons <=100 characters; evidence spans <=160 characters and exactly source-matched. No inferred position from celebrity enthusiasm.','input':json.dumps({'campaign':run['campaign'],'codebook':THEMES,'records':items}), 'text':{'format':{'type':'json_schema','name':'approved_chart_coding','strict':True,'schema':schema}}},items,str(run_id))
-  validate_classifications(out,items,themes=THEMES)
+  validate_classifications(out,items,themes=THEMES,contextual=True)
   with transaction() as c:
    for x in out['classifications']:
-    prov={**meta,'model':'gpt-6-astra','reasoning':'high','relevance':x['relevance'],'reason':x['reason'],'run_id':str(run_id),'response_id':res['id'],'review_required':True}
+    prov={**meta,'model':'gpt-6-astra','reasoning':'high','relevance':x['relevance'],'reason':x['reason'],'run_id':str(run_id),'response_id':res['id'],'review_required':True,'context':x['context'],'opinion_contract':'contextual-opinion-v1'}
     row=c.execute('INSERT INTO rmu.classifications(workspace_id,id,observation_id,codebook_version,theme,stance,evidence_span,provenance) VALUES(%s,%s,%s,%s,%s,%s,%s,%s) RETURNING *',(run['workspace_id'],uuid4(),UUID(x['record_id']),CODEBOOK,x['theme'],x['stance'],x['evidence_span'],Jsonb(prov))).fetchone();codes.append(row)
    c.execute("UPDATE rmu.model_requests SET state='validated' WHERE id=%s",(rid,))
  from concurrent.futures import ThreadPoolExecutor

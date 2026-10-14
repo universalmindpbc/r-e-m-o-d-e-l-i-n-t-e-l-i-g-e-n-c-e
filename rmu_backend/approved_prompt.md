@@ -11,6 +11,22 @@ For each theme, return relevance (relevant, not_relevant, uncertain), stance (su
 **Identify author assertions separately from quoted assertions.** Do not treat reposts as independent original statements. Return an exact text span supporting each non-unclear classification; use null when evidence is insufficient. Never infer that a missing position means opposition.
 **Return record_id and codebook_version unchanged.** Do not assign cohort identity from the cause-related stance. No numerical scores, population claims, approval or cross-author aggregation belong in this step.
 <empty-block/>
+## Contextual opinion contract · 15 October 2026
+These rules refine earlier classification instructions for every celebrity, organisation and topic. Use the supplied JSON schema; it is authoritative over earlier field lists.
+
+- Assess EVERY supplied post, including news reports, announcements, questions and quoted material. Format is independent of stance: news can be supportive, critical, mixed or descriptive. Never use an outlet's reputation as evidence of its position.
+- First identify what the supplied text discusses. Relevance is separate from opinion. Not discussing a narrow theme is not neutrality, opposition, lack of interest or disagreement with the wider cause.
+- Identify the target of evaluative framing: person, campaign, cause, recipients, business practices, media coverage or another explicit target. Record that target in plain language. Do not transfer criticism or affection between targets.
+- Read wording, headline framing, negation, context, praise, emoji and irony together. Contextual support is valid when the praise or emoji clearly responds to the campaign action in the supplied text. General celebrity affection alone does not establish cause support or fan membership.
+- A headline praising a donation can support a favourable classification; a headline attacking the donation or its recipients can support a critical classification. A bare amount/date announcement may be descriptive. Do not call every news item neutral. Do not manufacture a position because positive results are expected.
+- Distinguish the post's framing from a quoted speaker's assertion. Reporting that a critic objects does not by itself mean the author objects. A repost alone establishes circulation, not endorsement. Only assess the headline/post actually supplied; do not pretend the linked article or missing parent post was read.
+- Questions can coexist with support or criticism. When a question alone has no discernible position, use question_only. Mixed requires support and criticism toward the same specified theme; praise of the person plus uncertainty about the cause is not automatically mixed cause stance.
+- Return an exact source span and a concise evidence-based reason for every support, opposition or mixed label. Mark stance_basis explicit or contextual. Framing has its own exact span and target so criticism of media cannot silently become opposition to the cause.
+- If no position is discernible, explain why: descriptive, question_only, not_discussed, ambiguous_target or insufficient_context. Use no_position stance_basis. Never equate these cases with indifference.
+- Keep original posts, authors, fan inference and survey evidence distinct. Prolific findings remain unavailable until actual responses are supplied. AI classifications are not human-validated findings.
+- Reporting: show whole-collection coverage separately from stance among accounts discussing each theme. Retain relevant but unclear responses in that theme's denominator. Show not-discussed and relevance-uncertain counts separately. Combine conflicting relevant positions from the same account as mixed; never average unrelated denominators into alignment.
+- Preserve signed-off dashboard fields and design. Explain what we see, its supporting and challenging evidence, what to change and how to test it. Keep technical processing status in the evidence/method layer.
+
 ## Exact draft prompt: Overview intelligence
 **Using only supplied reviewed evidence and computed metrics, prepare three objects:** rihanna, fans and alignment.
 **Rihanna:** describe communication emphasis, cite original posts, and separate personal statements from organisational announcements and independently verified delivery. Report any missing approved talent brief.

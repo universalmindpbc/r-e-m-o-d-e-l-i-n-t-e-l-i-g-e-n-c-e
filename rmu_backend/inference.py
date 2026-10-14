@@ -23,15 +23,18 @@ classification=object_schema({'record_id':STR,'theme':{'type':'string','enum':li
 SCHEMA=object_schema({'classifications':{'type':'array','items':classification}})
 
 
-def validate_classifications(result,records,themes=None):
+def validate_classifications(result,records,themes=None,contextual=False):
     themes=THEMES if themes is None else themes
     if not isinstance(result,dict) or set(result)!={'classifications'} or not isinstance(result['classifications'],list):raise ValueError('Invalid classification response')
     texts={r['record_id']:r['text'] for r in records};seen=set()
     for item in result['classifications']:
-        if not isinstance(item,dict) or set(item)!=set(classification['properties']):raise ValueError('Invalid classification fields')
+        if not isinstance(item,dict) or set(item)!=(set(classification['properties'])|({'context'} if contextual else set())):raise ValueError('Invalid classification fields')
         ident,theme=item['record_id'],item['theme']
         if ident not in texts or theme not in themes or (ident,theme) in seen:raise ValueError('Unknown or duplicate evidence/theme')
         seen.add((ident,theme))
+        if contextual:
+            from .contextual import validate_context
+            validate_context(item,texts[ident])
         if item['relevance'] not in ('relevant','not_relevant','uncertain') or item['stance'] not in ('support','opposition','mixed','no_clear_position'):raise ValueError('Invalid label')
         span=item['evidence_span']
         if span is not None and (not isinstance(span,str) or not span.strip() or span not in texts[ident]):raise ValueError('Evidence span not in source')

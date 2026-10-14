@@ -5,7 +5,7 @@ from uuid import UUID
 from .db import transaction
 from .inference import THEMES,CODEBOOK_VERSION
 BASE_COLUMNS=['exported_at_utc','run_id','campaign_name','source_type','evidence_lane','collection_query','analysis_start','analysis_end','post_id','post_url','author_id','published_at_utc','retrieved_at_utc','post_type','language','post_text','post_text_json','inferred_cohort','cohort_evidence_json','public_metrics_json','codebook_version','classification_status','all_classifications_json']
-THEME_COLUMNS=['relevance','stance','evidence_span','reason','review_state','model','reasoning_effort','prompt_hash']
+THEME_COLUMNS=['relevance','stance','evidence_span','reason','review_state','model','reasoning_effort','prompt_hash','context_json']
 
 def safe_cell(value):
  text='' if value is None else str(value)
@@ -16,9 +16,9 @@ def safe_cell(value):
 def render_csv(run,records,classifications):
  by_record={}
  for item in classifications:by_record.setdefault(str(item['observation_id']),[]).append(item)
- from .workflows import THEMES as GENERIC,VERSION
- generic=any(c['codebook_version']==VERSION for c in classifications)
- themes=GENERIC if generic else THEMES;version=VERSION if generic else CODEBOOK_VERSION
+ from .workflows import THEMES as GENERIC,VERSION,GENERIC_VERSIONS
+ generic=any(c['codebook_version'] in GENERIC_VERSIONS for c in classifications)
+ themes=GENERIC if generic else THEMES;version=(VERSION if any(c['codebook_version']==VERSION for c in classifications) else 'campaign-evidence-v1') if generic else CODEBOOK_VERSION
  fields=BASE_COLUMNS+[theme+'_'+field for theme in themes for field in THEME_COLUMNS]
  stream=io.StringIO(newline='');writer=csv.DictWriter(stream,fieldnames=fields,quoting=csv.QUOTE_ALL);writer.writeheader()
  exported=datetime.now(timezone.utc).isoformat()
@@ -30,7 +30,7 @@ def render_csv(run,records,classifications):
    matches=[c for c in current if c['theme']==theme]
    if len(matches)!=1:continue
    c=matches[0];provenance=c['provenance']
-   values=dict(relevance=provenance.get('relevance'),stance=c['stance'],evidence_span=c['evidence_span'],reason=provenance.get('reason'),review_state=c['review_state'],model=provenance.get('model'),reasoning_effort=provenance.get('reasoning'),prompt_hash=provenance.get('prompt_hash'))
+   values=dict(relevance=provenance.get('relevance'),stance=c['stance'],evidence_span=c['evidence_span'],reason=provenance.get('reason'),review_state=c['review_state'],model=provenance.get('model'),reasoning_effort=provenance.get('reasoning'),prompt_hash=provenance.get('prompt_hash'),context_json=json.dumps(provenance.get('context'),ensure_ascii=False))
    row.update({theme+'_'+key:value for key,value in values.items()})
   writer.writerow({key:safe_cell(value) for key,value in row.items()})
  return ('\ufeff'+stream.getvalue()).encode('utf-8')
