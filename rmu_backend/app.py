@@ -108,11 +108,10 @@ def application(environ, start_response):
                 return reply("202 Accepted",start(payload))
             if workflow_match and workflow_match[2]=="resume":
                 if payload:raise ValueError("Unexpected resume fields")
-                from .workflows import get,kick
+                from .workflows import get,resume
                 data=get(workflow_match[1])
                 if not data:return reply("404 Not Found",{"error":"Run not found"})
-                kick(workflow_match[1])
-                return reply("202 Accepted",data)
+                return reply("202 Accepted",resume(workflow_match[1]))
             if path == "/v1/collection-preview":
                 return reply("200 OK", collection_preview(payload))
             if path == "/v1/runs":

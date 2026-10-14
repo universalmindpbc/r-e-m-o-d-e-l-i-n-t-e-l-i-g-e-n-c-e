@@ -53,6 +53,15 @@ def get(run_id):
  result['codebook']=THEMES;result['codebook_version']=VERSION
  return result
 
+def resume(run_id):
+ with transaction() as c:
+  ident=UUID(run_id)
+  if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated'",(ident,)).fetchone() or c.execute("SELECT 1 FROM rmu.collection_pages WHERE run_id=%s AND state IN ('reserved','uncertain')",(ident,)).fetchone():
+   raise pipeline.Conflict('An earlier paid request has an uncertain result. It must be reconciled before another charge; retained data is available to download.')
+  c.execute("UPDATE rmu.workflows SET state='queued',error=NULL,lease_until=NULL WHERE run_id=%s AND state='needs_attention'",(ident,))
+ kick(run_id)
+ return get(run_id)
+
 def kick(run_id):
  threading.Thread(target=work,args=(run_id,),daemon=True).start()
 
@@ -99,7 +108,11 @@ def synthesise(run,all_records):
   for cl in codes:
    r=lookup.get(str(cl['observation_id']))
    if r and cl['stance']==stance and r not in selected:selected.append(r)
- items=selected[:20]
+ items=[]
+ for record in selected:
+  if len(items)>=20:break
+  if len(json.dumps(items+[record]).encode())<=28000:items.append(record)
+ if not items:items=selected[:1]
  counts={t:{s:sum(x['theme']==t and x['stance']==s for x in codes) for s in ['support','opposition','mixed','no_clear_position']} for t in THEMES}
  instruction=prompt()+'\nPrepare seven human-readable intelligence panels. Describe what we see, evidence supporting/challenging it, limitations, a concrete change, and a feasible test. The talent panel requires posts from a resolved talent identity for personal-position claims. Public discussion is not verified fandom. Audience and societal needs require validation; Prolific is pending. Shared values are proposed messaging hypotheses. No numerical alignment, causal effects, private motives or survey findings. supports/challenges contain supplied record IDs only. Every panel must include limitations. Observation requires supporting IDs. All outputs draft.'
  data={'campaign':run['campaign'],'window':[str(run['starts_on']),str(run['ends_on'])],'records':items,'sample_metrics':metric['result'],'machine_stance_counts':counts,'codebook':THEMES,'classification_review':'pending','selection':'Up to 20 source posts prioritising opposition, mixed, support, then unclear; not representative','prolific':'pending'}
@@ -138,7 +151,12 @@ def work(run_id):
   with transaction() as c:
    coded={str(r['observation_id']) for r in c.execute('SELECT cl.observation_id FROM rmu.classifications cl JOIN rmu.run_observations ro ON ro.workspace_id=cl.workspace_id AND ro.observation_id=cl.observation_id WHERE ro.run_id=%s AND cl.codebook_version=%s GROUP BY cl.observation_id HAVING count(DISTINCT theme)=%s',(UUID(run_id),VERSION,len(THEMES)))}
   pending=[r for r in items if r['record_id'] not in coded]
-  for i in range(0,len(pending),20):stage('classifying');classify(pending[i:i+20],run)
+  batch=[]
+  for record in pending:
+   if batch and (len(batch)>=20 or len(json.dumps(batch+[record]).encode())>30000):
+    stage('classifying');classify(batch,run);batch=[]
+   batch.append(record)
+  if batch:stage('classifying');classify(batch,run)
   stage('synthesising')
   with transaction() as c:existing=c.execute('SELECT 1 FROM rmu.findings f JOIN rmu.analyses a ON a.workspace_id=f.workspace_id AND a.id=f.analysis_id WHERE a.run_id=%s',(UUID(run_id),)).fetchone()
   if not existing:synthesise(run,items)
