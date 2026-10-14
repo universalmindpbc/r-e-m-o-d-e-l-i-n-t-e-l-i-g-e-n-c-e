@@ -1,5 +1,6 @@
 """Transactions always select a non-owner role and a server-bound workspace."""
 import os
+import encodings.idna  # Initialise hostname codec before recovery/request threads start.
 from contextlib import contextmanager
 from uuid import UUID
 import psycopg
