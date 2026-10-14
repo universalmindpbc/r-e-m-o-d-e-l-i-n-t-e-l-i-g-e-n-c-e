@@ -68,6 +68,12 @@ def request_model(body,records,run_id,*,full_collection=False):
     if not 1<=len(records)<=limit or len({r['record_id'] for r in records})!=len(records):raise ValueError('Evidence count exceeds bounded request size')
     instructions=body['instructions']
     identity=digest(body)
+    # An operator may authorise exactly one replacement while retaining the old charge.
+    with transaction() as conn:
+        prior=conn.execute('SELECT id,resolution FROM rmu.model_requests WHERE request_hash=%s',(identity,)).fetchone()
+    if prior and (prior['resolution'] or {}).get('outcome')=='retry_authorised':
+        body={**body,'metadata':{**body.get('metadata',{}),'rmu_recovery_of':str(prior['id'])}}
+        identity=digest(body)
     cap=int(os.environ.get('RMU_MODEL_MAX_CALLS','0'))
     if not 1<=cap<=100:raise Conflict('Model call allowance exhausted or unset')
     if len(body['input'].encode())>(250000 if full_collection else 40000):raise ValueError('Batch exceeds input size bound')
