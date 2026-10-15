@@ -11,8 +11,8 @@ VERSION='research-brief-v1'
 VIEWS=['Talent','Audience','Society','Shared Values']
 def array(item,minimum=1,maximum=8):return {'type':'array','items':item,'minItems':minimum,'maxItems':maximum}
 EVIDENCE=object_schema({'source':STR,'quote':STR,'role':{'type':'string','enum':['supports','challenges','context']},'reading':STR})
-FINDING=object_schema({**{k:STR for k in ['title','observation','interpretation','value_tension','alternative','implication','message_a','message_b','test','limitation']},'views':array({'type':'string','enum':VIEWS},1,4),'evidence':array(EVIDENCE,2,6)})
-SCHEMA=object_schema({'headline':STR,'summary':STR,'findings':array(FINDING,6,6)})
+FINDING=object_schema({**{k:STR for k in ['title','observation','interpretation','value_tension','alternative','implication','message_a','message_b','test','limitation']},'views':array({'type':'string','enum':VIEWS},1,4),'evidence':array(EVIDENCE,1,6)})
+SCHEMA=object_schema({'headline':STR,'summary':STR,'findings':array(FINDING,1,6)})
 def collection_stats(rows):
  groups={}
  for row in rows:
@@ -25,13 +25,13 @@ def collection_stats(rows):
 def validate(out,rows):
  if not isinstance(out,dict) or not out.get('headline','').strip() or not out.get('summary','').strip():raise ValueError('Missing research synthesis')
  findings=out.get('findings',[])
- if len(findings)!=6:raise ValueError('Six developed findings required')
+ if not 1<=len(findings)<=6:raise ValueError('One to six supported findings required')
  lookup={str(i):r for i,r in enumerate(rows)}
  for f in findings:
   if not f.get('views') or not set(f['views'])<=set(VIEWS):raise ValueError('Unknown perspective')
   for k in ['title','observation','interpretation','value_tension','alternative','implication','message_a','message_b','test','limitation']:
    if not isinstance(f.get(k),str) or not f[k].strip() or len(f[k])>1600:raise ValueError('Incomplete research argument')
-  if not 2<=len(f.get('evidence',[]))<=6:raise ValueError('Evidence required')
+  if not 1<=len(f.get('evidence',[]))<=6:raise ValueError('Evidence required')
   seen=set()
   for e in f['evidence']:
    row=lookup.get(e.get('source'))
@@ -40,8 +40,6 @@ def validate(out,rows):
    seen.add(e['source'])
    if e.get('role') not in ['supports','challenges','context'] or not e.get('reading','').strip():raise ValueError('Evidence reading required')
   if not any(e['role']=='supports' for e in f['evidence']):raise ValueError('Finding lacks supporting evidence')
- for view in VIEWS:
-  if not any(view in f['views'] for f in findings):raise ValueError('Missing perspective')
  return out
 
 def populate(run_id,heartbeat=None):

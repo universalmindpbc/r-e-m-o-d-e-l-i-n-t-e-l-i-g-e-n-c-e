@@ -17,7 +17,9 @@ class ResearchTests(unittest.TestCase):
   rows=[{'record_id':str(i),'text':t,'cohort':'uncertain'} for i,t in enumerate(['Same headline https://t.co/a','same headline https://t.co/b','Not the same headline','https://t.co/c'])]
   s=collection_stats(rows)
   self.assertEqual(s['repeated_posts'],2);self.assertEqual(s['repeat_excess'],1);self.assertEqual(s['total'],4)
- def test_missing_perspective_rejected(self):
+ def test_sparse_other_topic_does_not_force_perspectives(self):
   for f in self.out['findings']:f['views']=['Audience']
-  with self.assertRaises(ValueError):validate(self.out,self.rows)
+  self.out['findings']=self.out['findings'][:1]
+  self.rows[0]['text']='Love her but what does it mean? Public transport.'
+  validate(self.out,self.rows)
 if __name__=='__main__':unittest.main()
