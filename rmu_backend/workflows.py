@@ -70,7 +70,8 @@ def map_approved(run_id):
   if c.execute("SELECT 1 FROM rmu.model_requests WHERE run_id=%s AND state!='validated' AND resolution IS NULL",(ident,)).fetchone():raise pipeline.Conflict('Reconcile the existing model request before mapping fields.')
   mapped=c.execute("SELECT result FROM rmu.analyses WHERE run_id=%s AND metric_version='approved-panels-v4'",(ident,)).fetchone()
   researched=c.execute("SELECT 1 FROM rmu.analyses WHERE run_id=%s AND metric_version='research-brief-v1'",(ident,)).fetchone()
-  if mapped and researched and all(mapped['result']['messaging']['shared'].values()) and all(mapped['result']['messaging']['actions'].values()):return get(run_id)
+  priorities=c.execute("SELECT 1 FROM rmu.analyses WHERE run_id=%s AND metric_version='campaign-priorities-v1'",(ident,)).fetchone()
+  if mapped and researched and priorities and all(mapped['result']['messaging']['shared'].values()) and all(mapped['result']['messaging']['actions'].values()):return get(run_id)
   c.execute("UPDATE rmu.workflows SET state='queued',error=NULL,lease_until=NULL WHERE run_id=%s AND state IN ('ready','needs_attention')",(ident,))
  kick(run_id)
  return get(run_id)
@@ -184,6 +185,8 @@ def work(run_id):
   populate(run_id,heartbeat=lambda:stage('synthesising'))
   from .deep_research import populate as research
   research(run_id,heartbeat=lambda:stage('synthesising'))
+  from .campaign_priorities import populate as priorities
+  priorities(run_id,heartbeat=lambda:stage('synthesising'))
   stage('ready')
  except Exception as e:
   message=str(e) if isinstance(e,(pipeline.Conflict,ValueError)) else 'The '+type(e).__name__+' check stopped this run. Retained data is safe; no automatic paid retry was sent.'
