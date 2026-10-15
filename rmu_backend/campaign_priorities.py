@@ -35,7 +35,7 @@ def populate(run_id,heartbeat=None):
  if not rows:return None
  prompt=(Path(__file__).parent/'priorities_prompt.md').read_text()
  if heartbeat:heartbeat()
- out,rid,meta,res=call({'max_output_tokens':14000,'instructions':prompt,'input':json.dumps({'campaign':run['campaign'],'posts':[{'id':str(i),'lane':r['cohort'],'text':r['text']} for i,r in enumerate(rows)]},ensure_ascii=False,separators=(',',':')),'text':{'format':{'type':'json_schema','name':'campaign_priorities','strict':True,'schema':SCHEMA}}},rows,str(run_id),full_collection=True)
+ out,rid,meta,res=call({'max_output_tokens':24000,'instructions':prompt,'input':json.dumps({'campaign':run['campaign'],'posts':[{'id':str(i),'lane':r['cohort'],'text':r['text']} for i,r in enumerate(rows)]},ensure_ascii=False,separators=(',',':')),'text':{'format':{'type':'json_schema','name':'campaign_priorities','strict':True,'schema':SCHEMA}}},rows,str(run_id),full_collection=True)
  validate(out,rows)
  for t in out['topics']:
   for field in FIELDS:t[field]=[rows[int(i)]['record_id'] for i in t[field]]
