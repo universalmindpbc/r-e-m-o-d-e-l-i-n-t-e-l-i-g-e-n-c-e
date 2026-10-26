@@ -4,6 +4,7 @@ A research and strategy portal connecting observed evidence, reviewed analysis, 
 
 **Founder and maintainer:** Ben Korbel<br>
 **Copyright holder:** Universal Mind TV, Public Benefit Corporation<br>
+**Licensors:** Universal Mind TV, Public Benefit Corporation and Re-Model Universe, Public Benefit Corporation<br>
 **Public proofing portal:** [rmu.universalmind.tv](https://rmu.universalmind.tv)<br>
 **Production address:** [re-model.co/intelligence/](https://re-model.co/intelligence/)
 

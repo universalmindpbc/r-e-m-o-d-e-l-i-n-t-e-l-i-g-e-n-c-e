@@ -1,6 +1,6 @@
 # Licensing and permission requests
 
-**Licensor:** Universal Mind TV, Public Benefit Corporation<br>
+**Licensors:** Universal Mind TV, Public Benefit Corporation and Re-Model Universe, Public Benefit Corporation<br>
 **Founder and maintainer:** Ben Korbel<br>
 **Contact:** ben@internetofhappiness.org
 
@@ -14,7 +14,7 @@ The source is publicly inspectable under the [permission-required notice](LICENS
 | Approved organisational use below USD 1 million annual revenue | Fee-free licence within the approved scope. |
 | Organisational use at or above USD 1 million annual revenue | Nominal fee negotiated in good faith in a written agreement. |
 
-An organisation's revenue assessment and any later threshold crossing are addressed in its individual agreement. Rights to redistribute, provide a hosted service, sublicense or use branding need express treatment in that agreement. Third-party code and content retain their own terms.
+Each written agreement identifies the granting licensor or licensors. An organisation's revenue assessment and any later threshold crossing are addressed in its individual agreement. Rights to redistribute, provide a hosted service, sublicense or use branding need express treatment in that agreement. Third-party code and content retain their own terms.
 
 To apply, send Ben a personal note with your identity, organisation, purpose, planned modifications or deployment, anticipated users, duration and relevant revenue context. Academic requests can identify the institution, project and supervisor where applicable. Please keep sensitive research and commercial information out of public GitHub issues.
 

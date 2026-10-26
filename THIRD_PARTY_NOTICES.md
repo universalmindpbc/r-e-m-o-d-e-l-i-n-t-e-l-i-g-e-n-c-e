@@ -1,6 +1,6 @@
 # Third-party code, data and content
 
-The repository-level [permission-required notice](LICENSE) governs only original material that Universal Mind TV, Public Benefit Corporation has authority to license. Third-party components keep their original terms, attribution and notices. A project licence is not permission to reuse third-party media, publications, datasets, trademarks or hosted services.
+The repository-level [permission-required notice](LICENSE) governs only original material that the project licensors have authority to license. Third-party components keep their original terms, attribution and notices. A project licence is not permission to reuse third-party media, publications, datasets, trademarks or hosted services.
 
 Preserve every existing vendor licence and source-specific notice. Review the applicable dependency manifests, lockfiles, dataset provenance and asset notices before redistribution. A public citation or an accessible download is not itself a blanket republication licence. No new rights to provider APIs or services are granted here.
 
