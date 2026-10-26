@@ -10,7 +10,7 @@ Offline backend tests:
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
-Frontend tests are in `frontend/tests/`; several test files use the installed TypeScript/Vinext tooling. The standard frontend build is run from `frontend/`. Browser QA that involves media requires a separate Chromium process launched with `--mute-audio` before navigation, followed by closing every automated media page.
+From `frontend/`, run `pnpm test` for the 44 current portal checks and `pnpm run build` for the application build. The old starter-template assertions remain available as `test:legacy-template` for historical inspection; they target the original template, not the current portal. Browser QA that involves media requires a separate Chromium process launched with `--mute-audio` before navigation, followed by closing every automated media page.
 
 Live integration scripts, collection operators, database migrations and model jobs require separate environment configuration and explicit operational authorisation. Do not treat all scripts under `tests/` as offline tests.
 

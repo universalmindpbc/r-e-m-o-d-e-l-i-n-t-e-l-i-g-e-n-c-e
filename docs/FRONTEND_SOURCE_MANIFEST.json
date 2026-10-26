@@ -994,8 +994,10 @@
     {
       "source_path": "package.json",
       "repository_path": "frontend/package.json",
-      "sha256": "c7f77f30fdd06d00dce74fa2402b08dfb588ac28de9e68f2e96b6223dcbfc83d",
-      "bytes": 1570
+      "sha256": "52dfbdde7491ea758caaf84d6ca662c696c4ad8bc091f9b89839fa4c6c14a0a4",
+      "bytes": 1853,
+      "upstream_sha256": "c7f77f30fdd06d00dce74fa2402b08dfb588ac28de9e68f2e96b6223dcbfc83d",
+      "import_adaptation": "Set the portal package name and route the default test command to the 44 current portal tests; preserve old template assertions behind test:legacy-template."
     },
     {
       "source_path": "pnpm-lock.yaml",
