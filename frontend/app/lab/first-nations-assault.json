@@ -1,0 +1,388 @@
+{
+  "rows": [
+    {
+      "state": "NSW",
+      "year": 2014,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 3090,
+      "cell": "Table 37!B8"
+    },
+    {
+      "state": "NSW",
+      "year": 2015,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2975,
+      "cell": "Table 37!C8"
+    },
+    {
+      "state": "NSW",
+      "year": 2016,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2689,
+      "cell": "Table 37!D8"
+    },
+    {
+      "state": "NSW",
+      "year": 2017,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2740,
+      "cell": "Table 37!E8"
+    },
+    {
+      "state": "NSW",
+      "year": 2018,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2805,
+      "cell": "Table 37!F8"
+    },
+    {
+      "state": "NSW",
+      "year": 2019,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2943,
+      "cell": "Table 37!G8"
+    },
+    {
+      "state": "NSW",
+      "year": 2020,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2925,
+      "cell": "Table 37!H8"
+    },
+    {
+      "state": "NSW",
+      "year": 2021,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 3146,
+      "cell": "Table 37!I8"
+    },
+    {
+      "state": "NSW",
+      "year": 2022,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 5054,
+      "cell": "Table 37!J8"
+    },
+    {
+      "state": "NSW",
+      "year": 2023,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 5631,
+      "cell": "Table 37!K8"
+    },
+    {
+      "state": "NSW",
+      "year": 2024,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 5640,
+      "cell": "Table 37!L8"
+    },
+    {
+      "state": "NSW",
+      "year": 2025,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 5698,
+      "cell": "Table 37!M8"
+    },
+    {
+      "state": "QLD",
+      "year": 2014,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!B13"
+    },
+    {
+      "state": "QLD",
+      "year": 2015,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!C13"
+    },
+    {
+      "state": "QLD",
+      "year": 2016,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!D13"
+    },
+    {
+      "state": "QLD",
+      "year": 2017,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!E13"
+    },
+    {
+      "state": "QLD",
+      "year": 2018,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!F13"
+    },
+    {
+      "state": "QLD",
+      "year": 2019,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!G13"
+    },
+    {
+      "state": "QLD",
+      "year": 2020,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!H13"
+    },
+    {
+      "state": "QLD",
+      "year": 2021,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!I13"
+    },
+    {
+      "state": "QLD",
+      "year": 2022,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!J13"
+    },
+    {
+      "state": "QLD",
+      "year": 2023,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 10946,
+      "cell": "Table 37!K13"
+    },
+    {
+      "state": "QLD",
+      "year": 2024,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 6971,
+      "cell": "Table 37!L13"
+    },
+    {
+      "state": "QLD",
+      "year": 2025,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 8470,
+      "cell": "Table 37!M13"
+    },
+    {
+      "state": "SA",
+      "year": 2014,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 1273,
+      "cell": "Table 37!B18"
+    },
+    {
+      "state": "SA",
+      "year": 2015,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 1520,
+      "cell": "Table 37!C18"
+    },
+    {
+      "state": "SA",
+      "year": 2016,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 1464,
+      "cell": "Table 37!D18"
+    },
+    {
+      "state": "SA",
+      "year": 2017,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 1393,
+      "cell": "Table 37!E18"
+    },
+    {
+      "state": "SA",
+      "year": 2018,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 1550,
+      "cell": "Table 37!F18"
+    },
+    {
+      "state": "SA",
+      "year": 2019,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 1660,
+      "cell": "Table 37!G18"
+    },
+    {
+      "state": "SA",
+      "year": 2020,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 1898,
+      "cell": "Table 37!H18"
+    },
+    {
+      "state": "SA",
+      "year": 2021,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 1857,
+      "cell": "Table 37!I18"
+    },
+    {
+      "state": "SA",
+      "year": 2022,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2271,
+      "cell": "Table 37!J18"
+    },
+    {
+      "state": "SA",
+      "year": 2023,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2513,
+      "cell": "Table 37!K18"
+    },
+    {
+      "state": "SA",
+      "year": 2024,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2951,
+      "cell": "Table 37!L18"
+    },
+    {
+      "state": "SA",
+      "year": 2025,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 2912,
+      "cell": "Table 37!M18"
+    },
+    {
+      "state": "NT",
+      "year": 2014,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 3669,
+      "cell": "Table 37!B23"
+    },
+    {
+      "state": "NT",
+      "year": 2015,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 3541,
+      "cell": "Table 37!C23"
+    },
+    {
+      "state": "NT",
+      "year": 2016,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 3497,
+      "cell": "Table 37!D23"
+    },
+    {
+      "state": "NT",
+      "year": 2017,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 3962,
+      "cell": "Table 37!E23"
+    },
+    {
+      "state": "NT",
+      "year": 2018,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 3862,
+      "cell": "Table 37!F23"
+    },
+    {
+      "state": "NT",
+      "year": 2019,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 3599,
+      "cell": "Table 37!G23"
+    },
+    {
+      "state": "NT",
+      "year": 2020,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 4584,
+      "cell": "Table 37!H23"
+    },
+    {
+      "state": "NT",
+      "year": 2021,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 5053,
+      "cell": "Table 37!I23"
+    },
+    {
+      "state": "NT",
+      "year": 2022,
+      "sex": "All",
+      "community": "First Nations",
+      "value": 6066,
+      "cell": "Table 37!J23"
+    },
+    {
+      "state": "NT",
+      "year": 2023,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!K23"
+    },
+    {
+      "state": "NT",
+      "year": 2024,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!L23"
+    },
+    {
+      "state": "NT",
+      "year": 2025,
+      "sex": "All",
+      "community": "First Nations",
+      "value": null,
+      "cell": "Table 37!M23"
+    }
+  ]
+}

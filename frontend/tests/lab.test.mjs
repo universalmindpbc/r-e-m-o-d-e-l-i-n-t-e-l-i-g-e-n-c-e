@@ -1,0 +1,44 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {measures,countMeasures,defaultFilters,selectEvidence} from '../app/lab/evidence.ts';
+import {parseTrendsCsv} from '../app/lab/trends.ts';
+test('a missing male survey estimate remains null',()=>{const result=selectEvidence(measures[0],{...defaultFilters,from:'2005-01-01',sex:'Men'});assert.equal(result.rows.find(r=>r.year===2022).value,null);assert.equal(result.rows.length,4);assert.equal(result.rows.find(r=>r.year===2012).value,0.6);assert.equal(result.rows.find(r=>r.year===2016).value,0.8);});
+test('international selection never retains Australian observations',()=>{for(const region of ['USA','EU','Africa','Asia','Global']){const r=selectEvidence(measures[0],{...defaultFilters,region});assert.equal(r.rows.length,0);assert.match(r.gap,/not yet/);}});
+test('unsupported community intersections do not reuse total population',()=>{const r=selectEvidence(measures[0],{...defaultFilters,community:'First Nations'});assert.equal(r.rows.length,0);assert.match(r.gap,/evidence gap/);});
+test('day window includes only an overlapping full reference period',()=>{const r=selectEvidence(measures[0],{...defaultFilters,from:'2022-06-30',to:'2022-06-30'});assert.equal(r.rows.length,2);assert.ok(r.rows.every(r=>r.year===2022));assert.equal(selectEvidence(measures[0],{...defaultFilters,from:'2025-01-01',to:'2025-01-02'}).rows.length,0);});
+test('invalid range and unsupported severity fail visibly',()=>{assert.match(selectEvidence(measures[0],{...defaultFilters,from:'2023-01-01',to:'2022-01-01'}).gap,/start date/);assert.match(selectEvidence(measures[0],{...defaultFilters,severity:'Lethal'}).gap,/does not provide/);});
+test('Google Trends imports preserve censored values and require matching term',()=>{const p=parseTrendsCsv('Category: All categories\n\nRegion,domestic violence: (Australia)\nNew South Wales,100\nVictoria,<1\n','domestic violence');assert.equal(p.kind,'region');assert.equal(p.rows[1].value,null);assert.equal(p.rows[1].display,'<1');assert.throws(()=>parseTrendsCsv('Week,another term\n2022-01-01,100','domestic violence'),/selected search term/);assert.throws(()=>parseTrendsCsv('Week,domestic violence\n2022-01-01,101','domestic violence'),/between 0 and 100/);});
+test('national sexual-assault counts reproduce ABS Table 29 without summing sexes',()=>{const m=countMeasures.find(m=>m.id==='recorded-sexual');const r=selectEvidence(m,defaultFilters);assert.equal(r.rows.find(r=>r.year===2015).value,7719);assert.equal(r.rows.find(r=>r.year===2025).value,16146);assert.equal(r.rows.length,11);assert.ok(r.rows.every(r=>r.sex==='All'&&r.state==='Australia'));});
+test('assault defaults to latest state counts with missing Victoria, never a national total',()=>{const m=countMeasures[0];const r=selectEvidence(m,defaultFilters);assert.ok(r.rows.every(r=>r.year===2025&&r.state!=='Australia'));assert.equal(r.rows.find(r=>r.state==='NSW').value,38942);assert.equal(r.rows.find(r=>r.state==='VIC').value,null);const nsw=selectEvidence(m,{...defaultFilters,state:'NSW'});assert.equal(nsw.rows.find(r=>r.year===2015).value,30464);assert.equal(nsw.rows.length,11);});
+test('2026 is unavailable, not extrapolated, and 2022 counts use calendar-year periods',()=>{const m=countMeasures[1];assert.match(selectEvidence(m,{...defaultFilters,from:'2026-01-01'}).gap,/2026/);const r=selectEvidence(m,{...defaultFilters,from:'2022-12-01',to:'2022-12-31'});assert.equal(r.rows.length,1);assert.equal(r.rows[0].value,11944);});
+test('count intersections preserve sex and exclude unavailable community breakdowns',()=>{const m=countMeasures[1];assert.equal(selectEvidence(m,{...defaultFilters,sex:'Women'}).rows.find(r=>r.year===2025).value,14201);assert.equal(selectEvidence(m,{...defaultFilters,community:'First Nations'}).rows.length,0);});
+
+import {realLabSeries,coveredStates,absSource} from '../app/lab/real-series.ts';
+import recorded from '../app/lab/recorded-crime.json' with {type:'json'};
+import {readFileSync} from 'node:fs';
+test('Lab default sums the same six ABS jurisdictions for every year without adding QLD',()=>{const result=realLabSeries('Domestic violence',defaultFilters);assert.equal(result.gap,'');assert.equal(result.points.length,11);assert.equal(result.points[0].value,62476);assert.equal(result.points.at(-1).value,93761);for(const point of result.points){const source=recorded.rows.filter(r=>r.offence==='Assault'&&r.sex==='All'&&coveredStates.includes(r.state)&&r.year===Number(point.date));assert.equal(source.length,6);assert.equal(point.value,source.reduce((n,r)=>n+r.value,0));assert(source.every(r=>point.cells.includes(r.cell)));}assert.match(result.measure.limitations,/not an ABS national total/);assert.match(absSource.download,/abs.gov.au/);});
+test('Lab state and sex selectors reproduce source observations without interpolation',()=>{const result=realLabSeries('Domestic violence',{...defaultFilters,state:'NSW',sex:'Women'});for(const point of result.points)assert.equal(point.value,recorded.rows.find(r=>r.offence==='Assault'&&r.state==='NSW'&&r.sex==='Women'&&r.year===Number(point.date)).value);const qld=realLabSeries('Domestic violence',{...defaultFilters,state:'QLD'});assert(qld.points.filter(p=>p.value!==null).every(p=>Number(p.date)>=2023));});
+test('Lab First Nations counts preserve missing NT observations from 2023',()=>{const result=realLabSeries('Domestic violence',{...defaultFilters,state:'NT',community:'First Nations'});assert.equal(result.points.find(p=>p.date==='2015').value,3541);assert.equal(result.points.find(p=>p.date==='2022').value,6066);assert(result.points.filter(p=>Number(p.date)>=2023).every(p=>p.value===null));assert.match(result.points[0].cells,/Table 37/);});
+test('unpublished Lab combinations do not fall back to invented or unrelated numbers',()=>{for(const [topic,edit] of [['Violent extremism',{}],['Domestic violence',{region:'USA'}],['Domestic violence',{state:'VIC'}],['Domestic violence',{from:'2026-01-01'}],['Domestic violence',{city:'Darwin'}],['Domestic violence',{religion:'Example'}],['Domestic violence',{age:'18–24'}],['Domestic violence',{community:'Non-Indigenous'}]]){const r=realLabSeries(topic,{...defaultFilters,...edit});assert(r.gap);assert.deepEqual(r.points,[]);}});
+test('Lab cannot read synthetic settings or offer a synthetic editor',()=>{for(const file of ['app/lab/LabScreen.tsx','app/lab/real-series.ts'])assert.doesNotMatch(readFileSync(file,'utf8'),/useSynthetic|labDemo|demo-series|synthetic-config/);assert.doesNotMatch(readFileSync('app/synthetic-config.ts','utf8'),/labDomesticReports|labExtremismReports/);assert.doesNotMatch(readFileSync('app/api/lab/research/route.ts','utf8'),/synthetic-domestic|synthetic-extremism/);});
+
+import {primaryReport,reportOptions,filtersForReport} from '../app/lab/evidence.ts';
+import {trendLinePath} from '../app/lab/trends.ts';
+test('primary counts are first and every optional report opens with valid source observations',()=>{
+ assert.equal(reportOptions[0].id,primaryReport);assert.equal(reportOptions.length,10);
+ for(const m of [...countMeasures,...measures]){const f=filtersForReport(m.id);const result=selectEvidence(m,f);assert.equal(result.gap,'',m.id);assert(result.rows.some(r=>r.value!==null));assert.equal(f.state,'All');assert.equal(f.sex,'All');assert.equal(f.community,'All');}
+ assert.deepEqual(filtersForReport(primaryReport),defaultFilters);
+ assert.equal(filtersForReport('remoteness','USA').region,'USA');
+});
+test('Trends CSV validates exact terms, keeps missing observations and breaks paths at censoring',()=>{
+ assert.throws(()=>parseTrendsCsv('Month,not domestic violence: (Australia)\n2022-01,50','domestic violence'),/selected search term/);
+ const parsed=parseTrendsCsv('Month,domestic violence: (Australia)\n2022-01,0\n2022-02,<1\n2022-03,100\n2022-04,\n2022-05,80\n2022-06,90','domestic violence');
+ assert.equal(parsed.scope,'Australia');assert.equal(parsed.rows[0].value,0);assert.equal(parsed.rows[1].value,null);assert.equal(parsed.rows[3].value,null);
+ const path=trendLinePath(parsed.rows);assert.equal((path.match(/M /g)||[]).length,3);assert.equal((path.match(/L /g)||[]).length,1);
+ assert.throws(()=>parseTrendsCsv('Month,domestic violence\n2022-01,50\n2022-01,60','domestic violence'),/Duplicate/);
+});
+test('Trends visitors have no upload facility and published source data has no fabricated fallback',()=>{
+ const panel=readFileSync('app/lab/TrendsPanel.tsx','utf8');assert.doesNotMatch(panel,/type="file"|localStorage|parseTrendsCsv/);assert.match(panel,/\/api\/lab\/trends\//);
+ const published=JSON.parse(readFileSync('server/google-trends.json','utf8'));const manifest=JSON.parse(readFileSync('data/google-trends/manifest.json','utf8'));
+ assert.equal(published.exports.length,manifest.exports.reduce((n,r)=>n+r.terms.length,0));
+});

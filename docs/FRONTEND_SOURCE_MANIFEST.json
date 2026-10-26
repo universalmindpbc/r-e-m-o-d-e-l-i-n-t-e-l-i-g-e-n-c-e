@@ -1,0 +1,1151 @@
+{
+  "snapshot_date": "2026-10-27",
+  "source_project": "Re-Model Intelligence / rmu-site",
+  "base_local_commit": "7f17488",
+  "published_backend_base_commit": "9739a338ee1afdccfcae9d14438454d70edb4285",
+  "description": "Approved complete portal snapshot, including local source additions; private runtime data, credentials and build output excluded. Existing deployed backend files match byte for byte.",
+  "files": [
+    {
+      "source_path": "app/AlignmentInsight.tsx",
+      "repository_path": "frontend/app/AlignmentInsight.tsx",
+      "sha256": "139f9918c4ad95d6cf30b29691f3d9d3d7fabd569cb941371f5eb0fc9aae3daf",
+      "bytes": 16697
+    },
+    {
+      "source_path": "app/ApprovedData.tsx",
+      "repository_path": "frontend/app/ApprovedData.tsx",
+      "sha256": "385b4d7ac028151ea4fe72ae605dcbea70d14661bbc4ca0ada6cb9bd8c0b0b09",
+      "bytes": 6899
+    },
+    {
+      "source_path": "app/AtomicPrompt.tsx",
+      "repository_path": "frontend/app/AtomicPrompt.tsx",
+      "sha256": "2c999875921b2817fb615798e21607c7a28fc8182975244b70f1f1e3061c2e6e",
+      "bytes": 5552
+    },
+    {
+      "source_path": "app/CampaignAdmin.tsx",
+      "repository_path": "frontend/app/CampaignAdmin.tsx",
+      "sha256": "fade933835bd6c43f8ac813709f00bf57403cb29f9fa67f43f66984b6e889b1e",
+      "bytes": 9363
+    },
+    {
+      "source_path": "app/CampaignPriorities.tsx",
+      "repository_path": "frontend/app/CampaignPriorities.tsx",
+      "sha256": "6dc8d710a93f6413119476b5ba96be05004e106bc1067c46f200c4e59a302121",
+      "bytes": 10615
+    },
+    {
+      "source_path": "app/CampaignProvider.tsx",
+      "repository_path": "frontend/app/CampaignProvider.tsx",
+      "sha256": "8662871131436192f0d698de7dae271fa6dfd832403fe358dc006892d53b89d8",
+      "bytes": 1544
+    },
+    {
+      "source_path": "app/ConnectorSettings.tsx",
+      "repository_path": "frontend/app/ConnectorSettings.tsx",
+      "sha256": "160d8261cc15f27abb6f32780ff75723115ae7728282ecd49c0cc574ea49cf53",
+      "bytes": 4157
+    },
+    {
+      "source_path": "app/ExportDataButton.tsx",
+      "repository_path": "frontend/app/ExportDataButton.tsx",
+      "sha256": "6d4197c84cb3e484699c43ede97b983070e894cc1abbb05bf04bf2fb7b59b288",
+      "bytes": 3226
+    },
+    {
+      "source_path": "app/Intelligence.tsx",
+      "repository_path": "frontend/app/Intelligence.tsx",
+      "sha256": "80ffa4ef4a04d6c12323a0d0407d06cb1993ff89b3759d36c024487a6919fc53",
+      "bytes": 15339
+    },
+    {
+      "source_path": "app/MessagingBrief.tsx",
+      "repository_path": "frontend/app/MessagingBrief.tsx",
+      "sha256": "d38f065931207bdff27d17ceafb577980d7fce488fd4b8c5fcf5f7f61ced3d19",
+      "bytes": 13903
+    },
+    {
+      "source_path": "app/OverviewContents.tsx",
+      "repository_path": "frontend/app/OverviewContents.tsx",
+      "sha256": "70c8333e6043d03e085c1acea2e64c9ce445cfddd3d8b8a2432eb10f4c1a3f1b",
+      "bytes": 2191
+    },
+    {
+      "source_path": "app/PipelineAdmin.tsx",
+      "repository_path": "frontend/app/PipelineAdmin.tsx",
+      "sha256": "b80a48c306c7814320abeb5c78247f4f6880987b6b312d5e85275a2d945e7d5d",
+      "bytes": 14110
+    },
+    {
+      "source_path": "app/ResearchBrief.tsx",
+      "repository_path": "frontend/app/ResearchBrief.tsx",
+      "sha256": "554e29f6120c96b180357776593db2a3d79d5cc0915c13090cc0411e9ad90a83",
+      "bytes": 12136
+    },
+    {
+      "source_path": "app/SyntheticEditor.tsx",
+      "repository_path": "frontend/app/SyntheticEditor.tsx",
+      "sha256": "31b352f326d478f09d424a9c945460ef413f1c98e9eb881a8e94f36f3600347b",
+      "bytes": 5193
+    },
+    {
+      "source_path": "app/SyntheticProvider.tsx",
+      "repository_path": "frontend/app/SyntheticProvider.tsx",
+      "sha256": "95c146c78a7db43bd779adc011141c4d029d8f24c0704de81d4f763e816bb720",
+      "bytes": 1504
+    },
+    {
+      "source_path": "app/WorkspaceProvider.tsx",
+      "repository_path": "frontend/app/WorkspaceProvider.tsx",
+      "sha256": "e387dfb0e85f3d2aa7255955203b41bb63c6aac19b13157c3e5d2c84da91cebd",
+      "bytes": 1062
+    },
+    {
+      "source_path": "app/api/admin/connectors/route.ts",
+      "repository_path": "frontend/app/api/admin/connectors/route.ts",
+      "sha256": "43758c19b029f7a3af1a0643380c50daf2647346bdbde67d21dbbdb5d2f6f097",
+      "bytes": 1805
+    },
+    {
+      "source_path": "app/api/admin/intelligence-spec/route.ts",
+      "repository_path": "frontend/app/api/admin/intelligence-spec/route.ts",
+      "sha256": "45907c0514795e5ff09726e1af8b910cbc23334c615d722c758debfcee33c21c",
+      "bytes": 676
+    },
+    {
+      "source_path": "app/api/admin/pipeline/[...path]/route.ts",
+      "repository_path": "frontend/app/api/admin/pipeline/[...path]/route.ts",
+      "sha256": "87514d5fe923530ad7bc84cd178ee50876e972bef33a2625b47c42da73195cc9",
+      "bytes": 2553
+    },
+    {
+      "source_path": "app/api/admin/session/route.ts",
+      "repository_path": "frontend/app/api/admin/session/route.ts",
+      "sha256": "e6d9d871321f7decf3a092d67eaf475079ae9b6458351ddc8c9a273a5e665720",
+      "bytes": 1213
+    },
+    {
+      "source_path": "app/api/campaign/route.ts",
+      "repository_path": "frontend/app/api/campaign/route.ts",
+      "sha256": "05423aefa377da4d21f3234f30c503c2c5729f4f122b76b0be3111ce4b35e927",
+      "bytes": 1419
+    },
+    {
+      "source_path": "app/api/intelligence/[...path]/route.ts",
+      "repository_path": "frontend/app/api/intelligence/[...path]/route.ts",
+      "sha256": "6603a326cca1f1210dfc3a559d7f18a17b104360f7104f8772275245e3582f18",
+      "bytes": 2233
+    },
+    {
+      "source_path": "app/api/lab/research/route.ts",
+      "repository_path": "frontend/app/api/lab/research/route.ts",
+      "sha256": "08660cfa7f819a476adb6b0dee3a2a1d47a79c3dc94cd0e141dd3ed64f08a475",
+      "bytes": 11895
+    },
+    {
+      "source_path": "app/api/lab/trends/route.ts",
+      "repository_path": "frontend/app/api/lab/trends/route.ts",
+      "sha256": "378995b761b06e9eb11d9b1850265f20395b1201e132a45896df175e578299d9",
+      "bytes": 254
+    },
+    {
+      "source_path": "app/api/network/review/route.ts",
+      "repository_path": "frontend/app/api/network/review/route.ts",
+      "sha256": "379160564356a913cff668fa7b8746a2d763f8ecfac750230dc65facd25836e7",
+      "bytes": 2001
+    },
+    {
+      "source_path": "app/api/network/route.ts",
+      "repository_path": "frontend/app/api/network/route.ts",
+      "sha256": "e015c7852c591044879e9844adb7c50c9ec4e909d1c97f5c24f9dd8b3c3ef7b0",
+      "bytes": 1015
+    },
+    {
+      "source_path": "app/api/survey/rihanna-clf/route.ts",
+      "repository_path": "frontend/app/api/survey/rihanna-clf/route.ts",
+      "sha256": "81af65438f09227f1ea7e4ca7f3ac280f85ef5b5052162e5dfe7c0fe695a670d",
+      "bytes": 4614
+    },
+    {
+      "source_path": "app/api/synthetic/route.ts",
+      "repository_path": "frontend/app/api/synthetic/route.ts",
+      "sha256": "f82ed87fe60cc8ca76dace3d0e8fb5deb056cf334068e8ab6ab902cfff0bae39",
+      "bytes": 1282
+    },
+    {
+      "source_path": "app/campaign-config.ts",
+      "repository_path": "frontend/app/campaign-config.ts",
+      "sha256": "81d8ea657d8368a6ebc945e93ce0db0e0d1801b5fefd37fde4c3f2b638252d3c",
+      "bytes": 2118
+    },
+    {
+      "source_path": "app/connector-config.ts",
+      "repository_path": "frontend/app/connector-config.ts",
+      "sha256": "a320cabae8eaa37e8dd337f7c900d2175ec2e5e39b087a022910ffefca5eca76",
+      "bytes": 4951
+    },
+    {
+      "source_path": "app/intelligence/climate-justice/page.tsx",
+      "repository_path": "frontend/app/intelligence/climate-justice/page.tsx",
+      "sha256": "d5a4e8189a5cef51ba1372e0cfb024cb928cd7815627ef63dd95bc93cc757ac9",
+      "bytes": 113
+    },
+    {
+      "source_path": "app/intelligence/page.tsx",
+      "repository_path": "frontend/app/intelligence/page.tsx",
+      "sha256": "77d65dbd39591b7e3a888aace1ec04385d1eab5e2bcd464c72d9885e8ec59b41",
+      "bytes": 123
+    },
+    {
+      "source_path": "app/intelligence/violence/page.tsx",
+      "repository_path": "frontend/app/intelligence/violence/page.tsx",
+      "sha256": "73b8c41fc41373eab3b0032397177cbc5227df700ea3c661eef86bc886e69c9c",
+      "bytes": 128
+    },
+    {
+      "source_path": "app/lab/EvidenceChart.tsx",
+      "repository_path": "frontend/app/lab/EvidenceChart.tsx",
+      "sha256": "285e9b682ba3d6f704ce14d38f842db7267eaa03614f139c95d594fa1e6f2084",
+      "bytes": 3776
+    },
+    {
+      "source_path": "app/lab/LabScreen.tsx",
+      "repository_path": "frontend/app/lab/LabScreen.tsx",
+      "sha256": "bd0d506e0f7a7fda0be53647b9674cecc0ed0d0c6ac312001745ce49c186f369",
+      "bytes": 18244
+    },
+    {
+      "source_path": "app/lab/ResearchPanel.tsx",
+      "repository_path": "frontend/app/lab/ResearchPanel.tsx",
+      "sha256": "2b2f6dd0a46223a395dbd05fa6716c91bd0a0c3b91989d82e00acb90c80086bf",
+      "bytes": 5986
+    },
+    {
+      "source_path": "app/lab/TrendsPanel.tsx",
+      "repository_path": "frontend/app/lab/TrendsPanel.tsx",
+      "sha256": "429c95f3cee425c43d6989b4fcb2e57edad7d0e7a20273c56cc3208b0095e8cf",
+      "bytes": 8168
+    },
+    {
+      "source_path": "app/lab/evidence.ts",
+      "repository_path": "frontend/app/lab/evidence.ts",
+      "sha256": "8862a1c366450d0a703e63267c403d1df596ae5765bfce992b2253ed533a0ba5",
+      "bytes": 15470
+    },
+    {
+      "source_path": "app/lab/first-nations-assault.json",
+      "repository_path": "frontend/app/lab/first-nations-assault.json",
+      "sha256": "e413fba0b53d1f6958b20913a3d9e4dcb803a5aee0bf90b264b393c4b7833dec",
+      "bytes": 7712
+    },
+    {
+      "source_path": "app/lab/lab.module.css",
+      "repository_path": "frontend/app/lab/lab.module.css",
+      "sha256": "e6627de7654fb5c1b38af9a42943156750db77cf23e3889e291abc7f2f15f8c5",
+      "bytes": 14203
+    },
+    {
+      "source_path": "app/lab/real-series.ts",
+      "repository_path": "frontend/app/lab/real-series.ts",
+      "sha256": "7dae6bc7752d785e9f2d50a997c67cc27a7c09c115038f98e174bd6049f67f65",
+      "bytes": 6698
+    },
+    {
+      "source_path": "app/lab/recorded-crime.json",
+      "repository_path": "frontend/app/lab/recorded-crime.json",
+      "sha256": "af2971a6c7dc8e698c2e8e81cb8f0a54df96ae4140662626e43f9dead4130770",
+      "bytes": 124024
+    },
+    {
+      "source_path": "app/lab/trends.ts",
+      "repository_path": "frontend/app/lab/trends.ts",
+      "sha256": "6ceeacf32684d698c1a672b5866d630c243760ce195c1c0d2d049f021a4e684f",
+      "bytes": 2837
+    },
+    {
+      "source_path": "app/message-scenarios.ts",
+      "repository_path": "frontend/app/message-scenarios.ts",
+      "sha256": "a3083582d2e56df99c0b1789c03f709df2429fa23ec074d667a861e2b07ec6d7",
+      "bytes": 2094
+    },
+    {
+      "source_path": "app/network/Network.tsx",
+      "repository_path": "frontend/app/network/Network.tsx",
+      "sha256": "e61c7c11b5bebb640802598daf38363b41c6ec42ee8ce6fe5256c92cbdf6e996",
+      "bytes": 8556
+    },
+    {
+      "source_path": "app/network/browse.ts",
+      "repository_path": "frontend/app/network/browse.ts",
+      "sha256": "18bcb2c7976a81ee2140e41ba182db52e2ee8b5d1027355b872ebbe55cfbdaa9",
+      "bytes": 2801
+    },
+    {
+      "source_path": "app/network/geometry.ts",
+      "repository_path": "frontend/app/network/geometry.ts",
+      "sha256": "cace509ec5e1809b6a69b9d1c6dbcfa9a0aae1ae585179c63a539747acff0d01",
+      "bytes": 2285
+    },
+    {
+      "source_path": "app/network/network.module.css",
+      "repository_path": "frontend/app/network/network.module.css",
+      "sha256": "59e30029efc6ad5ed8b0a9ba587a0bc65ae8e00872ec9bd3fccb51826f882834",
+      "bytes": 4681
+    },
+    {
+      "source_path": "app/network/report/page.tsx",
+      "repository_path": "frontend/app/network/report/page.tsx",
+      "sha256": "8d0dd27ac5948ee9baddfb6654aa08274572f27f6c1d108876b61c4fcf3da33a",
+      "bytes": 3432
+    },
+    {
+      "source_path": "app/network/report/report.module.css",
+      "repository_path": "frontend/app/network/report/report.module.css",
+      "sha256": "04754876ecd6845c6d2105141d9cacd085d3e1a033fd1a1ee41c841808702244",
+      "bytes": 1249
+    },
+    {
+      "source_path": "app/network/review-validation.ts",
+      "repository_path": "frontend/app/network/review-validation.ts",
+      "sha256": "694e4fd86141139347d4ff4e3c4cc2f8eebf53ef01756d97b0c4cb289e34d6aa",
+      "bytes": 641
+    },
+    {
+      "source_path": "app/network/types.ts",
+      "repository_path": "frontend/app/network/types.ts",
+      "sha256": "96a622ce5da40729953e8bdbfa7bae48cca23aab87054b03774884b35a937d96",
+      "bytes": 1076
+    },
+    {
+      "source_path": "app/network/workflow.ts",
+      "repository_path": "frontend/app/network/workflow.ts",
+      "sha256": "44bca89b2aebb2d84013ab425bc59f1560f117376c85bd61737b696712475b2a",
+      "bytes": 2046
+    },
+    {
+      "source_path": "app/projects/ProjectLanding.tsx",
+      "repository_path": "frontend/app/projects/ProjectLanding.tsx",
+      "sha256": "2a239174678c425c1fb9ee6fab691a5e6d470fccffc07aff1f5c745d392d6bad",
+      "bytes": 2343
+    },
+    {
+      "source_path": "app/projects/projects.module.css",
+      "repository_path": "frontend/app/projects/projects.module.css",
+      "sha256": "ef0014ab11dd1cb5fdf3f24e4c9abc0703fbf508164ea94585b92c76f033ef9d",
+      "bytes": 2382
+    },
+    {
+      "source_path": "app/report/ReportReader.tsx",
+      "repository_path": "frontend/app/report/ReportReader.tsx",
+      "sha256": "6455d81c384b8167416b26bcb2e62c4e4624e8c68566afcc7e7d7958f798fa3b",
+      "bytes": 35480
+    },
+    {
+      "source_path": "app/report/canonical-report.md",
+      "repository_path": "frontend/app/report/canonical-report.md",
+      "sha256": "d961f5911c32a8814b67dccd6ae1cb02409be0c8d36cd7dd5861896d816cee5e",
+      "bytes": 86777
+    },
+    {
+      "source_path": "app/report/canonical-report.ts",
+      "repository_path": "frontend/app/report/canonical-report.ts",
+      "sha256": "240ad4bda1e111c5846a76395d69044a70052ad7aa02264dae3e4fe8a6ce0d61",
+      "bytes": 4682
+    },
+    {
+      "source_path": "app/report/page.tsx",
+      "repository_path": "frontend/app/report/page.tsx",
+      "sha256": "7e6f6f4b864dbec3335a242da02e5d372179ed3c73369ab9a0cabb56e751464b",
+      "bytes": 340
+    },
+    {
+      "source_path": "app/report/report-content.ts",
+      "repository_path": "frontend/app/report/report-content.ts",
+      "sha256": "0f00f0df858a4792f21ddff94af83d174201e26a01f7b3683c8bd3452b27ad89",
+      "bytes": 4822
+    },
+    {
+      "source_path": "app/report/report.module.css",
+      "repository_path": "frontend/app/report/report.module.css",
+      "sha256": "98c17b8c8a0edf1ac9665e72aa4f0c808599749afd4fd83e908279aff34de4ff",
+      "bytes": 45533
+    },
+    {
+      "source_path": "app/report/violence-report.ts",
+      "repository_path": "frontend/app/report/violence-report.ts",
+      "sha256": "fd692fb2909a2bf3aa517acb3045597a4b828d665d19a9073803de169bea9ea8",
+      "bytes": 3358
+    },
+    {
+      "source_path": "app/survey/rihanna-clf/Survey.tsx",
+      "repository_path": "frontend/app/survey/rihanna-clf/Survey.tsx",
+      "sha256": "f8d05e466de6bcc0ba35f56ba984eac239a298534ccea1e27174096a56569272",
+      "bytes": 6746
+    },
+    {
+      "source_path": "app/survey/rihanna-clf/page.tsx",
+      "repository_path": "frontend/app/survey/rihanna-clf/page.tsx",
+      "sha256": "1938971e02e1ab64b8a898b7484c49106c6d80c988d26990cc111af98e5abb78",
+      "bytes": 400
+    },
+    {
+      "source_path": "app/survey/rihanna-clf/questions.ts",
+      "repository_path": "frontend/app/survey/rihanna-clf/questions.ts",
+      "sha256": "a27652da29971b2df4b962041cc2e90d67e6d1c732dee593f144581072778279",
+      "bytes": 3073
+    },
+    {
+      "source_path": "app/survey/rihanna-clf/survey.module.css",
+      "repository_path": "frontend/app/survey/rihanna-clf/survey.module.css",
+      "sha256": "245213b88c3a8c3a7d304a7537f49389823fb4c285cf174a7772675e31728ba6",
+      "bytes": 2041
+    },
+    {
+      "source_path": "app/synthetic-config.ts",
+      "repository_path": "frontend/app/synthetic-config.ts",
+      "sha256": "5ce6e4b465f19dce051d863756e5ffc3c9fd7c6d8e239a814abd092b08cfda4d",
+      "bytes": 3842
+    },
+    {
+      "source_path": "app/violence-demo.ts",
+      "repository_path": "frontend/app/violence-demo.ts",
+      "sha256": "6e801be0a6c6471396eaa3e3c4fe616069e29bba74a626d8486b1aeecffa64de",
+      "bytes": 7734
+    },
+    {
+      "source_path": "backend/adopt_retained_campaign.py",
+      "repository_path": "frontend/backend/adopt_retained_campaign.py",
+      "sha256": "b909be912f42ddde3a9c5904e846ea50c9c004c2df3b50205fc3290e82e18d85",
+      "bytes": 1895
+    },
+    {
+      "source_path": "backend/analyse_parallel_remainder.py",
+      "repository_path": "frontend/backend/analyse_parallel_remainder.py",
+      "sha256": "141e1c5e9732a4cc799e41641c16402f48bc6e09650bd8c7c42e182844babb21",
+      "bytes": 1055
+    },
+    {
+      "source_path": "backend/analyse_reverse_remainder.py",
+      "repository_path": "frontend/backend/analyse_reverse_remainder.py",
+      "sha256": "49c900f7bfd084ac5b297aed9580de9793c2443470e69e09c361cd7462c2ecc9",
+      "bytes": 1065
+    },
+    {
+      "source_path": "backend/inspect_allowance.py",
+      "repository_path": "frontend/backend/inspect_allowance.py",
+      "sha256": "7ee409cc03d8ebd439bfa94947bea6f355fe2d0c8c7e15a67b2c0ca0ba92affb",
+      "bytes": 399
+    },
+    {
+      "source_path": "backend/inspect_approved_progress.py",
+      "repository_path": "frontend/backend/inspect_approved_progress.py",
+      "sha256": "e43eec784300d20d078a2833e03634b2846b2b5edf9d8fed23d701377e3f9f9c",
+      "bytes": 538
+    },
+    {
+      "source_path": "backend/inspect_completed_workflow.py",
+      "repository_path": "frontend/backend/inspect_completed_workflow.py",
+      "sha256": "0eae0bc750d0d4119faa7968f37de247c910dedad0ec7178a49a1a3f5ed64c32",
+      "bytes": 618
+    },
+    {
+      "source_path": "backend/inspect_export_operator.py",
+      "repository_path": "frontend/backend/inspect_export_operator.py",
+      "sha256": "146cc0b172db030b32ed546fdbf0315865d6c71fafcee65053986e3b785d89e8",
+      "bytes": 1840
+    },
+    {
+      "source_path": "backend/inspect_mapping_scope.py",
+      "repository_path": "frontend/backend/inspect_mapping_scope.py",
+      "sha256": "1ed473be118303949da171f4b7388ed6ee5b27c4cf8dfcecfd28e7519f3e8b94",
+      "bytes": 478
+    },
+    {
+      "source_path": "backend/inspect_model_progress.py",
+      "repository_path": "frontend/backend/inspect_model_progress.py",
+      "sha256": "d999c38a19fe43fe2b4c56b40e8b987632bf6a95f461802a21e152f4d23e3183",
+      "bytes": 304
+    },
+    {
+      "source_path": "backend/inspect_retained_readiness.py",
+      "repository_path": "frontend/backend/inspect_retained_readiness.py",
+      "sha256": "4f84b7906d3ea429b9fd8c5ebab93d014ea6b06019f602ebbd5d8826bd4ded16",
+      "bytes": 771
+    },
+    {
+      "source_path": "backend/inspect_spans_operator.py",
+      "repository_path": "frontend/backend/inspect_spans_operator.py",
+      "sha256": "698c147aaa46282349faa0c682ae05b334101e4699cc7e2fbabe4db113d3e4e3",
+      "bytes": 841
+    },
+    {
+      "source_path": "backend/inspect_workflows_operator.py",
+      "repository_path": "frontend/backend/inspect_workflows_operator.py",
+      "sha256": "5ff9df4dadfc337b031a2bbe4227d3322d7f1e3fa475e29bbebeefc32a77384b",
+      "bytes": 321
+    },
+    {
+      "source_path": "backend/network_audit.py",
+      "repository_path": "frontend/backend/network_audit.py",
+      "sha256": "cad2d1d2fb4f81cbcd48fbe9f85f5eeaad6b3ad5daff50d6fb7fdca45f3efc02",
+      "bytes": 1502
+    },
+    {
+      "source_path": "backend/network_expand.py",
+      "repository_path": "frontend/backend/network_expand.py",
+      "sha256": "b059d4c5596b68419cddfd2bc6695c0d61f81e14854422576061e702552bdb03",
+      "bytes": 2877
+    },
+    {
+      "source_path": "backend/network_operator.py",
+      "repository_path": "frontend/backend/network_operator.py",
+      "sha256": "159ce02bf2c3f11a34688619005431c6e8c215a9832ef93a4b0c42853a50c3cd",
+      "bytes": 5394
+    },
+    {
+      "source_path": "backend/network_prompt.md",
+      "repository_path": "frontend/backend/network_prompt.md",
+      "sha256": "d7f83b861f21d5da254aca498caca3c75401d6d60338e4abe08bdfc5b5cbdb51",
+      "bytes": 4160
+    },
+    {
+      "source_path": "backend/network_recent.py",
+      "repository_path": "frontend/backend/network_recent.py",
+      "sha256": "f5a385e48be68a028b44be032e79d8754ccbd131455e76d7571f686fa7eb2a01",
+      "bytes": 1217
+    },
+    {
+      "source_path": "backend/populate_approved_operator.py",
+      "repository_path": "frontend/backend/populate_approved_operator.py",
+      "sha256": "70434116e3f9b77a44ac547b5176217c676b5c753ac4e5f38183749983a98aaf",
+      "bytes": 281
+    },
+    {
+      "source_path": "backend/provision_runtime.py",
+      "repository_path": "frontend/backend/provision_runtime.py",
+      "sha256": "ee2e60368264905cc9feeafed52b57e108154b62905f4359b21b57fc9f0654fb",
+      "bytes": 1398
+    },
+    {
+      "source_path": "backend/recover_span_encoding_operator.py",
+      "repository_path": "frontend/backend/recover_span_encoding_operator.py",
+      "sha256": "7dc17b573ce2a947f87aeb69d2d0212d1ce5c975e2acc8004bf3b55c46366c97",
+      "bytes": 2976
+    },
+    {
+      "source_path": "backend/test_network_operator.py",
+      "repository_path": "frontend/backend/test_network_operator.py",
+      "sha256": "898ce0b02fc32214c818e51a67648cb8b6178c033b70acaacfc50c726adaabb4",
+      "bytes": 1647
+    },
+    {
+      "source_path": "backend/test_network_snapshot.py",
+      "repository_path": "frontend/backend/test_network_snapshot.py",
+      "sha256": "abe866ed7cbc3186a980027de55aa1654288a618413586bcfd5f66e20f639060",
+      "bytes": 1679
+    },
+    {
+      "source_path": "backend/tests/workflow_connection_check.py",
+      "repository_path": "frontend/backend/tests/workflow_connection_check.py",
+      "sha256": "319436d439ab0de52c9f677c84375f1197f306760f8887c9485a78edb3353152",
+      "bytes": 338
+    },
+    {
+      "source_path": "backend/tests/workflow_start_proof.py",
+      "repository_path": "frontend/backend/tests/workflow_start_proof.py",
+      "sha256": "fe28ed2a3c46c7a26f210b5103b1a0294b02e85e3a8391efdb7d4b16c9d31973",
+      "bytes": 557
+    },
+    {
+      "source_path": "data/google-trends/australia - domestic violence - google trends - multiTimeline.csv",
+      "repository_path": "frontend/data/google-trends/australia - domestic violence - google trends - multiTimeline.csv",
+      "sha256": "f99b21b657c6128ebc380925782742a1738d6b0da060fb4f4f2aba02ec7254f3",
+      "bytes": 3078
+    },
+    {
+      "source_path": "data/google-trends/manifest.json",
+      "repository_path": "frontend/data/google-trends/manifest.json",
+      "sha256": "33a8157551c2525a2028a1bc1d0f1863e09f3a04896a6c52cac5dbcdb3681cfc",
+      "bytes": 2572
+    },
+    {
+      "source_path": "data/google-trends/usa - domestic violence - google trends.csv",
+      "repository_path": "frontend/data/google-trends/usa - domestic violence - google trends.csv",
+      "sha256": "88b05a971a851a9012c16886229dc6ff4b8e847e50dbc8b4617343e5c144e797",
+      "bytes": 3082
+    },
+    {
+      "source_path": "data/google-trends/worldwide - domestic violence - google trends.csv",
+      "repository_path": "frontend/data/google-trends/worldwide - domestic violence - google trends.csv",
+      "sha256": "ce2af8435bcfd4c369a70b50d32aa2a03775965c9d5dca83222b36022e6db9c1",
+      "bytes": 3078
+    },
+    {
+      "source_path": "db/migrations/0001_campaign_settings.sql",
+      "repository_path": "frontend/db/migrations/0001_campaign_settings.sql",
+      "sha256": "376e8dbe5609aafeb6791a871f53a98badba95d9b829c37ed6debec5a4ef3b72",
+      "bytes": 579
+    },
+    {
+      "source_path": "db/migrations/0002_connector_preferences.sql",
+      "repository_path": "frontend/db/migrations/0002_connector_preferences.sql",
+      "sha256": "91a4bbf254a5ddfc5198ac71bb4abd0ec6d01f9e14ba294a33d7940aa206c384",
+      "bytes": 246
+    },
+    {
+      "source_path": "db/migrations/0003_synthetic_settings.sql",
+      "repository_path": "frontend/db/migrations/0003_synthetic_settings.sql",
+      "sha256": "c7fccdff47d0fe6ce211286a7e341cb6379ed337488a49c64500fe264efc95d3",
+      "bytes": 955
+    },
+    {
+      "source_path": "db/migrations/0004_network_reviews.sql",
+      "repository_path": "frontend/db/migrations/0004_network_reviews.sql",
+      "sha256": "e25735c78ad892b62ee47a753d99bb5e49ae188b2e6020cdc8ec6d0af0c30f00",
+      "bytes": 455
+    },
+    {
+      "source_path": "db/migrations/0005_prolific_pilot.sql",
+      "repository_path": "frontend/db/migrations/0005_prolific_pilot.sql",
+      "sha256": "70c81903a9fd3e413f2b33644d991268f793eccaf6a97b6e0d32e09443c9edd8",
+      "bytes": 756
+    },
+    {
+      "source_path": "db/migrations/010_lab_research.sql",
+      "repository_path": "frontend/db/migrations/010_lab_research.sql",
+      "sha256": "a454ebfe27906080b17565bdfedab1b06a1b629b080b7403fb815f35f0f0be17",
+      "bytes": 563
+    },
+    {
+      "source_path": "db/migrations/011_campaign_workspaces.sql",
+      "repository_path": "frontend/db/migrations/011_campaign_workspaces.sql",
+      "sha256": "a7fb636cf7ba1c0440d2d0a54b120a7427cbfecabc0e9031d63a14b1b2f27f6d",
+      "bytes": 1580
+    },
+    {
+      "source_path": "docs/CLIENT_PRIORITIES_2026-10-15.md",
+      "repository_path": "frontend/docs/CLIENT_PRIORITIES_2026-10-15.md",
+      "sha256": "334efd1266115ad365adcf400c245e7b72c592e6226a3d39a266be7679018f89",
+      "bytes": 3110
+    },
+    {
+      "source_path": "docs/CONTEXTUAL_OPINION_2026-10-15.md",
+      "repository_path": "frontend/docs/CONTEXTUAL_OPINION_2026-10-15.md",
+      "sha256": "ef5dcdcabfcd690814af87def2f08e045eacd65932d8ae4e93b0bcc46c58eb8f",
+      "bytes": 10613
+    },
+    {
+      "source_path": "docs/DEEP_RESEARCH_2026-10-15.md",
+      "repository_path": "frontend/docs/DEEP_RESEARCH_2026-10-15.md",
+      "sha256": "a80dc04852155a77cd7792a6781bfcfa0313fc533fc302ec8cf71ee44a5afaee",
+      "bytes": 4531
+    },
+    {
+      "source_path": "docs/infrastructure/approved-panel-field-map.md",
+      "repository_path": "frontend/docs/infrastructure/approved-panel-field-map.md",
+      "sha256": "4bca84363b58e384d47e9ccb8c4492ef0f26657fda8a0d9acca8af4252ab1d1d",
+      "bytes": 4837
+    },
+    {
+      "source_path": "docs/infrastructure/enterprise-mvp-decision.md",
+      "repository_path": "frontend/docs/infrastructure/enterprise-mvp-decision.md",
+      "sha256": "b2ce2482e3d9a36dda359c3d326a130971dabd07a7e409a9c7f82604f0889f99",
+      "bytes": 10978
+    },
+    {
+      "source_path": "docs/infrastructure/pipeline-status.md",
+      "repository_path": "frontend/docs/infrastructure/pipeline-status.md",
+      "sha256": "f50b3ac2037f2486cd9bcbff31a67b6beccca90a3903a3fa1dd17e5a66580b28",
+      "bytes": 20192
+    },
+    {
+      "source_path": "docs/infrastructure/prompt-first-pass-approval.json",
+      "repository_path": "frontend/docs/infrastructure/prompt-first-pass-approval.json",
+      "sha256": "cfe0a2dbe73ac3cd8524f29a946acd1ecef3e1271282e2292b61a1ddfb46ceb6",
+      "bytes": 432
+    },
+    {
+      "source_path": "docs/network-demo.md",
+      "repository_path": "frontend/docs/network-demo.md",
+      "sha256": "45ee6370e2084ef9ede2a66b661e66b4ca91b6b989de8e17b0191f50478af086",
+      "bytes": 4330
+    },
+    {
+      "source_path": "docs/network-workflow.md",
+      "repository_path": "frontend/docs/network-workflow.md",
+      "sha256": "d3d61af44254c77103fb2410b0b3bff8d047bbae5a19fdcdb94e653bb8cd1613",
+      "bytes": 3888
+    },
+    {
+      "source_path": "docs/no-more-violence-lab.md",
+      "repository_path": "frontend/docs/no-more-violence-lab.md",
+      "sha256": "44b10ee9cbf663d577c1f149600fe3bfda5b91a62e0e4b9401e1b134b4e71189",
+      "bytes": 8681
+    },
+    {
+      "source_path": "docs/prolific-pilot.md",
+      "repository_path": "frontend/docs/prolific-pilot.md",
+      "sha256": "1376f57dd65b5fc05b7bc649c38a17d49be1ae83edefee4a8b71de37f42bea82",
+      "bytes": 4666
+    },
+    {
+      "source_path": "public/Rihanna_Climate_Justice_Strategic_Impact_Report.pdf",
+      "repository_path": "frontend/public/Rihanna_Climate_Justice_Strategic_Impact_Report.pdf",
+      "sha256": "62ccf4cc84f48973d04aafc181f17bcdd823fa6a411890059b10363e221cf119",
+      "bytes": 2733205
+    },
+    {
+      "source_path": "public/research-response-chart.png",
+      "repository_path": "frontend/public/research-response-chart.png",
+      "sha256": "2f7258ac16d4131ba08307d6bc4a71610a73ad9ba652db94adba51c6752f1829",
+      "bytes": 70747
+    },
+    {
+      "source_path": "public/research-surveybot-phone.png",
+      "repository_path": "frontend/public/research-surveybot-phone.png",
+      "sha256": "a76f28818c09d957e3699dd05ebcc9b8ba4e2e3cfa3c8eb74ec41ad8efc50c48",
+      "bytes": 360057
+    },
+    {
+      "source_path": "public/research-world-map.png",
+      "repository_path": "frontend/public/research-world-map.png",
+      "sha256": "31cd915b20a8bab0175b2bad05834055cd9629319360f87b9771a550bf2c26c3",
+      "bytes": 1754631
+    },
+    {
+      "source_path": "scripts/build-trends-data.mjs",
+      "repository_path": "frontend/scripts/build-trends-data.mjs",
+      "sha256": "f3b365c10d4ea597ed7d605f534af74a9615342e79e7fb8413fd4afec90c4067",
+      "bytes": 4104
+    },
+    {
+      "source_path": "scripts/export-intelligence-spec.mjs",
+      "repository_path": "frontend/scripts/export-intelligence-spec.mjs",
+      "sha256": "b2ed12ae9c5c0fd1beaa47f10f308750c09759789fba44457dc7bdd1ccdc7bc2",
+      "bytes": 1278
+    },
+    {
+      "source_path": "scripts/import-approved-review.mjs",
+      "repository_path": "frontend/scripts/import-approved-review.mjs",
+      "sha256": "e329ed9e481337e13b30cdec0c3357664f1b8d4134056bf9c50e83315ada0c89",
+      "bytes": 1890
+    },
+    {
+      "source_path": "scripts/ingest-x-snapshot.mjs",
+      "repository_path": "frontend/scripts/ingest-x-snapshot.mjs",
+      "sha256": "9e1cb7fad1ffc5890909bbf04eecab560182ab3454c0c8842c4c3703edc946fe",
+      "bytes": 3929
+    },
+    {
+      "source_path": "scripts/qa-lab-line.mjs",
+      "repository_path": "frontend/scripts/qa-lab-line.mjs",
+      "sha256": "134af10f7ddbcd42f0296c55025c043b910efa7e1730f3d63b4a8f2f4ffd3099",
+      "bytes": 8066
+    },
+    {
+      "source_path": "scripts/qa-lab-reports.mjs",
+      "repository_path": "frontend/scripts/qa-lab-reports.mjs",
+      "sha256": "1baf952d7bc787a2374ceb132989fe79714fefed4211c81b01e1c456fb0e8cad",
+      "bytes": 7655
+    },
+    {
+      "source_path": "scripts/qa-lab-research.mjs",
+      "repository_path": "frontend/scripts/qa-lab-research.mjs",
+      "sha256": "2fe986d90767a97fa3e1ee5dcbb0269c0139fbabcb3707653b27b4a6a5f24f83",
+      "bytes": 2754
+    },
+    {
+      "source_path": "scripts/qa-lab.mjs",
+      "repository_path": "frontend/scripts/qa-lab.mjs",
+      "sha256": "7b59326bf38a92bfafa106bfe9208d95dd189fcea0d5d29336497d4c7d4529d3",
+      "bytes": 8232
+    },
+    {
+      "source_path": "scripts/qa-network.mjs",
+      "repository_path": "frontend/scripts/qa-network.mjs",
+      "sha256": "c6ee69571973b86e9ccd0960e1b1a2b0ef9d420a25518c1bf6d0e8b545a1e522",
+      "bytes": 4470
+    },
+    {
+      "source_path": "scripts/qa-overview-first-load.mjs",
+      "repository_path": "frontend/scripts/qa-overview-first-load.mjs",
+      "sha256": "b911f5dfae9cca209a079a20ca06bff899c953c60de35583a72856661a6bda4b",
+      "bytes": 2255
+    },
+    {
+      "source_path": "scripts/qa-prolific-survey.mjs",
+      "repository_path": "frontend/scripts/qa-prolific-survey.mjs",
+      "sha256": "4f264a20f38ce88f8866b9cc5c53d3d40f03a417b3f9696f688fa9d1f172ee6c",
+      "bytes": 3732
+    },
+    {
+      "source_path": "scripts/qa-trends-published.mjs",
+      "repository_path": "frontend/scripts/qa-trends-published.mjs",
+      "sha256": "754953d3e09444f73281a56645ab71b6cb0a6c28ce42c1ca55614edc8d94e711",
+      "bytes": 5439
+    },
+    {
+      "source_path": "scripts/qa-violence-dashboard.mjs",
+      "repository_path": "frontend/scripts/qa-violence-dashboard.mjs",
+      "sha256": "c6f1b386d80683e51d8a103be5cf31ec589092198053b60319cd04e8d563bbe2",
+      "bytes": 10033
+    },
+    {
+      "source_path": "server/campaign.ts",
+      "repository_path": "frontend/server/campaign.ts",
+      "sha256": "3cd73baafb6192e60e4f1387abc9da7ad9ced299252051ca6e03eecb49f0e8d2",
+      "bytes": 2084
+    },
+    {
+      "source_path": "server/google-trends.json",
+      "repository_path": "frontend/server/google-trends.json",
+      "sha256": "1e1cb096eefdef51452f027dfad514e4d646e4bab3838f20d2a91688874cc5bc",
+      "bytes": 92866
+    },
+    {
+      "source_path": "server/intelligence/approved-review.json",
+      "repository_path": "frontend/server/intelligence/approved-review.json",
+      "sha256": "36de65f7b0e248d5af1fd961fb38ad31643b0ba02c9aa050777a874c7450707b",
+      "bytes": 133942
+    },
+    {
+      "source_path": "server/intelligence/approved-review.md",
+      "repository_path": "frontend/server/intelligence/approved-review.md",
+      "sha256": "e317f036bcbaa18988cac9de6f3222b14694e3ce851015bab9f950aba6fa6417",
+      "bytes": 57388
+    },
+    {
+      "source_path": "server/intelligence/review.json",
+      "repository_path": "frontend/server/intelligence/review.json",
+      "sha256": "50fd3c9b584d990658a0bbb3f8ffd2eb8c6db08a6a44c212dbc2d30a5f765630",
+      "bytes": 77
+    },
+    {
+      "source_path": "server/intelligence/specification.json",
+      "repository_path": "frontend/server/intelligence/specification.json",
+      "sha256": "69d1fd990f498e68a2744a7e4a84464f429906e2b0f92676b56a6b2c89ef1bcd",
+      "bytes": 26991
+    },
+    {
+      "source_path": "server/network-demo.json",
+      "repository_path": "frontend/server/network-demo.json",
+      "sha256": "555de3c5f2fadf0e7179a0313da38a7285eb49eb0383d141e0a16362020a8108",
+      "bytes": 85830
+    },
+    {
+      "source_path": "server/network.ts",
+      "repository_path": "frontend/server/network.ts",
+      "sha256": "b3d7507e338f1440574c421194dcd23db6b7a7c54fe8bf8951f4f671843dc35b",
+      "bytes": 1403
+    },
+    {
+      "source_path": "server/workspace-settings.ts",
+      "repository_path": "frontend/server/workspace-settings.ts",
+      "sha256": "e1677fca24313c85a0ea0d31bdf2a0a53ad769594eb6fcf58e6319dc98295846",
+      "bytes": 2371
+    },
+    {
+      "source_path": "tests/campaign-settings.test.mjs",
+      "repository_path": "frontend/tests/campaign-settings.test.mjs",
+      "sha256": "bce6a50b4953a0bf1479b410cf3322a1e2df2fcf81974d88581649e4e1fe8e82",
+      "bytes": 991
+    },
+    {
+      "source_path": "tests/lab.test.mjs",
+      "repository_path": "frontend/tests/lab.test.mjs",
+      "sha256": "368d809fe462060647e3297b58ac170e2db6b96906566c9f1440757d7a46b84a",
+      "bytes": 8830
+    },
+    {
+      "source_path": "tests/network.test.mjs",
+      "repository_path": "frontend/tests/network.test.mjs",
+      "sha256": "2a1a3d6308ef2aee2c60db299439880425b840ebf907d3ac4c45b40c48297890",
+      "bytes": 4014
+    },
+    {
+      "source_path": "tests/prolific-storage.test.mjs",
+      "repository_path": "frontend/tests/prolific-storage.test.mjs",
+      "sha256": "87005c7d99b01cf17c3fdf7a7da2eede0e6e333327a488e74ef9efb3e2e3612c",
+      "bytes": 4543
+    },
+    {
+      "source_path": "tests/prolific-survey.test.mjs",
+      "repository_path": "frontend/tests/prolific-survey.test.mjs",
+      "sha256": "e64c5377f5f6a85885ce18916bc8f96baca1433f5118efb9fb3a7852fc42d1af",
+      "bytes": 1981
+    },
+    {
+      "source_path": "tests/synthetic-settings.test.mjs",
+      "repository_path": "frontend/tests/synthetic-settings.test.mjs",
+      "sha256": "bc9af0f8e5ce7da63022a26defdbefd8a4f8f1446f2d1b395f2f5eed9f4dcf85",
+      "bytes": 1231
+    },
+    {
+      "source_path": "tests/trends-publication.test.mjs",
+      "repository_path": "frontend/tests/trends-publication.test.mjs",
+      "sha256": "77c0de20e81f94b5238eee10f06ce770dac418faebc6d2d703f13ad95bb52763",
+      "bytes": 2935
+    },
+    {
+      "source_path": "tests/workspace-settings.test.mjs",
+      "repository_path": "frontend/tests/workspace-settings.test.mjs",
+      "sha256": "ae5ac8d602440c0297f690c839bac65591cd5c115d7554fbaa00f3c4f520e5a5",
+      "bytes": 2572
+    },
+    {
+      "source_path": ".gitignore",
+      "repository_path": "frontend/.gitignore",
+      "sha256": "94f23284eea2c1bda88f7aa109a9fd6603f309484770fa8490933b10a10970ac",
+      "bytes": 627
+    },
+    {
+      "source_path": "AGENTS.md",
+      "repository_path": "frontend/AGENTS.md",
+      "sha256": "8fe853ec304db490e8b7ebabc6d92aea66128a2a6fa71fab89054bdd413a2fdc",
+      "bytes": 3379
+    },
+    {
+      "source_path": "README.md",
+      "repository_path": "frontend/README.md",
+      "sha256": "af0e551c205881318cd99d0eb6ee12bd4069a16be71fc7b75aab6202639c2f26",
+      "bytes": 993,
+      "upstream_sha256": "64a2fd2c533a34f602b5d4fb58d3abbac6e1ec180408248c8436d28aabb7045e",
+      "import_adaptation": "Repository documentation or private-data exclusion rules; application implementation unchanged."
+    },
+    {
+      "source_path": "app/RmuDashboard.tsx",
+      "repository_path": "frontend/app/RmuDashboard.tsx",
+      "sha256": "62ea9230ec38ecbd47cf7923d3fb0680940fd1e2e445e097d75ec10faf5d027a",
+      "bytes": 52265
+    },
+    {
+      "source_path": "app/globals.css",
+      "repository_path": "frontend/app/globals.css",
+      "sha256": "65c7bd0d3a04c544b3676f3f9649b101645961ef91c6b478e99e884bb25bc2ba",
+      "bytes": 93252
+    },
+    {
+      "source_path": "app/layout.tsx",
+      "repository_path": "frontend/app/layout.tsx",
+      "sha256": "07eb1243d0e9022d002e839fc6f7df7cf7fd1f9f7d1239f04eec7465ad4f09bb",
+      "bytes": 1281
+    },
+    {
+      "source_path": "app/page.tsx",
+      "repository_path": "frontend/app/page.tsx",
+      "sha256": "2308d47e44e960a0e005f339a6e9c151527cc42cb4a5f26ca34a45a83d547726",
+      "bytes": 126
+    },
+    {
+      "source_path": "db/index.ts",
+      "repository_path": "frontend/db/index.ts",
+      "sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
+      "bytes": 423
+    },
+    {
+      "source_path": "db/schema.ts",
+      "repository_path": "frontend/db/schema.ts",
+      "sha256": "13ddacbf0be50e054d450a6c642b7fdc1aa943fd6b99084711e07e58b600390d",
+      "bytes": 169
+    },
+    {
+      "source_path": "drizzle.config.ts",
+      "repository_path": "frontend/drizzle.config.ts",
+      "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
+      "bytes": 148
+    },
+    {
+      "source_path": "drizzle/meta/_journal.json",
+      "repository_path": "frontend/drizzle/meta/_journal.json",
+      "sha256": "90cb374e093894d0efce6f1830d873a42aadd8ba49d2f024495e5cb2e1c8c303",
+      "bytes": 61
+    },
+    {
+      "source_path": "eslint.config.mjs",
+      "repository_path": "frontend/eslint.config.mjs",
+      "sha256": "6090bd544865638d8c77a3443f037b3b289596a7ec1e1dccc3a13677e6d1ca83",
+      "bytes": 1009
+    },
+    {
+      "source_path": "examples/d1/app/api/notes/route.ts",
+      "repository_path": "frontend/examples/d1/app/api/notes/route.ts",
+      "sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909",
+      "bytes": 1700
+    },
+    {
+      "source_path": "examples/d1/db/schema.ts",
+      "repository_path": "frontend/examples/d1/db/schema.ts",
+      "sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454",
+      "bytes": 370
+    },
+    {
+      "source_path": "next-env.d.ts",
+      "repository_path": "frontend/next-env.d.ts",
+      "sha256": "a291a6b60536fec0a3b9d4ffd6d51179b463e9bc20281d7499d756813b4c07d5",
+      "bytes": 189
+    },
+    {
+      "source_path": "next.config.ts",
+      "repository_path": "frontend/next.config.ts",
+      "sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
+      "bytes": 133
+    },
+    {
+      "source_path": "package.json",
+      "repository_path": "frontend/package.json",
+      "sha256": "c7f77f30fdd06d00dce74fa2402b08dfb588ac28de9e68f2e96b6223dcbfc83d",
+      "bytes": 1570
+    },
+    {
+      "source_path": "pnpm-lock.yaml",
+      "repository_path": "frontend/pnpm-lock.yaml",
+      "sha256": "c6038456903b54dc4e537dde17ee60716b467580da3773055ebabc412220889d",
+      "bytes": 204947
+    },
+    {
+      "source_path": "pnpm-workspace.yaml",
+      "repository_path": "frontend/pnpm-workspace.yaml",
+      "sha256": "baf270b7c4f4a227ea70d684f8078f15b8de8bf06985828d2b09617001ea3b7f",
+      "bytes": 116
+    },
+    {
+      "source_path": "postcss.config.mjs",
+      "repository_path": "frontend/postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94
+    },
+    {
+      "source_path": "public/re-model-context.jpg",
+      "repository_path": "frontend/public/re-model-context.jpg",
+      "sha256": "a01b7846f4e3049272d20d29fd406b11ac4961296eca4b915f89c1377e7bbf4c",
+      "bytes": 104267
+    },
+    {
+      "source_path": "public/re-model-favicon.png",
+      "repository_path": "frontend/public/re-model-favicon.png",
+      "sha256": "ebb0c50ce739135516d495c6e8befb9de00fba0037bc24fd0337e137072ccea3",
+      "bytes": 3732
+    },
+    {
+      "source_path": "public/re-model-intelligence-id.png",
+      "repository_path": "frontend/public/re-model-intelligence-id.png",
+      "sha256": "014be47ea7c070479b02dd52f97ee0aebb388536255d97c332c452fcf7e470f3",
+      "bytes": 19100
+    },
+    {
+      "source_path": "public/re-model-intelligence-social.png",
+      "repository_path": "frontend/public/re-model-intelligence-social.png",
+      "sha256": "84ca54bf334ac6fd9b85357a448a1ba81209f803343c2099dd23fe5e73e52ef3",
+      "bytes": 1471842
+    },
+    {
+      "source_path": "public/re-model-logo-lockup-white.png",
+      "repository_path": "frontend/public/re-model-logo-lockup-white.png",
+      "sha256": "605d638c5e8b665f224ff51dc23cbc049ac1fd0ea79935b68f57f20a32194eea",
+      "bytes": 75046
+    },
+    {
+      "source_path": "public/re-model-logo-white.png",
+      "repository_path": "frontend/public/re-model-logo-white.png",
+      "sha256": "42e06cb4e3eeeb81756f91d4a34a8b4fc11e2426d3666ba9c5166fca6d2c938f",
+      "bytes": 14908
+    },
+    {
+      "source_path": "public/remodel-impact-01.jpg",
+      "repository_path": "frontend/public/remodel-impact-01.jpg",
+      "sha256": "b48e7a2a0bfea383291b21c73a61440ddd9a44332b2f8daccc269ec98ebb95fd",
+      "bytes": 430301
+    },
+    {
+      "source_path": "public/remodel-impact-02.jpg",
+      "repository_path": "frontend/public/remodel-impact-02.jpg",
+      "sha256": "f93d14b311d8b44952e61b06458edc3c3b6bee085aaa5004e623cee0d9041beb",
+      "bytes": 463126
+    },
+    {
+      "source_path": "public/rihanna-aqua.png",
+      "repository_path": "frontend/public/rihanna-aqua.png",
+      "sha256": "7089447aecb799c13f69d3f67b60787771af7a5e50c2b10ef09565cbfc03fe07",
+      "bytes": 743741
+    },
+    {
+      "source_path": "public/rihanna-concert-red.png",
+      "repository_path": "frontend/public/rihanna-concert-red.png",
+      "sha256": "855eb56d28ae611ed89b88111388bcb83ac4069809f17805c6071391b3c1a380",
+      "bytes": 1979067
+    },
+    {
+      "source_path": "public/rihanna-concert-tailoring.png",
+      "repository_path": "frontend/public/rihanna-concert-tailoring.png",
+      "sha256": "22d2c253f42cf1794f28a1fa0ea483dbfef26358ab09c7ceca6e3f4433a8f0a4",
+      "bytes": 2321840
+    },
+    {
+      "source_path": "public/rihanna-global-citizen-loop.mp4",
+      "repository_path": "frontend/public/rihanna-global-citizen-loop.mp4",
+      "sha256": "bf18860d7605bda7ee55128abb39a2323ddbb823b45d384772b9c4a3d912aff5",
+      "bytes": 22164263
+    },
+    {
+      "source_path": "public/rihanna-global-citizen-loop.vtt",
+      "repository_path": "frontend/public/rihanna-global-citizen-loop.vtt",
+      "sha256": "08e063af8b40a2f2a7bdd26871161f087c9360e6ec02d280e70cc281cbc98495",
+      "bytes": 63
+    },
+    {
+      "source_path": "public/rihanna-global-citizen-poster.jpg",
+      "repository_path": "frontend/public/rihanna-global-citizen-poster.jpg",
+      "sha256": "25b7b9c74eda683ed54977a627daea304180cff6e16dceed381e9323803c4427",
+      "bytes": 41726
+    },
+    {
+      "source_path": "public/universal-mind-flower.png",
+      "repository_path": "frontend/public/universal-mind-flower.png",
+      "sha256": "d7b0c8c14b00152e1be5a74c0d51dd9e31ea33fb6c0b0dbc5febc6f903aaa89d",
+      "bytes": 3394
+    },
+    {
+      "source_path": "scripts/deploy-rmu-staging.sh",
+      "repository_path": "frontend/scripts/deploy-rmu-staging.sh",
+      "sha256": "fa73832c71b2d1bf05bf9877b7636a5ffbc2f52141494d56f50816a23c3c6776",
+      "bytes": 659
+    },
+    {
+      "source_path": "scripts/qa-dashboard.mjs",
+      "repository_path": "frontend/scripts/qa-dashboard.mjs",
+      "sha256": "447daaa28a10f320be04c8c3f33aba40b289a23605ee20f2f87750fb13dd44d1",
+      "bytes": 26001
+    },
+    {
+      "source_path": "tests/rendered-html.test.mjs",
+      "repository_path": "frontend/tests/rendered-html.test.mjs",
+      "sha256": "d69538542140ad5fe7a6b7c0830b54cc301c94850e86708cd39480b2bdcd6929",
+      "bytes": 3547
+    },
+    {
+      "source_path": "tsconfig.json",
+      "repository_path": "frontend/tsconfig.json",
+      "sha256": "379054f6cec60ebd0e18c47a3ce72b2cc1b3f7abd0037c668e87cb2070891147",
+      "bytes": 603
+    },
+    {
+      "source_path": "vite.config.ts",
+      "repository_path": "frontend/vite.config.ts",
+      "sha256": "198353a1a34780d783474cae0575ad69faf00b7605f90c8f9c443f6d402e08e0",
+      "bytes": 1133
+    },
+    {
+      "source_path": "worker/index.ts",
+      "repository_path": "frontend/worker/index.ts",
+      "sha256": "3aca7ec7eef6b33ec614c0bf5d6fad8e6938bb7b501247ab32098ef5f07df6c4",
+      "bytes": 2079
+    },
+    {
+      "source_path": "wrangler.rmu-staging.jsonc",
+      "repository_path": "frontend/wrangler.rmu-staging.jsonc",
+      "sha256": "37859f6219afec3369428c0cb1910c8e67cdbe7699047ce7f6c7015af3b92924",
+      "bytes": 859
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "acquisition": {
+    "status": "published",
+    "checkedAt": "2026-10-20",
+    "message": "Three Google Trends domestic-violence Web Search timeline exports supplied by Ben. Original CSVs retained unchanged; metadata verified against their Google download URLs. Regional and related-topic exports have not been supplied."
+  },
+  "exports": [
+    {
+      "id": "domestic-violence-au-web-2026-10-20",
+      "terms": [
+        "domestic violence"
+      ],
+      "geography": "AU",
+      "geographyLabel": "Australia",
+      "channel": "Web Search",
+      "from": "2004-01-01",
+      "to": "2026-10-19",
+      "exportedAt": "2026-10-20T09:09:17.917593+11:00",
+      "sourceUrl": "https://trends.google.com/trends/explore?date=all&geo=AU&q=domestic%20violence&hl=en-US",
+      "timeCsv": "australia - domestic violence - google trends - multiTimeline.csv",
+      "resolution": "MONTH",
+      "category": "All categories",
+      "metadataVerified": "Search type, category, scope and request dates verified against the original Google download metadata.",
+      "receivedAt": "2026-10-20"
+    },
+    {
+      "id": "domestic-violence-us-web-2026-10-20",
+      "terms": [
+        "domestic violence"
+      ],
+      "geography": "US",
+      "geographyLabel": "United States",
+      "channel": "Web Search",
+      "from": "2004-01-01",
+      "to": "2026-10-19",
+      "exportedAt": "2026-10-20T09:10:05.355819+11:00",
+      "sourceUrl": "https://trends.google.com/trends/explore?date=all&geo=US&q=domestic%20violence&hl=en-US",
+      "timeCsv": "usa - domestic violence - google trends.csv",
+      "resolution": "MONTH",
+      "category": "All categories",
+      "metadataVerified": "Search type, category, scope and request dates verified against the original Google download metadata.",
+      "receivedAt": "2026-10-20"
+    },
+    {
+      "id": "domestic-violence-worldwide-web-2026-10-20",
+      "terms": [
+        "domestic violence"
+      ],
+      "geography": "",
+      "geographyLabel": "Worldwide",
+      "channel": "Web Search",
+      "from": "2004-01-01",
+      "to": "2026-10-19",
+      "exportedAt": "2026-10-20T09:11:10.323001+11:00",
+      "sourceUrl": "https://trends.google.com/trends/explore?date=all&q=domestic%20violence&hl=en-US",
+      "timeCsv": "worldwide - domestic violence - google trends.csv",
+      "resolution": "MONTH",
+      "category": "All categories",
+      "metadataVerified": "Search type, category, scope and request dates verified against the original Google download metadata.",
+      "receivedAt": "2026-10-20"
+    }
+  ]
+}

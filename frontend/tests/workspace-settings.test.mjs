@@ -1,0 +1,16 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {DatabaseSync} from 'node:sqlite';
+import {readFileSync} from 'node:fs';
+import ts from 'typescript';
+import {campaignDefaults} from '../app/campaign-config.ts';
+import {demoDefaults} from '../app/synthetic-config.ts';
+const db=new DatabaseSync(':memory:');
+for(const file of ['0001_campaign_settings.sql','0003_synthetic_settings.sql','011_campaign_workspaces.sql'])db.exec(readFileSync(new URL('../db/migrations/'+file,import.meta.url),'utf8'));
+const binding={prepare(sql){let values=[];return {bind(...args){values=args;return this;},async first(){return db.prepare(sql).get(...values)||null;},async run(){return {meta:{changes:Number(db.prepare(sql).run(...values).changes)}};}};}};
+const source=ts.transpileModule(readFileSync(new URL('../server/workspace-settings.ts',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+const loaded={exports:{}};new Function('require','exports','module',source)(name=>name==='./campaign'?{bindings:()=>({CAMPAIGN_DB:binding})}:name.includes('synthetic-config')?{demoDefaults}:{campaignDefaults},loaded.exports,loaded);
+const {readSettings,saveSettings,workspace}=loaded.exports;
+test('saving No More Violence demo values leaves Rihanna values unchanged',async()=>{const before=await readSettings('climate-justice','synthetic');const nmv=await readSettings('violence','synthetic');assert.equal(nmv.writable,true);const next={...nmv.settings,events:7};assert.equal((await saveSettings('violence','synthetic',next,nmv.version)).version,1);assert.equal((await readSettings('violence','synthetic')).settings.events,7);assert.deepEqual(await readSettings('climate-justice','synthetic'),before);});
+test('campaign identity is isolated and stale writes are rejected',async()=>{const before=await readSettings('climate-justice','campaign');const nmv=await readSettings('violence','campaign');assert.equal(nmv.settings.name,'No More Violence');await saveSettings('violence','campaign',{...nmv.settings,agency:'Proof agency'},nmv.version);assert.equal(await saveSettings('violence','campaign',nmv.settings,nmv.version),null);assert.deepEqual(await readSettings('climate-justice','campaign'),before);});
+test('legacy URLs target climate justice and unknown workspace IDs are rejected',()=>{assert.equal(workspace(new Request('https://rmu.universalmind.tv/api/campaign')),'climate-justice');assert.throws(()=>workspace(new Request('https://rmu.universalmind.tv/api/campaign?workspace=unknown')));});

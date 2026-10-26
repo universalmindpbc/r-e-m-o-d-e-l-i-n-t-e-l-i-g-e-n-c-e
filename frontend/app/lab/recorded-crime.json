@@ -1,0 +1,6347 @@
+{
+  "source": "https://www.abs.gov.au/statistics/people/crime-and-justice/recorded-crime-victims/2025",
+  "workbook": "5. Victims of family and domestic violence related offences (Tables 29 to 38).xlsx",
+  "released": "3 September 2026",
+  "checked": "20 October 2026",
+  "rows": [
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2014,
+      "value": 35,
+      "cell": "Table 29!B8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2015,
+      "value": 31,
+      "cell": "Table 29!C8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2016,
+      "value": 41,
+      "cell": "Table 29!D8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2017,
+      "value": 33,
+      "cell": "Table 29!E8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2018,
+      "value": 38,
+      "cell": "Table 29!F8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2019,
+      "value": 22,
+      "cell": "Table 29!G8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2020,
+      "value": 23,
+      "cell": "Table 29!H8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2021,
+      "value": 32,
+      "cell": "Table 29!I8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2022,
+      "value": 38,
+      "cell": "Table 29!J8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2023,
+      "value": 38,
+      "cell": "Table 29!K8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2024,
+      "value": 44,
+      "cell": "Table 29!L8"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2025,
+      "value": 33,
+      "cell": "Table 29!M8"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2014,
+      "value": 1138,
+      "cell": "Table 29!B11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2015,
+      "value": 1190,
+      "cell": "Table 29!C11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2016,
+      "value": 1243,
+      "cell": "Table 29!D11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2017,
+      "value": 1212,
+      "cell": "Table 29!E11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2018,
+      "value": 1156,
+      "cell": "Table 29!F11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2019,
+      "value": 1253,
+      "cell": "Table 29!G11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2020,
+      "value": 1413,
+      "cell": "Table 29!H11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2021,
+      "value": 1280,
+      "cell": "Table 29!I11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2022,
+      "value": 1288,
+      "cell": "Table 29!J11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2023,
+      "value": 1618,
+      "cell": "Table 29!K11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2024,
+      "value": 1896,
+      "cell": "Table 29!L11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Men",
+      "year": 2025,
+      "value": 1738,
+      "cell": "Table 29!M11"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2014,
+      "value": 56,
+      "cell": "Table 29!B15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2015,
+      "value": 61,
+      "cell": "Table 29!C15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2016,
+      "value": 52,
+      "cell": "Table 29!D15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2017,
+      "value": 42,
+      "cell": "Table 29!E15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2018,
+      "value": 54,
+      "cell": "Table 29!F15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2019,
+      "value": 49,
+      "cell": "Table 29!G15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2020,
+      "value": 52,
+      "cell": "Table 29!H15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2021,
+      "value": 33,
+      "cell": "Table 29!I15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2022,
+      "value": 35,
+      "cell": "Table 29!J15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2023,
+      "value": 58,
+      "cell": "Table 29!K15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2024,
+      "value": 57,
+      "cell": "Table 29!L15"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2025,
+      "value": 42,
+      "cell": "Table 29!M15"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2014,
+      "value": 5811,
+      "cell": "Table 29!B18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2015,
+      "value": 6497,
+      "cell": "Table 29!C18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2016,
+      "value": 6938,
+      "cell": "Table 29!D18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2017,
+      "value": 7456,
+      "cell": "Table 29!E18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2018,
+      "value": 7645,
+      "cell": "Table 29!F18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2019,
+      "value": 7690,
+      "cell": "Table 29!G18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2020,
+      "value": 8739,
+      "cell": "Table 29!H18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2021,
+      "value": 10063,
+      "cell": "Table 29!I18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2022,
+      "value": 10633,
+      "cell": "Table 29!J18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2023,
+      "value": 12421,
+      "cell": "Table 29!K18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2024,
+      "value": 14066,
+      "cell": "Table 29!L18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "Women",
+      "year": 2025,
+      "value": 14201,
+      "cell": "Table 29!M18"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2014,
+      "value": 95,
+      "cell": "Table 29!B22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2015,
+      "value": 91,
+      "cell": "Table 29!C22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2016,
+      "value": 97,
+      "cell": "Table 29!D22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2017,
+      "value": 82,
+      "cell": "Table 29!E22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2018,
+      "value": 92,
+      "cell": "Table 29!F22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2019,
+      "value": 74,
+      "cell": "Table 29!G22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2020,
+      "value": 82,
+      "cell": "Table 29!H22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2021,
+      "value": 65,
+      "cell": "Table 29!I22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2022,
+      "value": 72,
+      "cell": "Table 29!J22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2023,
+      "value": 97,
+      "cell": "Table 29!K22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2024,
+      "value": 102,
+      "cell": "Table 29!L22"
+    },
+    {
+      "offence": "Murder",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2025,
+      "value": 76,
+      "cell": "Table 29!M22"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2014,
+      "value": 6961,
+      "cell": "Table 29!B25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2015,
+      "value": 7719,
+      "cell": "Table 29!C25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2016,
+      "value": 8197,
+      "cell": "Table 29!D25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2017,
+      "value": 8688,
+      "cell": "Table 29!E25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2018,
+      "value": 8826,
+      "cell": "Table 29!F25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2019,
+      "value": 8985,
+      "cell": "Table 29!G25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2020,
+      "value": 10175,
+      "cell": "Table 29!H25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2021,
+      "value": 11362,
+      "cell": "Table 29!I25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2022,
+      "value": 11944,
+      "cell": "Table 29!J25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2023,
+      "value": 14069,
+      "cell": "Table 29!K25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2024,
+      "value": 16281,
+      "cell": "Table 29!L25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "Australia",
+      "sex": "All",
+      "year": 2025,
+      "value": 16146,
+      "cell": "Table 29!M25"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2014,
+      "value": 11,
+      "cell": "Table 30!B9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2015,
+      "value": 9,
+      "cell": "Table 30!C9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2016,
+      "value": 14,
+      "cell": "Table 30!D9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2017,
+      "value": 13,
+      "cell": "Table 30!E9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2018,
+      "value": 15,
+      "cell": "Table 30!F9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2019,
+      "value": 7,
+      "cell": "Table 30!G9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2020,
+      "value": 4,
+      "cell": "Table 30!H9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2021,
+      "value": 17,
+      "cell": "Table 30!I9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2022,
+      "value": 13,
+      "cell": "Table 30!J9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2023,
+      "value": 10,
+      "cell": "Table 30!K9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2024,
+      "value": 20,
+      "cell": "Table 30!L9"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2025,
+      "value": 17,
+      "cell": "Table 30!M9"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2014,
+      "value": 9569,
+      "cell": "Table 30!B11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2015,
+      "value": 10103,
+      "cell": "Table 30!C11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2016,
+      "value": 9487,
+      "cell": "Table 30!D11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2017,
+      "value": 9510,
+      "cell": "Table 30!E11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2018,
+      "value": 10087,
+      "cell": "Table 30!F11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2019,
+      "value": 10459,
+      "cell": "Table 30!G11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2020,
+      "value": 10930,
+      "cell": "Table 30!H11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2021,
+      "value": 11544,
+      "cell": "Table 30!I11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2022,
+      "value": 11463,
+      "cell": "Table 30!J11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2023,
+      "value": 12820,
+      "cell": "Table 30!K11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2024,
+      "value": 13268,
+      "cell": "Table 30!L11"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2025,
+      "value": 13472,
+      "cell": "Table 30!M11"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2014,
+      "value": 591,
+      "cell": "Table 30!B12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2015,
+      "value": 599,
+      "cell": "Table 30!C12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2016,
+      "value": 621,
+      "cell": "Table 30!D12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2017,
+      "value": 574,
+      "cell": "Table 30!E12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2018,
+      "value": 546,
+      "cell": "Table 30!F12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2019,
+      "value": 634,
+      "cell": "Table 30!G12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2020,
+      "value": 750,
+      "cell": "Table 30!H12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2021,
+      "value": 682,
+      "cell": "Table 30!I12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2022,
+      "value": 646,
+      "cell": "Table 30!J12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2023,
+      "value": 856,
+      "cell": "Table 30!K12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2024,
+      "value": 1028,
+      "cell": "Table 30!L12"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Men",
+      "year": 2025,
+      "value": 874,
+      "cell": "Table 30!M12"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2014,
+      "value": 25,
+      "cell": "Table 30!B16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2015,
+      "value": 15,
+      "cell": "Table 30!C16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2016,
+      "value": 15,
+      "cell": "Table 30!D16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2017,
+      "value": 11,
+      "cell": "Table 30!E16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2018,
+      "value": 18,
+      "cell": "Table 30!F16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2019,
+      "value": 21,
+      "cell": "Table 30!G16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2020,
+      "value": 24,
+      "cell": "Table 30!H16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2021,
+      "value": 9,
+      "cell": "Table 30!I16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2022,
+      "value": 10,
+      "cell": "Table 30!J16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2023,
+      "value": 14,
+      "cell": "Table 30!K16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2024,
+      "value": 17,
+      "cell": "Table 30!L16"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2025,
+      "value": 16,
+      "cell": "Table 30!M16"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2014,
+      "value": 19918,
+      "cell": "Table 30!B18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2015,
+      "value": 20338,
+      "cell": "Table 30!C18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2016,
+      "value": 20098,
+      "cell": "Table 30!D18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2017,
+      "value": 19265,
+      "cell": "Table 30!E18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2018,
+      "value": 19675,
+      "cell": "Table 30!F18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2019,
+      "value": 20427,
+      "cell": "Table 30!G18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2020,
+      "value": 20432,
+      "cell": "Table 30!H18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2021,
+      "value": 20893,
+      "cell": "Table 30!I18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2022,
+      "value": 21395,
+      "cell": "Table 30!J18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2023,
+      "value": 23429,
+      "cell": "Table 30!K18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2024,
+      "value": 23518,
+      "cell": "Table 30!L18"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2025,
+      "value": 24176,
+      "cell": "Table 30!M18"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2014,
+      "value": 2447,
+      "cell": "Table 30!B19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2015,
+      "value": 2614,
+      "cell": "Table 30!C19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2016,
+      "value": 2675,
+      "cell": "Table 30!D19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2017,
+      "value": 2844,
+      "cell": "Table 30!E19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2018,
+      "value": 2896,
+      "cell": "Table 30!F19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2019,
+      "value": 2890,
+      "cell": "Table 30!G19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2020,
+      "value": 3524,
+      "cell": "Table 30!H19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2021,
+      "value": 4015,
+      "cell": "Table 30!I19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2022,
+      "value": 4022,
+      "cell": "Table 30!J19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2023,
+      "value": 5154,
+      "cell": "Table 30!K19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2024,
+      "value": 5688,
+      "cell": "Table 30!L19"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "Women",
+      "year": 2025,
+      "value": 5398,
+      "cell": "Table 30!M19"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2014,
+      "value": 35,
+      "cell": "Table 30!B23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2015,
+      "value": 28,
+      "cell": "Table 30!C23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2016,
+      "value": 28,
+      "cell": "Table 30!D23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2017,
+      "value": 23,
+      "cell": "Table 30!E23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2018,
+      "value": 31,
+      "cell": "Table 30!F23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2019,
+      "value": 28,
+      "cell": "Table 30!G23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2020,
+      "value": 29,
+      "cell": "Table 30!H23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2021,
+      "value": 19,
+      "cell": "Table 30!I23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2022,
+      "value": 20,
+      "cell": "Table 30!J23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2023,
+      "value": 28,
+      "cell": "Table 30!K23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2024,
+      "value": 41,
+      "cell": "Table 30!L23"
+    },
+    {
+      "offence": "Murder",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2025,
+      "value": 27,
+      "cell": "Table 30!M23"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2014,
+      "value": 29518,
+      "cell": "Table 30!B25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2015,
+      "value": 30464,
+      "cell": "Table 30!C25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2016,
+      "value": 29613,
+      "cell": "Table 30!D25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2017,
+      "value": 28796,
+      "cell": "Table 30!E25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2018,
+      "value": 29902,
+      "cell": "Table 30!F25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2019,
+      "value": 30937,
+      "cell": "Table 30!G25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2020,
+      "value": 31411,
+      "cell": "Table 30!H25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2021,
+      "value": 32476,
+      "cell": "Table 30!I25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2022,
+      "value": 32893,
+      "cell": "Table 30!J25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2023,
+      "value": 36317,
+      "cell": "Table 30!K25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2024,
+      "value": 38722,
+      "cell": "Table 30!L25"
+    },
+    {
+      "offence": "Assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2025,
+      "value": 38942,
+      "cell": "Table 30!M25"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2014,
+      "value": 3044,
+      "cell": "Table 30!B26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2015,
+      "value": 3208,
+      "cell": "Table 30!C26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2016,
+      "value": 3292,
+      "cell": "Table 30!D26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2017,
+      "value": 3424,
+      "cell": "Table 30!E26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2018,
+      "value": 3459,
+      "cell": "Table 30!F26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2019,
+      "value": 3533,
+      "cell": "Table 30!G26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2020,
+      "value": 4288,
+      "cell": "Table 30!H26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2021,
+      "value": 4701,
+      "cell": "Table 30!I26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2022,
+      "value": 4678,
+      "cell": "Table 30!J26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2023,
+      "value": 6017,
+      "cell": "Table 30!K26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2024,
+      "value": 6996,
+      "cell": "Table 30!L26"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NSW",
+      "sex": "All",
+      "year": 2025,
+      "value": 6452,
+      "cell": "Table 30!M26"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2014,
+      "value": 10,
+      "cell": "Table 30!B31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2015,
+      "value": 12,
+      "cell": "Table 30!C31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2016,
+      "value": 14,
+      "cell": "Table 30!D31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2017,
+      "value": 3,
+      "cell": "Table 30!E31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2018,
+      "value": 0,
+      "cell": "Table 30!F31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2019,
+      "value": 6,
+      "cell": "Table 30!G31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2020,
+      "value": 5,
+      "cell": "Table 30!H31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2021,
+      "value": 4,
+      "cell": "Table 30!I31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2022,
+      "value": 3,
+      "cell": "Table 30!J31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2023,
+      "value": 7,
+      "cell": "Table 30!K31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2024,
+      "value": 12,
+      "cell": "Table 30!L31"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2025,
+      "value": 10,
+      "cell": "Table 30!M31"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2014,
+      "value": 164,
+      "cell": "Table 30!B33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2015,
+      "value": 217,
+      "cell": "Table 30!C33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2016,
+      "value": 254,
+      "cell": "Table 30!D33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2017,
+      "value": 241,
+      "cell": "Table 30!E33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2018,
+      "value": 225,
+      "cell": "Table 30!F33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2019,
+      "value": 207,
+      "cell": "Table 30!G33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2020,
+      "value": 230,
+      "cell": "Table 30!H33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2021,
+      "value": 221,
+      "cell": "Table 30!I33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2022,
+      "value": 205,
+      "cell": "Table 30!J33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2023,
+      "value": 230,
+      "cell": "Table 30!K33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2024,
+      "value": 257,
+      "cell": "Table 30!L33"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Men",
+      "year": 2025,
+      "value": 255,
+      "cell": "Table 30!M33"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2014,
+      "value": 12,
+      "cell": "Table 30!B37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2015,
+      "value": 11,
+      "cell": "Table 30!C37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2016,
+      "value": 16,
+      "cell": "Table 30!D37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2017,
+      "value": 10,
+      "cell": "Table 30!E37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2018,
+      "value": 13,
+      "cell": "Table 30!F37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2019,
+      "value": 9,
+      "cell": "Table 30!G37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2020,
+      "value": 12,
+      "cell": "Table 30!H37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2021,
+      "value": 12,
+      "cell": "Table 30!I37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2022,
+      "value": 13,
+      "cell": "Table 30!J37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2023,
+      "value": 9,
+      "cell": "Table 30!K37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2024,
+      "value": 13,
+      "cell": "Table 30!L37"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2025,
+      "value": 10,
+      "cell": "Table 30!M37"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2014,
+      "value": 1161,
+      "cell": "Table 30!B39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2015,
+      "value": 1437,
+      "cell": "Table 30!C39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2016,
+      "value": 1722,
+      "cell": "Table 30!D39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2017,
+      "value": 1832,
+      "cell": "Table 30!E39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2018,
+      "value": 1943,
+      "cell": "Table 30!F39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2019,
+      "value": 1935,
+      "cell": "Table 30!G39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2020,
+      "value": 2130,
+      "cell": "Table 30!H39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2021,
+      "value": 2299,
+      "cell": "Table 30!I39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2022,
+      "value": 2485,
+      "cell": "Table 30!J39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2023,
+      "value": 2282,
+      "cell": "Table 30!K39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2024,
+      "value": 2685,
+      "cell": "Table 30!L39"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "Women",
+      "year": 2025,
+      "value": 2704,
+      "cell": "Table 30!M39"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2014,
+      "value": 20,
+      "cell": "Table 30!B43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2015,
+      "value": 20,
+      "cell": "Table 30!C43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2016,
+      "value": 26,
+      "cell": "Table 30!D43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2017,
+      "value": 18,
+      "cell": "Table 30!E43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2018,
+      "value": 15,
+      "cell": "Table 30!F43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2019,
+      "value": 19,
+      "cell": "Table 30!G43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2020,
+      "value": 21,
+      "cell": "Table 30!H43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2021,
+      "value": 17,
+      "cell": "Table 30!I43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2022,
+      "value": 16,
+      "cell": "Table 30!J43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2023,
+      "value": 13,
+      "cell": "Table 30!K43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2024,
+      "value": 25,
+      "cell": "Table 30!L43"
+    },
+    {
+      "offence": "Murder",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2025,
+      "value": 18,
+      "cell": "Table 30!M43"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2014,
+      "value": 1325,
+      "cell": "Table 30!B45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2015,
+      "value": 1673,
+      "cell": "Table 30!C45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2016,
+      "value": 1984,
+      "cell": "Table 30!D45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2017,
+      "value": 2086,
+      "cell": "Table 30!E45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2018,
+      "value": 2167,
+      "cell": "Table 30!F45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2019,
+      "value": 2140,
+      "cell": "Table 30!G45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2020,
+      "value": 2366,
+      "cell": "Table 30!H45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2021,
+      "value": 2522,
+      "cell": "Table 30!I45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2022,
+      "value": 2691,
+      "cell": "Table 30!J45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2023,
+      "value": 2516,
+      "cell": "Table 30!K45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2024,
+      "value": 2947,
+      "cell": "Table 30!L45"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "VIC",
+      "sex": "All",
+      "year": 2025,
+      "value": 2972,
+      "cell": "Table 30!M45"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2014,
+      "value": 9,
+      "cell": "Table 30!B50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2015,
+      "value": 5,
+      "cell": "Table 30!C50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2016,
+      "value": 0,
+      "cell": "Table 30!D50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2017,
+      "value": 8,
+      "cell": "Table 30!E50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2018,
+      "value": 5,
+      "cell": "Table 30!F50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2019,
+      "value": 4,
+      "cell": "Table 30!G50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2020,
+      "value": 3,
+      "cell": "Table 30!H50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2021,
+      "value": 0,
+      "cell": "Table 30!I50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2022,
+      "value": 4,
+      "cell": "Table 30!J50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2023,
+      "value": 7,
+      "cell": "Table 30!K50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2024,
+      "value": 5,
+      "cell": "Table 30!L50"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2025,
+      "value": 7,
+      "cell": "Table 30!M50"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2014,
+      "value": null,
+      "cell": "Table 30!B52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2015,
+      "value": null,
+      "cell": "Table 30!C52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2016,
+      "value": null,
+      "cell": "Table 30!D52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2017,
+      "value": null,
+      "cell": "Table 30!E52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2018,
+      "value": null,
+      "cell": "Table 30!F52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2019,
+      "value": null,
+      "cell": "Table 30!G52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2020,
+      "value": null,
+      "cell": "Table 30!H52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2021,
+      "value": null,
+      "cell": "Table 30!I52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2022,
+      "value": null,
+      "cell": "Table 30!J52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2023,
+      "value": 11086,
+      "cell": "Table 30!K52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2024,
+      "value": 11722,
+      "cell": "Table 30!L52"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2025,
+      "value": 9854,
+      "cell": "Table 30!M52"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2014,
+      "value": 211,
+      "cell": "Table 30!B53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2015,
+      "value": 211,
+      "cell": "Table 30!C53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2016,
+      "value": 204,
+      "cell": "Table 30!D53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2017,
+      "value": 205,
+      "cell": "Table 30!E53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2018,
+      "value": 203,
+      "cell": "Table 30!F53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2019,
+      "value": 230,
+      "cell": "Table 30!G53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2020,
+      "value": 239,
+      "cell": "Table 30!H53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2021,
+      "value": 222,
+      "cell": "Table 30!I53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2022,
+      "value": 268,
+      "cell": "Table 30!J53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2023,
+      "value": 340,
+      "cell": "Table 30!K53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2024,
+      "value": 397,
+      "cell": "Table 30!L53"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Men",
+      "year": 2025,
+      "value": 386,
+      "cell": "Table 30!M53"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2014,
+      "value": 12,
+      "cell": "Table 30!B57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2015,
+      "value": 10,
+      "cell": "Table 30!C57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2016,
+      "value": 7,
+      "cell": "Table 30!D57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2017,
+      "value": 3,
+      "cell": "Table 30!E57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2018,
+      "value": 4,
+      "cell": "Table 30!F57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2019,
+      "value": 5,
+      "cell": "Table 30!G57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2020,
+      "value": 7,
+      "cell": "Table 30!H57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2021,
+      "value": 4,
+      "cell": "Table 30!I57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2022,
+      "value": 6,
+      "cell": "Table 30!J57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2023,
+      "value": 13,
+      "cell": "Table 30!K57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2024,
+      "value": 16,
+      "cell": "Table 30!L57"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2025,
+      "value": 9,
+      "cell": "Table 30!M57"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2014,
+      "value": null,
+      "cell": "Table 30!B59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2015,
+      "value": null,
+      "cell": "Table 30!C59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2016,
+      "value": null,
+      "cell": "Table 30!D59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2017,
+      "value": null,
+      "cell": "Table 30!E59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2018,
+      "value": null,
+      "cell": "Table 30!F59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2019,
+      "value": null,
+      "cell": "Table 30!G59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2020,
+      "value": null,
+      "cell": "Table 30!H59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2021,
+      "value": null,
+      "cell": "Table 30!I59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2022,
+      "value": null,
+      "cell": "Table 30!J59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2023,
+      "value": 24380,
+      "cell": "Table 30!K59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2024,
+      "value": 25152,
+      "cell": "Table 30!L59"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2025,
+      "value": 22372,
+      "cell": "Table 30!M59"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2014,
+      "value": 1005,
+      "cell": "Table 30!B60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2015,
+      "value": 1221,
+      "cell": "Table 30!C60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2016,
+      "value": 1231,
+      "cell": "Table 30!D60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2017,
+      "value": 1337,
+      "cell": "Table 30!E60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2018,
+      "value": 1421,
+      "cell": "Table 30!F60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2019,
+      "value": 1441,
+      "cell": "Table 30!G60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2020,
+      "value": 1561,
+      "cell": "Table 30!H60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2021,
+      "value": 1923,
+      "cell": "Table 30!I60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2022,
+      "value": 2331,
+      "cell": "Table 30!J60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2023,
+      "value": 3014,
+      "cell": "Table 30!K60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2024,
+      "value": 3539,
+      "cell": "Table 30!L60"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "Women",
+      "year": 2025,
+      "value": 3731,
+      "cell": "Table 30!M60"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2014,
+      "value": 18,
+      "cell": "Table 30!B64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2015,
+      "value": 13,
+      "cell": "Table 30!C64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2016,
+      "value": 14,
+      "cell": "Table 30!D64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2017,
+      "value": 16,
+      "cell": "Table 30!E64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2018,
+      "value": 13,
+      "cell": "Table 30!F64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2019,
+      "value": 9,
+      "cell": "Table 30!G64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2020,
+      "value": 11,
+      "cell": "Table 30!H64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2021,
+      "value": 5,
+      "cell": "Table 30!I64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2022,
+      "value": 17,
+      "cell": "Table 30!J64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2023,
+      "value": 19,
+      "cell": "Table 30!K64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2024,
+      "value": 23,
+      "cell": "Table 30!L64"
+    },
+    {
+      "offence": "Murder",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2025,
+      "value": 16,
+      "cell": "Table 30!M64"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2014,
+      "value": null,
+      "cell": "Table 30!B66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2015,
+      "value": null,
+      "cell": "Table 30!C66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2016,
+      "value": null,
+      "cell": "Table 30!D66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2017,
+      "value": null,
+      "cell": "Table 30!E66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2018,
+      "value": null,
+      "cell": "Table 30!F66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2019,
+      "value": null,
+      "cell": "Table 30!G66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2020,
+      "value": null,
+      "cell": "Table 30!H66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2021,
+      "value": null,
+      "cell": "Table 30!I66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2022,
+      "value": null,
+      "cell": "Table 30!J66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2023,
+      "value": 35483,
+      "cell": "Table 30!K66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2024,
+      "value": 36907,
+      "cell": "Table 30!L66"
+    },
+    {
+      "offence": "Assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2025,
+      "value": 32232,
+      "cell": "Table 30!M66"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2014,
+      "value": 1214,
+      "cell": "Table 30!B67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2015,
+      "value": 1433,
+      "cell": "Table 30!C67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2016,
+      "value": 1432,
+      "cell": "Table 30!D67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2017,
+      "value": 1541,
+      "cell": "Table 30!E67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2018,
+      "value": 1626,
+      "cell": "Table 30!F67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2019,
+      "value": 1671,
+      "cell": "Table 30!G67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2020,
+      "value": 1798,
+      "cell": "Table 30!H67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2021,
+      "value": 2156,
+      "cell": "Table 30!I67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2022,
+      "value": 2592,
+      "cell": "Table 30!J67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2023,
+      "value": 3359,
+      "cell": "Table 30!K67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2024,
+      "value": 3940,
+      "cell": "Table 30!L67"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "QLD",
+      "sex": "All",
+      "year": 2025,
+      "value": 4115,
+      "cell": "Table 30!M67"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2014,
+      "value": 3,
+      "cell": "Table 30!B72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2015,
+      "value": 5,
+      "cell": "Table 30!C72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2016,
+      "value": 4,
+      "cell": "Table 30!D72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2017,
+      "value": 5,
+      "cell": "Table 30!E72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2018,
+      "value": 0,
+      "cell": "Table 30!F72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2019,
+      "value": 5,
+      "cell": "Table 30!G72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2020,
+      "value": 3,
+      "cell": "Table 30!H72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2021,
+      "value": 3,
+      "cell": "Table 30!I72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2022,
+      "value": 0,
+      "cell": "Table 30!J72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2023,
+      "value": 3,
+      "cell": "Table 30!K72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2024,
+      "value": 0,
+      "cell": "Table 30!L72"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2025,
+      "value": 0,
+      "cell": "Table 30!M72"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2014,
+      "value": 1587,
+      "cell": "Table 30!B74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2015,
+      "value": 1815,
+      "cell": "Table 30!C74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2016,
+      "value": 1834,
+      "cell": "Table 30!D74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2017,
+      "value": 1717,
+      "cell": "Table 30!E74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2018,
+      "value": 1829,
+      "cell": "Table 30!F74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2019,
+      "value": 2043,
+      "cell": "Table 30!G74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2020,
+      "value": 2269,
+      "cell": "Table 30!H74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2021,
+      "value": 2314,
+      "cell": "Table 30!I74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2022,
+      "value": 2539,
+      "cell": "Table 30!J74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2023,
+      "value": 3074,
+      "cell": "Table 30!K74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2024,
+      "value": 3471,
+      "cell": "Table 30!L74"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2025,
+      "value": 3593,
+      "cell": "Table 30!M74"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2014,
+      "value": 74,
+      "cell": "Table 30!B75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2015,
+      "value": 74,
+      "cell": "Table 30!C75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2016,
+      "value": 70,
+      "cell": "Table 30!D75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2017,
+      "value": 71,
+      "cell": "Table 30!E75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2018,
+      "value": 61,
+      "cell": "Table 30!F75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2019,
+      "value": 64,
+      "cell": "Table 30!G75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2020,
+      "value": 61,
+      "cell": "Table 30!H75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2021,
+      "value": 62,
+      "cell": "Table 30!I75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2022,
+      "value": 47,
+      "cell": "Table 30!J75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2023,
+      "value": 62,
+      "cell": "Table 30!K75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2024,
+      "value": 78,
+      "cell": "Table 30!L75"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Men",
+      "year": 2025,
+      "value": 68,
+      "cell": "Table 30!M75"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2014,
+      "value": 0,
+      "cell": "Table 30!B79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2015,
+      "value": 11,
+      "cell": "Table 30!C79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2016,
+      "value": 3,
+      "cell": "Table 30!D79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2017,
+      "value": 3,
+      "cell": "Table 30!E79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2018,
+      "value": 0,
+      "cell": "Table 30!F79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2019,
+      "value": 0,
+      "cell": "Table 30!G79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2020,
+      "value": 3,
+      "cell": "Table 30!H79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2021,
+      "value": 3,
+      "cell": "Table 30!I79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2022,
+      "value": 3,
+      "cell": "Table 30!J79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2023,
+      "value": 9,
+      "cell": "Table 30!K79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2024,
+      "value": 0,
+      "cell": "Table 30!L79"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2025,
+      "value": 0,
+      "cell": "Table 30!M79"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2014,
+      "value": 5143,
+      "cell": "Table 30!B81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2015,
+      "value": 5926,
+      "cell": "Table 30!C81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2016,
+      "value": 5939,
+      "cell": "Table 30!D81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2017,
+      "value": 5407,
+      "cell": "Table 30!E81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2018,
+      "value": 5467,
+      "cell": "Table 30!F81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2019,
+      "value": 5965,
+      "cell": "Table 30!G81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2020,
+      "value": 6421,
+      "cell": "Table 30!H81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2021,
+      "value": 6469,
+      "cell": "Table 30!I81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2022,
+      "value": 7039,
+      "cell": "Table 30!J81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2023,
+      "value": 7581,
+      "cell": "Table 30!K81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2024,
+      "value": 8409,
+      "cell": "Table 30!L81"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2025,
+      "value": 8275,
+      "cell": "Table 30!M81"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2014,
+      "value": 518,
+      "cell": "Table 30!B82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2015,
+      "value": 555,
+      "cell": "Table 30!C82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2016,
+      "value": 541,
+      "cell": "Table 30!D82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2017,
+      "value": 577,
+      "cell": "Table 30!E82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2018,
+      "value": 536,
+      "cell": "Table 30!F82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2019,
+      "value": 524,
+      "cell": "Table 30!G82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2020,
+      "value": 531,
+      "cell": "Table 30!H82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2021,
+      "value": 633,
+      "cell": "Table 30!I82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2022,
+      "value": 594,
+      "cell": "Table 30!J82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2023,
+      "value": 667,
+      "cell": "Table 30!K82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2024,
+      "value": 659,
+      "cell": "Table 30!L82"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "Women",
+      "year": 2025,
+      "value": 724,
+      "cell": "Table 30!M82"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2014,
+      "value": 3,
+      "cell": "Table 30!B86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2015,
+      "value": 8,
+      "cell": "Table 30!C86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2016,
+      "value": 8,
+      "cell": "Table 30!D86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2017,
+      "value": 11,
+      "cell": "Table 30!E86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2018,
+      "value": 4,
+      "cell": "Table 30!F86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2019,
+      "value": 7,
+      "cell": "Table 30!G86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2020,
+      "value": 7,
+      "cell": "Table 30!H86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2021,
+      "value": 6,
+      "cell": "Table 30!I86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2022,
+      "value": 5,
+      "cell": "Table 30!J86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2023,
+      "value": 6,
+      "cell": "Table 30!K86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2024,
+      "value": 0,
+      "cell": "Table 30!L86"
+    },
+    {
+      "offence": "Murder",
+      "state": "SA",
+      "sex": "All",
+      "year": 2025,
+      "value": 0,
+      "cell": "Table 30!M86"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2014,
+      "value": 6727,
+      "cell": "Table 30!B88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2015,
+      "value": 7740,
+      "cell": "Table 30!C88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2016,
+      "value": 7779,
+      "cell": "Table 30!D88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2017,
+      "value": 7124,
+      "cell": "Table 30!E88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2018,
+      "value": 7291,
+      "cell": "Table 30!F88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2019,
+      "value": 8009,
+      "cell": "Table 30!G88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2020,
+      "value": 8686,
+      "cell": "Table 30!H88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2021,
+      "value": 8788,
+      "cell": "Table 30!I88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2022,
+      "value": 9588,
+      "cell": "Table 30!J88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2023,
+      "value": 10666,
+      "cell": "Table 30!K88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2024,
+      "value": 11886,
+      "cell": "Table 30!L88"
+    },
+    {
+      "offence": "Assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2025,
+      "value": 11869,
+      "cell": "Table 30!M88"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2014,
+      "value": 591,
+      "cell": "Table 30!B89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2015,
+      "value": 626,
+      "cell": "Table 30!C89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2016,
+      "value": 603,
+      "cell": "Table 30!D89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2017,
+      "value": 643,
+      "cell": "Table 30!E89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2018,
+      "value": 603,
+      "cell": "Table 30!F89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2019,
+      "value": 585,
+      "cell": "Table 30!G89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2020,
+      "value": 595,
+      "cell": "Table 30!H89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2021,
+      "value": 689,
+      "cell": "Table 30!I89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2022,
+      "value": 643,
+      "cell": "Table 30!J89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2023,
+      "value": 724,
+      "cell": "Table 30!K89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2024,
+      "value": 738,
+      "cell": "Table 30!L89"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "SA",
+      "sex": "All",
+      "year": 2025,
+      "value": 789,
+      "cell": "Table 30!M89"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2014,
+      "value": 9,
+      "cell": "Table 30!B94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2015,
+      "value": 4,
+      "cell": "Table 30!C94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2016,
+      "value": 4,
+      "cell": "Table 30!D94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2017,
+      "value": 0,
+      "cell": "Table 30!E94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2018,
+      "value": 9,
+      "cell": "Table 30!F94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2019,
+      "value": 3,
+      "cell": "Table 30!G94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2020,
+      "value": 7,
+      "cell": "Table 30!H94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2021,
+      "value": 3,
+      "cell": "Table 30!I94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2022,
+      "value": 6,
+      "cell": "Table 30!J94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2023,
+      "value": 3,
+      "cell": "Table 30!K94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2024,
+      "value": 3,
+      "cell": "Table 30!L94"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2025,
+      "value": 6,
+      "cell": "Table 30!M94"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2014,
+      "value": 3860,
+      "cell": "Table 30!B96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2015,
+      "value": 4858,
+      "cell": "Table 30!C96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2016,
+      "value": 5416,
+      "cell": "Table 30!D96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2017,
+      "value": 4767,
+      "cell": "Table 30!E96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2018,
+      "value": 4788,
+      "cell": "Table 30!F96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2019,
+      "value": 4663,
+      "cell": "Table 30!G96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2020,
+      "value": 5871,
+      "cell": "Table 30!H96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2021,
+      "value": 5879,
+      "cell": "Table 30!I96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2022,
+      "value": 6486,
+      "cell": "Table 30!J96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2023,
+      "value": 7084,
+      "cell": "Table 30!K96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2024,
+      "value": 8054,
+      "cell": "Table 30!L96"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2025,
+      "value": 8861,
+      "cell": "Table 30!M96"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2014,
+      "value": 70,
+      "cell": "Table 30!B97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2015,
+      "value": 71,
+      "cell": "Table 30!C97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2016,
+      "value": 75,
+      "cell": "Table 30!D97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2017,
+      "value": 92,
+      "cell": "Table 30!E97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2018,
+      "value": 99,
+      "cell": "Table 30!F97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2019,
+      "value": 95,
+      "cell": "Table 30!G97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2020,
+      "value": 100,
+      "cell": "Table 30!H97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2021,
+      "value": 69,
+      "cell": "Table 30!I97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2022,
+      "value": 89,
+      "cell": "Table 30!J97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2023,
+      "value": 83,
+      "cell": "Table 30!K97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2024,
+      "value": 102,
+      "cell": "Table 30!L97"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Men",
+      "year": 2025,
+      "value": 102,
+      "cell": "Table 30!M97"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2014,
+      "value": 5,
+      "cell": "Table 30!B101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2015,
+      "value": 5,
+      "cell": "Table 30!C101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2016,
+      "value": 9,
+      "cell": "Table 30!D101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2017,
+      "value": 9,
+      "cell": "Table 30!E101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2018,
+      "value": 15,
+      "cell": "Table 30!F101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2019,
+      "value": 5,
+      "cell": "Table 30!G101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2020,
+      "value": 6,
+      "cell": "Table 30!H101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2021,
+      "value": 4,
+      "cell": "Table 30!I101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2022,
+      "value": 7,
+      "cell": "Table 30!J101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2023,
+      "value": 6,
+      "cell": "Table 30!K101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2024,
+      "value": 10,
+      "cell": "Table 30!L101"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2025,
+      "value": 4,
+      "cell": "Table 30!M101"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2014,
+      "value": 10648,
+      "cell": "Table 30!B103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2015,
+      "value": 13291,
+      "cell": "Table 30!C103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2016,
+      "value": 15149,
+      "cell": "Table 30!D103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2017,
+      "value": 13695,
+      "cell": "Table 30!E103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2018,
+      "value": 13595,
+      "cell": "Table 30!F103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2019,
+      "value": 14562,
+      "cell": "Table 30!G103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2020,
+      "value": 16262,
+      "cell": "Table 30!H103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2021,
+      "value": 16873,
+      "cell": "Table 30!I103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2022,
+      "value": 18260,
+      "cell": "Table 30!J103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2023,
+      "value": 20042,
+      "cell": "Table 30!K103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2024,
+      "value": 22282,
+      "cell": "Table 30!L103"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2025,
+      "value": 23811,
+      "cell": "Table 30!M103"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2014,
+      "value": 471,
+      "cell": "Table 30!B104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2015,
+      "value": 427,
+      "cell": "Table 30!C104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2016,
+      "value": 512,
+      "cell": "Table 30!D104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2017,
+      "value": 607,
+      "cell": "Table 30!E104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2018,
+      "value": 616,
+      "cell": "Table 30!F104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2019,
+      "value": 637,
+      "cell": "Table 30!G104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2020,
+      "value": 718,
+      "cell": "Table 30!H104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2021,
+      "value": 829,
+      "cell": "Table 30!I104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2022,
+      "value": 760,
+      "cell": "Table 30!J104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2023,
+      "value": 861,
+      "cell": "Table 30!K104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2024,
+      "value": 1020,
+      "cell": "Table 30!L104"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "Women",
+      "year": 2025,
+      "value": 1147,
+      "cell": "Table 30!M104"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2014,
+      "value": 10,
+      "cell": "Table 30!B108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2015,
+      "value": 7,
+      "cell": "Table 30!C108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2016,
+      "value": 14,
+      "cell": "Table 30!D108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2017,
+      "value": 6,
+      "cell": "Table 30!E108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2018,
+      "value": 24,
+      "cell": "Table 30!F108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2019,
+      "value": 8,
+      "cell": "Table 30!G108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2020,
+      "value": 17,
+      "cell": "Table 30!H108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2021,
+      "value": 8,
+      "cell": "Table 30!I108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2022,
+      "value": 14,
+      "cell": "Table 30!J108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2023,
+      "value": 15,
+      "cell": "Table 30!K108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2024,
+      "value": 12,
+      "cell": "Table 30!L108"
+    },
+    {
+      "offence": "Murder",
+      "state": "WA",
+      "sex": "All",
+      "year": 2025,
+      "value": 13,
+      "cell": "Table 30!M108"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2014,
+      "value": 14603,
+      "cell": "Table 30!B110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2015,
+      "value": 18274,
+      "cell": "Table 30!C110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2016,
+      "value": 20713,
+      "cell": "Table 30!D110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2017,
+      "value": 18711,
+      "cell": "Table 30!E110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2018,
+      "value": 18520,
+      "cell": "Table 30!F110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2019,
+      "value": 19437,
+      "cell": "Table 30!G110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2020,
+      "value": 22257,
+      "cell": "Table 30!H110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2021,
+      "value": 22880,
+      "cell": "Table 30!I110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2022,
+      "value": 24896,
+      "cell": "Table 30!J110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2023,
+      "value": 27237,
+      "cell": "Table 30!K110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2024,
+      "value": 30451,
+      "cell": "Table 30!L110"
+    },
+    {
+      "offence": "Assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2025,
+      "value": 32793,
+      "cell": "Table 30!M110"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2014,
+      "value": 544,
+      "cell": "Table 30!B111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2015,
+      "value": 502,
+      "cell": "Table 30!C111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2016,
+      "value": 596,
+      "cell": "Table 30!D111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2017,
+      "value": 715,
+      "cell": "Table 30!E111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2018,
+      "value": 718,
+      "cell": "Table 30!F111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2019,
+      "value": 757,
+      "cell": "Table 30!G111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2020,
+      "value": 821,
+      "cell": "Table 30!H111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2021,
+      "value": 909,
+      "cell": "Table 30!I111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2022,
+      "value": 864,
+      "cell": "Table 30!J111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2023,
+      "value": 960,
+      "cell": "Table 30!K111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2024,
+      "value": 1142,
+      "cell": "Table 30!L111"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "WA",
+      "sex": "All",
+      "year": 2025,
+      "value": 1263,
+      "cell": "Table 30!M111"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2014,
+      "value": 228,
+      "cell": "Table 30!B116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2015,
+      "value": 266,
+      "cell": "Table 30!C116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2016,
+      "value": 316,
+      "cell": "Table 30!D116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2017,
+      "value": 357,
+      "cell": "Table 30!E116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2018,
+      "value": 403,
+      "cell": "Table 30!F116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2019,
+      "value": 431,
+      "cell": "Table 30!G116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2020,
+      "value": 425,
+      "cell": "Table 30!H116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2021,
+      "value": 433,
+      "cell": "Table 30!I116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2022,
+      "value": 488,
+      "cell": "Table 30!J116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2023,
+      "value": 532,
+      "cell": "Table 30!K116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2024,
+      "value": 530,
+      "cell": "Table 30!L116"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2025,
+      "value": 547,
+      "cell": "Table 30!M116"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2014,
+      "value": 11,
+      "cell": "Table 30!B117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2015,
+      "value": 3,
+      "cell": "Table 30!C117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2016,
+      "value": 4,
+      "cell": "Table 30!D117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2017,
+      "value": 16,
+      "cell": "Table 30!E117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2018,
+      "value": 3,
+      "cell": "Table 30!F117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2019,
+      "value": 11,
+      "cell": "Table 30!G117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2020,
+      "value": 13,
+      "cell": "Table 30!H117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2021,
+      "value": 21,
+      "cell": "Table 30!I117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2022,
+      "value": 23,
+      "cell": "Table 30!J117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2023,
+      "value": 26,
+      "cell": "Table 30!K117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2024,
+      "value": 22,
+      "cell": "Table 30!L117"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Men",
+      "year": 2025,
+      "value": 30,
+      "cell": "Table 30!M117"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2014,
+      "value": 903,
+      "cell": "Table 30!B121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2015,
+      "value": 931,
+      "cell": "Table 30!C121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2016,
+      "value": 1007,
+      "cell": "Table 30!D121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2017,
+      "value": 1072,
+      "cell": "Table 30!E121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2018,
+      "value": 1062,
+      "cell": "Table 30!F121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2019,
+      "value": 1150,
+      "cell": "Table 30!G121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2020,
+      "value": 1177,
+      "cell": "Table 30!H121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2021,
+      "value": 1181,
+      "cell": "Table 30!I121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2022,
+      "value": 1228,
+      "cell": "Table 30!J121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2023,
+      "value": 1293,
+      "cell": "Table 30!K121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2024,
+      "value": 1455,
+      "cell": "Table 30!L121"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2025,
+      "value": 1412,
+      "cell": "Table 30!M121"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2014,
+      "value": 71,
+      "cell": "Table 30!B122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2015,
+      "value": 65,
+      "cell": "Table 30!C122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2016,
+      "value": 89,
+      "cell": "Table 30!D122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2017,
+      "value": 65,
+      "cell": "Table 30!E122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2018,
+      "value": 78,
+      "cell": "Table 30!F122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2019,
+      "value": 93,
+      "cell": "Table 30!G122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2020,
+      "value": 104,
+      "cell": "Table 30!H122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2021,
+      "value": 167,
+      "cell": "Table 30!I122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2022,
+      "value": 232,
+      "cell": "Table 30!J122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2023,
+      "value": 214,
+      "cell": "Table 30!K122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2024,
+      "value": 256,
+      "cell": "Table 30!L122"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "Women",
+      "year": 2025,
+      "value": 236,
+      "cell": "Table 30!M122"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2014,
+      "value": 1137,
+      "cell": "Table 30!B126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2015,
+      "value": 1196,
+      "cell": "Table 30!C126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2016,
+      "value": 1325,
+      "cell": "Table 30!D126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2017,
+      "value": 1431,
+      "cell": "Table 30!E126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2018,
+      "value": 1467,
+      "cell": "Table 30!F126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2019,
+      "value": 1578,
+      "cell": "Table 30!G126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2020,
+      "value": 1601,
+      "cell": "Table 30!H126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2021,
+      "value": 1616,
+      "cell": "Table 30!I126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2022,
+      "value": 1720,
+      "cell": "Table 30!J126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2023,
+      "value": 1821,
+      "cell": "Table 30!K126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2024,
+      "value": 1997,
+      "cell": "Table 30!L126"
+    },
+    {
+      "offence": "Assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2025,
+      "value": 1973,
+      "cell": "Table 30!M126"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2014,
+      "value": 84,
+      "cell": "Table 30!B127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2015,
+      "value": 65,
+      "cell": "Table 30!C127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2016,
+      "value": 94,
+      "cell": "Table 30!D127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2017,
+      "value": 82,
+      "cell": "Table 30!E127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2018,
+      "value": 82,
+      "cell": "Table 30!F127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2019,
+      "value": 101,
+      "cell": "Table 30!G127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2020,
+      "value": 124,
+      "cell": "Table 30!H127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2021,
+      "value": 194,
+      "cell": "Table 30!I127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2022,
+      "value": 257,
+      "cell": "Table 30!J127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2023,
+      "value": 243,
+      "cell": "Table 30!K127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2024,
+      "value": 284,
+      "cell": "Table 30!L127"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "TAS",
+      "sex": "All",
+      "year": 2025,
+      "value": 269,
+      "cell": "Table 30!M127"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2014,
+      "value": 798,
+      "cell": "Table 30!B132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2015,
+      "value": 727,
+      "cell": "Table 30!C132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2016,
+      "value": 700,
+      "cell": "Table 30!D132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2017,
+      "value": 848,
+      "cell": "Table 30!E132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2018,
+      "value": 814,
+      "cell": "Table 30!F132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2019,
+      "value": 788,
+      "cell": "Table 30!G132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2020,
+      "value": 1052,
+      "cell": "Table 30!H132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2021,
+      "value": 1258,
+      "cell": "Table 30!I132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2022,
+      "value": 1465,
+      "cell": "Table 30!J132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2023,
+      "value": 1677,
+      "cell": "Table 30!K132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2024,
+      "value": 1484,
+      "cell": "Table 30!L132"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2025,
+      "value": 1431,
+      "cell": "Table 30!M132"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2014,
+      "value": 5,
+      "cell": "Table 30!B133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2015,
+      "value": 4,
+      "cell": "Table 30!C133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2016,
+      "value": 11,
+      "cell": "Table 30!D133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2017,
+      "value": 8,
+      "cell": "Table 30!E133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2018,
+      "value": 7,
+      "cell": "Table 30!F133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2019,
+      "value": 5,
+      "cell": "Table 30!G133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2020,
+      "value": 14,
+      "cell": "Table 30!H133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2021,
+      "value": 0,
+      "cell": "Table 30!I133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2022,
+      "value": 7,
+      "cell": "Table 30!J133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2023,
+      "value": 6,
+      "cell": "Table 30!K133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2024,
+      "value": 0,
+      "cell": "Table 30!L133"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Men",
+      "year": 2025,
+      "value": 10,
+      "cell": "Table 30!M133"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2014,
+      "value": 3483,
+      "cell": "Table 30!B137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2015,
+      "value": 3370,
+      "cell": "Table 30!C137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2016,
+      "value": 3311,
+      "cell": "Table 30!D137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2017,
+      "value": 3632,
+      "cell": "Table 30!E137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2018,
+      "value": 3542,
+      "cell": "Table 30!F137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2019,
+      "value": 3239,
+      "cell": "Table 30!G137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2020,
+      "value": 4070,
+      "cell": "Table 30!H137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2021,
+      "value": 4473,
+      "cell": "Table 30!I137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2022,
+      "value": 5332,
+      "cell": "Table 30!J137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2023,
+      "value": 6239,
+      "cell": "Table 30!K137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2024,
+      "value": 5997,
+      "cell": "Table 30!L137"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2025,
+      "value": 5708,
+      "cell": "Table 30!M137"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2014,
+      "value": 101,
+      "cell": "Table 30!B138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2015,
+      "value": 112,
+      "cell": "Table 30!C138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2016,
+      "value": 102,
+      "cell": "Table 30!D138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2017,
+      "value": 135,
+      "cell": "Table 30!E138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2018,
+      "value": 92,
+      "cell": "Table 30!F138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2019,
+      "value": 70,
+      "cell": "Table 30!G138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2020,
+      "value": 96,
+      "cell": "Table 30!H138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2021,
+      "value": 90,
+      "cell": "Table 30!I138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2022,
+      "value": 107,
+      "cell": "Table 30!J138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2023,
+      "value": 111,
+      "cell": "Table 30!K138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2024,
+      "value": 80,
+      "cell": "Table 30!L138"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "Women",
+      "year": 2025,
+      "value": 125,
+      "cell": "Table 30!M138"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2014,
+      "value": 4282,
+      "cell": "Table 30!B142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2015,
+      "value": 4096,
+      "cell": "Table 30!C142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2016,
+      "value": 4009,
+      "cell": "Table 30!D142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2017,
+      "value": 4478,
+      "cell": "Table 30!E142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2018,
+      "value": 4359,
+      "cell": "Table 30!F142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2019,
+      "value": 4030,
+      "cell": "Table 30!G142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2020,
+      "value": 5131,
+      "cell": "Table 30!H142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2021,
+      "value": 5733,
+      "cell": "Table 30!I142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2022,
+      "value": 6796,
+      "cell": "Table 30!J142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2023,
+      "value": 7926,
+      "cell": "Table 30!K142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2024,
+      "value": 7502,
+      "cell": "Table 30!L142"
+    },
+    {
+      "offence": "Assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2025,
+      "value": 7173,
+      "cell": "Table 30!M142"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2014,
+      "value": 111,
+      "cell": "Table 30!B143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2015,
+      "value": 120,
+      "cell": "Table 30!C143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2016,
+      "value": 106,
+      "cell": "Table 30!D143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2017,
+      "value": 140,
+      "cell": "Table 30!E143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2018,
+      "value": 98,
+      "cell": "Table 30!F143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2019,
+      "value": 79,
+      "cell": "Table 30!G143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2020,
+      "value": 111,
+      "cell": "Table 30!H143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2021,
+      "value": 90,
+      "cell": "Table 30!I143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2022,
+      "value": 114,
+      "cell": "Table 30!J143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2023,
+      "value": 122,
+      "cell": "Table 30!K143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2024,
+      "value": 79,
+      "cell": "Table 30!L143"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "NT",
+      "sex": "All",
+      "year": 2025,
+      "value": 136,
+      "cell": "Table 30!M143"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2014,
+      "value": 161,
+      "cell": "Table 30!B148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2015,
+      "value": 185,
+      "cell": "Table 30!C148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2016,
+      "value": 293,
+      "cell": "Table 30!D148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2017,
+      "value": 287,
+      "cell": "Table 30!E148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2018,
+      "value": 261,
+      "cell": "Table 30!F148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2019,
+      "value": 275,
+      "cell": "Table 30!G148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2020,
+      "value": 307,
+      "cell": "Table 30!H148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2021,
+      "value": 260,
+      "cell": "Table 30!I148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2022,
+      "value": 300,
+      "cell": "Table 30!J148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2023,
+      "value": 347,
+      "cell": "Table 30!K148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2024,
+      "value": 309,
+      "cell": "Table 30!L148"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2025,
+      "value": 314,
+      "cell": "Table 30!M148"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2014,
+      "value": 11,
+      "cell": "Table 30!B149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2015,
+      "value": 8,
+      "cell": "Table 30!C149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2016,
+      "value": 9,
+      "cell": "Table 30!D149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2017,
+      "value": 10,
+      "cell": "Table 30!E149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2018,
+      "value": 6,
+      "cell": "Table 30!F149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2019,
+      "value": 16,
+      "cell": "Table 30!G149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2020,
+      "value": 9,
+      "cell": "Table 30!H149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2021,
+      "value": 9,
+      "cell": "Table 30!I149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2022,
+      "value": 9,
+      "cell": "Table 30!J149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2023,
+      "value": 9,
+      "cell": "Table 30!K149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2024,
+      "value": 17,
+      "cell": "Table 30!L149"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Men",
+      "year": 2025,
+      "value": 21,
+      "cell": "Table 30!M149"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2014,
+      "value": 480,
+      "cell": "Table 30!B153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2015,
+      "value": 519,
+      "cell": "Table 30!C153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2016,
+      "value": 653,
+      "cell": "Table 30!D153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2017,
+      "value": 677,
+      "cell": "Table 30!E153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2018,
+      "value": 608,
+      "cell": "Table 30!F153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2019,
+      "value": 696,
+      "cell": "Table 30!G153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2020,
+      "value": 634,
+      "cell": "Table 30!H153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2021,
+      "value": 692,
+      "cell": "Table 30!I153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2022,
+      "value": 672,
+      "cell": "Table 30!J153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2023,
+      "value": 717,
+      "cell": "Table 30!K153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2024,
+      "value": 684,
+      "cell": "Table 30!L153"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2025,
+      "value": 692,
+      "cell": "Table 30!M153"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2014,
+      "value": 41,
+      "cell": "Table 30!B154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2015,
+      "value": 66,
+      "cell": "Table 30!C154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2016,
+      "value": 81,
+      "cell": "Table 30!D154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2017,
+      "value": 60,
+      "cell": "Table 30!E154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2018,
+      "value": 60,
+      "cell": "Table 30!F154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2019,
+      "value": 104,
+      "cell": "Table 30!G154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2020,
+      "value": 66,
+      "cell": "Table 30!H154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2021,
+      "value": 102,
+      "cell": "Table 30!I154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2022,
+      "value": 101,
+      "cell": "Table 30!J154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2023,
+      "value": 113,
+      "cell": "Table 30!K154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2024,
+      "value": 143,
+      "cell": "Table 30!L154"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "Women",
+      "year": 2025,
+      "value": 131,
+      "cell": "Table 30!M154"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2014,
+      "value": 639,
+      "cell": "Table 30!B158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2015,
+      "value": 706,
+      "cell": "Table 30!C158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2016,
+      "value": 949,
+      "cell": "Table 30!D158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2017,
+      "value": 974,
+      "cell": "Table 30!E158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2018,
+      "value": 872,
+      "cell": "Table 30!F158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2019,
+      "value": 978,
+      "cell": "Table 30!G158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2020,
+      "value": 942,
+      "cell": "Table 30!H158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2021,
+      "value": 968,
+      "cell": "Table 30!I158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2022,
+      "value": 977,
+      "cell": "Table 30!J158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2023,
+      "value": 1099,
+      "cell": "Table 30!K158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2024,
+      "value": 1019,
+      "cell": "Table 30!L158"
+    },
+    {
+      "offence": "Assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2025,
+      "value": 1011,
+      "cell": "Table 30!M158"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2014,
+      "value": 50,
+      "cell": "Table 30!B159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2015,
+      "value": 83,
+      "cell": "Table 30!C159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2016,
+      "value": 88,
+      "cell": "Table 30!D159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2017,
+      "value": 66,
+      "cell": "Table 30!E159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2018,
+      "value": 72,
+      "cell": "Table 30!F159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2019,
+      "value": 115,
+      "cell": "Table 30!G159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2020,
+      "value": 77,
+      "cell": "Table 30!H159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2021,
+      "value": 113,
+      "cell": "Table 30!I159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2022,
+      "value": 111,
+      "cell": "Table 30!J159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2023,
+      "value": 119,
+      "cell": "Table 30!K159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2024,
+      "value": 160,
+      "cell": "Table 30!L159"
+    },
+    {
+      "offence": "Sexual assault",
+      "state": "ACT",
+      "sex": "All",
+      "year": 2025,
+      "value": 149,
+      "cell": "Table 30!M159"
+    }
+  ],
+  "download": "https://www.abs.gov.au/statistics/people/crime-and-justice/recorded-crime-victims/2025/5.%20Victims%20of%20family%20and%20domestic%20violence%20related%20offences%20%28Tables%2029%20to%2038%29.xlsx",
+  "methodology": "https://www.abs.gov.au/methodologies/recorded-crime-victims-methodology/2025",
+  "sha256": "5b95cc2676d60b0cb7b4c7970331cdd3978e0c0f21720ad2e7242812f86ba721"
+}

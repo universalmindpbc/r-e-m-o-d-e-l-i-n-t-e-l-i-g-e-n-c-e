@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {demoDefaults,validateDemo,compact,ratio} from '../app/synthetic-config.ts';
+test('defaults mirror the dashboard and format its original totals',()=>{assert.deepEqual(validateDemo(demoDefaults),demoDefaults);assert.equal(compact(demoDefaults.reach),'1.1B');assert.equal(compact(demoDefaults.likes),'3.3M');assert.equal(ratio(12,20),60);});
+test('rejects missing, invalid, out-of-range and fractional count values',()=>{for(const edit of [{talent:101},{events:1.5},{revenue:-1},{views:Infinity},{posts:null},{fanAccounts:0},{talentChange:-101}])assert.throws(()=>validateDemo({...demoDefaults,...edit}));});
+test('enforces theme denominators without requiring exclusive post themes',()=>{assert.throws(()=>validateDemo({...demoDefaults,theme0Posts:21}));assert.throws(()=>validateDemo({...demoDefaults,theme1Stance0:62}));assert.throws(()=>validateDemo({...demoDefaults,fanPosts:99}));assert.doesNotThrow(()=>validateDemo({...demoDefaults,theme0Posts:20}));});
+test('allows zero totals, signed changes and an unset share-of-voice requirement',()=>{assert.doesNotThrow(()=>validateDemo({...demoDefaults,events:0,roi:-100,audienceChange:5,voice:null}));});

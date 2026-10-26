@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS campaign_settings (id INTEGER PRIMARY KEY CHECK (id = 1), settings TEXT NOT NULL, version INTEGER NOT NULL DEFAULT 0, updated_at TEXT);
+INSERT OR IGNORE INTO campaign_settings (id, settings, version) VALUES (1, '{"name": "Clara Lionel Foundation (CLF)", "talent": "Rihanna", "agency": "WME", "topics": ["@rihanna", "@ClaraLionelFdn", "climate justice", "sustainability"], "analysisStartDate": "2022-01-01", "analysisEndDate": "2022-04-30", "announcementDate": "2022-01-25", "endDateMeaning": "Analysis cutoff; not an official campaign end date"}', 0);

@@ -2,3 +2,19 @@
 .venv/
 __pycache__/
 *.pyc
+
+# Repository presentation: never publish runtime credentials or private data.
+.env*
+!.env.example
+**/.private/
+**/.runtime-private/
+**/private/
+**/__pycache__/
+**/*.pyc
+**/.venv/
+**/node_modules/
+**/.next/
+**/.vinext/
+**/.wrangler/
+**/dist/
+**/*.tsbuildinfo

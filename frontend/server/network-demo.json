@@ -1,0 +1,1388 @@
+{
+  "campaign": "Clara Lionel Foundation (CLF)",
+  "talent": "Rihanna",
+  "sourceRun": "0b6e7d76-fd59-49ff-bf5e-d824381c04b4",
+  "period": "January–April 2022",
+  "retrievedAt": "2026-10-15T18:42:19.610924+00:00",
+  "researchedAt": "2026-10-15T22:58:47.450259+00:00",
+  "expiresAt": "2026-11-13T00:00:00Z",
+  "sourcePosts": 407,
+  "sourceAccounts": 301,
+  "eligibleAccounts": 299,
+  "status": "Expanded discovery · human review pending",
+  "gaps": "40 research leads: 20 from the retained X sample and 20 from wider-web discovery. The latter adds musicians and music organisations, with unknown X audience sizes. Hyperpop and professional UGC coverage remain gaps. This pool is not a client-approved recommendation list.",
+  "methodology": [
+    "Start with the retained campaign sample; exclude Rihanna and CLF from recommendations. This is a bounded conversation sample, not a complete engagement leaderboard.",
+    "Enrich public accounts through X, screen biographies and campaign posts with OpenAI, then review public sources and up to 10 recent original X posts for each candidate.",
+    "Prioritise documented cause relevance and complementary roles; assess public work, not inferred sensitive traits or personality. Supported evidence describes a documented role, not a verified endorsement.",
+    "Node size uses logarithmic current follower counts. Followers are not historical reach, unique audience, effectiveness or an alignment score.",
+    "Dashed campaign links are proposed connections. Faint within-group lines show shared category, not interpersonal relationships. Existing grant relationships are identified in the evidence.",
+    "Newsroom contacts retain editorial independence. Review source quality, current activity, consent, audience quality, conflicting evidence and suitability before outreach.",
+    "This saved demo is campaign-specific. A new campaign requires a new API collection, bounded screening, source review and approved snapshot. No automatic paid research runs on page load.",
+    "Every new campaign requires Observed network → Expanded discovery → Reviewed recommendations. The plan is bound to the exact client, topic and analysis window.",
+    "Web-discovered leads are distinct from accounts observed on X. Musical proximity is separate from documented cause work. Unknown audience size uses a dashed neutral node, not an invented follower count.",
+    "The first page is a proposed complementary mix. Browse at most 20 at a time, pin up to five, and shortlist across pages. Browsing incurs no research charge.",
+    "Human review decisions are stored against this campaign and research revision. Client-ready exports contain approved recommendations only. Draft exports remain labelled provisional.",
+    "AI strategy: This is provisional AI synthesis after the supplied source research, NOT human approval, fresh verification, endorsement or confirmed participation. The 20 leads comprise six musicians, including a songwriter; two music businesses; five substantive community voices; one music-climate delivery organisation; four editorial contacts; and two creator/communicator leads. Selection prioritises complementary functions, not follower totals or inferred audience traits. Begin by inviting CJA and GirlsCARE, documented funding connections, to define priorities and communication boundaries. Consult community expertise before developing artist or label proposals. Pharrell is a historical foundation-proximity lead, not a demonstrated climate advocate; environmental touring activity among other musicians must not automatically be treated as climate-justice alignment. Keep editorial outreach, including YR Media, separate from advocacy and commissioned campaign content: preserve independent framing and conclusions, and disclose any sponsorship. Gaps include predominantly historical campaign evidence, limited Caribbean community coverage beyond GirlsCARE, unproven professional UGC capability, uncertain funding outcomes, and reliance on organisational claims and shared REVERB sources. Audience quality, willingness and practical access remain unverified. Activity dates reflect supplied bounded checks, not exhaustive inactivity findings; refresh channels before outreach. Web-discovered candidates lack collected current X metrics and activity. Human reviewers must inspect original sources, verify identities, current roles and contacts, independently assess outcomes and contrary evidence, and review consent, compensation, rights, capacity and conflicts before approving outreach or publication. Do not imply that selected organisations represent all frontline communities or that any candidate endorses Rihanna, CLF or commercial brands."
+  ],
+  "costEstimateUsd": 5.2496,
+  "budgetUsd": 25,
+  "candidates": [
+    {
+      "id": "1491083406",
+      "name": "Climate Justice Alliance (CJA) 🌻",
+      "handle": "CJAOurPower",
+      "category": "Community",
+      "followers": 22485,
+      "observedPosts": 2,
+      "rationale": "A documented CLF/StartSmall grantee whose campaign post foregrounds frontline leadership and a just transition; anchors the network in community priorities and an existing funding relationship.",
+      "role": "Explore a grantee-led briefing and jointly designed educational content, with CJA determining which priorities it wishes to share.",
+      "alignment": "Explicitly thanks the funders for supporting grassroots and frontline leadership, solutions and vision.",
+      "limitation": "An existing CLF funding connection is documented. Confirm current programmes, capacity and consent for a new communication collaboration. Existing funding is not consent to new communications. Confirm programmes, capacity and permissions; the supplied bounded check returned an original X post dated 2026-10-13.",
+      "evidence": [
+        {
+          "url": "https://x.com/CJAOurPower/status/1486426096803405828",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/rihannas-clara-lionel-foundation-commits-approximately-15m-to-18-grassroots-organizations-on-the-frontlines-of-climate-justice-301467219.html",
+          "label": "CLF grant announcement",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "CLF names Climate Justice Alliance among its grantees. This is an existing funding connection, not a newly discovered relationship. Latest original X post returned by the bounded activity check: 2026-10-13.",
+      "origin": "observed",
+      "subtype": "Community voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "1383133912436723714",
+      "name": "Girls Climate Action for Resilience & Empowerment",
+      "handle": "GirlsCareJa",
+      "category": "Community",
+      "followers": 321,
+      "observedPosts": 1,
+      "rationale": "GirlsCARE combines documented CLF-linked funding with an explicit Caribbean climate-and-gender-justice mission, adding regional substance beyond celebrity-focused coverage.",
+      "role": "Explore grantee-led Caribbean storytelling about programme priorities and gender justice, with participants controlling their contributions.",
+      "alignment": "Thanks Rihanna and CLF for climate-justice leadership and expresses enthusiasm for using support to empower young women across the Caribbean.",
+      "limitation": "An existing CLF funding connection is documented. Confirm current programmes, capacity and consent for a new communication collaboration. Activity requires a fresh check before outreach. Existing funding does not establish a new collaboration. Confirm programmes, capacity and consent; latest original X post returned was 2026-02-21, requiring a fresh activity and channel check before outreach.",
+      "evidence": [
+        {
+          "url": "https://x.com/GirlsCareJa/status/1486425105303547908",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://startsmall.llc/",
+          "label": "Start Small grant ledger",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "The public funding ledger records GirlsCARE support in partnership with CLF. A 2025 Caribbean climate conference also names GirlsCARE as a partner. Latest original X post returned by the bounded activity check: 2026-02-21.",
+      "origin": "observed",
+      "subtype": "Community voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "422104815",
+      "name": "Yeampierre",
+      "handle": "yeampierre",
+      "category": "Community",
+      "followers": 9277,
+      "observedPosts": 1,
+      "rationale": "The supplied UPROSE leadership source supports substantive climate-justice expertise; Yeampierre's campaign post emphasizes community-led solutions rather than donation visibility.",
+      "role": "Explore an expert discussion or compensated messaging review focused on frontline solutions and community decision-making.",
+      "alignment": "Publicly praises Rihanna's understanding of impacts on BIPOC communities and emphasises that those communities have solutions.",
+      "limitation": "The biography's movement-building description needs verification through public work. Praise does not establish friendship, organisational representation or availability. Verify current affiliations, capacity and any authority to represent an organisation. Praise establishes neither friendship nor campaign participation; latest original X post returned: 2026-07-02.",
+      "evidence": [
+        {
+          "url": "https://x.com/yeampierre/status/1486703477308932099",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.uprose.org/about-us/our-people/",
+          "label": "UPROSE leadership",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "UPROSE identifies Elizabeth Yeampierre in its leadership. Her documented professional climate-justice work supports a substantive community contribution. Latest original X post returned by the bounded activity check: 2026-07-02.",
+      "origin": "observed",
+      "subtype": "Community voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "255797635",
+      "name": "Robert D. Bullard",
+      "handle": "DrBobBullard",
+      "category": "Community",
+      "followers": 29365,
+      "observedPosts": 1,
+      "rationale": "The supplied founder biography documents Bullard's environmental-justice research and public education, providing an evidence-focused contribution distinct from cultural amplification.",
+      "role": "Explore an expert briefing on unequal climate risks and questions journalists and participating artists should ask about funding outcomes.",
+      "alignment": "Shared an EcoWatch report about the climate-justice donation; no explicit personal endorsement appears in the supplied post.",
+      "limitation": "The substantive expertise signal comes from the biography, not demonstrated work in this sample. Verify credentials and publications; a news share is not sustained advocacy evidence. Confirm current affiliations, availability and relevant publications. Sharing campaign coverage is not personal endorsement or sustained campaign involvement; latest original X post returned: 2026-10-15.",
+      "evidence": [
+        {
+          "url": "https://x.com/DrBobBullard/status/1488981809543192576",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.bullardcenter.org/about/our-founder",
+          "label": "Bullard Center founder biography",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "The founder biography documents Robert Bullard’s environmental-justice research and public education. The proposed role is based on that public work. Latest original X post returned by the bounded activity check: 2026-10-15.",
+      "origin": "observed",
+      "subtype": "Community voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "259873788",
+      "name": "Moms Clean Air Force",
+      "handle": "CleanAirMoms",
+      "category": "Community",
+      "followers": 35728,
+      "observedPosts": 1,
+      "rationale": "Moms Clean Air Force's documented clean-air and children's-health mission adds a practical family-oriented perspective alongside its positive historical campaign response.",
+      "role": "Explore accessible educational material connecting climate justice, air pollution and children's health, subject to organisational review.",
+      "alignment": "Responds positively to the funding announcement with hearts and an environmental-justice hashtag.",
+      "limitation": "The biography's 1.6 million community claim is unverified and is not X reach. The post does not establish an ongoing CLF relationship or detailed campaign position. Audience response and an ongoing CLF relationship are unconfirmed. The supplied membership claim is unverified and not X reach. Confirm current priorities; latest original X post returned: 2026-10-15.",
+      "evidence": [
+        {
+          "url": "https://x.com/CleanAirMoms/status/1486345129464147981",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.momscleanairforce.org/our-mission/",
+          "label": "Moms Clean Air Force mission",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "The organisation explicitly works on air pollution and climate change affecting children. The topical fit is documented; audience response is unknown. Latest original X post returned by the bounded activity check: 2026-10-15.",
+      "origin": "observed",
+      "subtype": "Community voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "18100166",
+      "name": "helienne",
+      "handle": "helienne",
+      "category": "Culture",
+      "followers": 4484,
+      "observedPosts": 1,
+      "rationale": "Songwriting and documented ECSA leadership support an artist-to-artist role; Helienne's historical post encourages other artists to follow the climate-funding example.",
+      "role": "Explore a songwriter-facing discussion about responsible artist participation, with grantees explaining their funding and communication priorities.",
+      "alignment": "Calls the donation inspiring and wishes more artists would act similarly, explicitly highlighting the organisations' leadership.",
+      "limitation": "Verify identity, credits and current institutional roles. This individual statement does not commit any music organisation or establish sustained climate work. One historical post does not demonstrate sustained climate work or commit ECSA. Verify current roles and interest; latest original X post returned: 2026-09-11.",
+      "evidence": [
+        {
+          "url": "https://x.com/helienne/status/1487043416642969604",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://composeralliance.org/about/who-we-are/",
+          "label": "European Composer and Songwriter Alliance",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "ECSA identifies Helienne Lindvall as president. This supports a music-sector role; the historical climate post alone does not establish sustained cause work. Latest original X post returned by the bounded activity check: 2026-09-11.",
+      "origin": "observed",
+      "subtype": "Cultural voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "web:billie-eilish",
+      "name": "Billie Eilish",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · pop",
+      "profileUrl": "https://reverb.org/impact_report/hit-me-hard-and-soft-the-tour/",
+      "connection": "No direct Rihanna relationship established in this review.",
+      "recommended": true,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "REVERB reports touring-integrated climate projects, nonprofit support and fan engagement, providing cause-based relevance without an established Rihanna relationship.",
+      "role": "Explore artist-led climate storytelling and fan participation informed by consenting grantees, without equating touring sustainability with climate justice.",
+      "alignment": "REVERB documents climate projects, nonprofit support and fan engagement integrated into her touring.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open. Tour reports require independent outcome and contrary-evidence review. Participation, availability and audience quality are unconfirmed; current X metrics and activity were not collected.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://reverb.org/impact_report/hit-me-hard-and-soft-the-tour/",
+          "label": "REVERB tour impact report",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://reverb.org/impact_report/happier-than-ever-world-tour-impact-report/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. REVERB documents climate projects, nonprofit support and fan engagement integrated into her touring. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:coldplay",
+      "name": "Coldplay",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · pop / alternative",
+      "profileUrl": "https://www.coldplay.com/emissions-update/",
+      "connection": "Industry proximity; direct campaign participation is not established.",
+      "recommended": true,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The band's emissions reporting offers a practical touring-sustainability perspective. Industry proximity does not establish CLF participation or frontline climate-justice alignment.",
+      "role": "Explore a conversation about lower-impact music operations, with community experts distinguishing emissions measures from justice priorities.",
+      "alignment": "The band reports measured reductions in direct touring emissions; supporting methods and boundaries are described.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open. Review reported methods, boundaries, outcomes and contrary evidence independently. Participation, availability and audience quality are unconfirmed; current X metrics and activity were not collected.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.coldplay.com/emissions-update/",
+          "label": "Coldplay tour emissions update · 2024",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://sustainability.coldplay.com/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The band reports measured reductions in direct touring emissions; supporting methods and boundaries are described. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:ellie-goulding",
+      "name": "Ellie Goulding",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · pop",
+      "profileUrl": "https://www.unep.org/news-and-stories/video/ellie-goulding-dives-red-sea-call-protect-worlds-coral-reefs",
+      "connection": "Appeared in the wider Global Citizen music ecosystem; no current CLF connection verified.",
+      "recommended": true,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "UNEP documents coral-protection advocacy and climate communication, offering a relevant starting point for island-resilience storytelling rather than a verified CLF connection.",
+      "role": "Explore an artist-and-grantee conversation about coral protection and island resilience, led by relevant community expertise.",
+      "alignment": "UNEP documents coral protection advocacy and earlier climate communication. Current ambassador status must be rechecked.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open. Recheck current ambassador status and independently assess outcomes and contrary evidence. Participation, availability and audience quality are unconfirmed; current X metrics and activity were not collected.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.unep.org/news-and-stories/video/ellie-goulding-dives-red-sea-call-protect-worlds-coral-reefs",
+          "label": "UNEP coral advocacy · COP27",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.unep.org/en/people/ellie-goulding",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. UNEP documents coral protection advocacy and earlier climate communication. Current ambassador status must be rechecked. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:jack-johnson",
+      "name": "Jack Johnson",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · acoustic / songwriter",
+      "profileUrl": "https://reverb.org/artist/jack-johnson/",
+      "connection": "Cause-led discovery, outside Rihanna’s immediate genre cluster.",
+      "recommended": true,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "REVERB describes longstanding environmental collaboration, adding practical music-and-climate experience outside Rihanna's immediate genre cluster; no direct relationship is established.",
+      "role": "Explore musician-to-musician environmental learning and how artist platforms could support community-defined priorities.",
+      "alignment": "REVERB describes a longstanding environmental collaboration. This offers practical music-and-climate experience.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open. Independently review collaboration outcomes and contrary evidence; environmental experience does not alone establish climate-justice alignment. Participation, availability and audience quality are unconfirmed; current X metrics and activity were not collected.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://reverb.org/artist/jack-johnson/",
+          "label": "REVERB artist partnership",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://reverb.org/tour/jack-johnson-2022/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. REVERB describes a longstanding environmental collaboration. This offers practical music-and-climate experience. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:pharrell",
+      "name": "Pharrell Williams",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · hip-hop / pop",
+      "profileUrl": "https://www.vogue.com/slideshow/rihanna-diamond-ball-2019",
+      "connection": "Historical CLF event performer.",
+      "recommended": true,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "Reported performance at CLF's fundraising event establishes historical foundation proximity, providing a distinct re-engagement lead rather than evidence of sustained climate advocacy.",
+      "role": "Ask CLF to review its historical event relationship before considering a reintroduction focused on grantee priorities.",
+      "alignment": "Reported performance at CLF’s fundraising event establishes historical foundation proximity, not sustained climate advocacy.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. Sustained climate alignment remains unverified; proximity is not endorsement. Historical proximity establishes neither sustained climate alignment, endorsement nor present access. Participation, availability and audience quality are unconfirmed; current X metrics and activity were not collected.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.vogue.com/slideshow/rihanna-diamond-ball-2019",
+          "label": "Diamond Ball performance reporting · 2019",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://time.com/5673371/rihanna-diamond-ball-2019/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Limited",
+      "researchNote": "Wider-web discovery checked 2026-10-15. Reported performance at CLF’s fundraising event establishes historical foundation proximity, not sustained climate advocacy. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:umg",
+      "name": "Universal Music Group",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Record company",
+      "profileUrl": "https://www.universalmusic.com/global-impact/",
+      "connection": "Industry organisation; no campaign access or artist participation inferred.",
+      "recommended": true,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "Company descriptions of environmental work and a REVERB partnership provide an operational music-business lead, not independent evidence of climate-justice outcomes.",
+      "role": "Explore a defined label contribution to distribution or event operations, contingent on grantee priorities and verified environmental claims.",
+      "alignment": "The company describes environmental work and a REVERB partnership; these are corporate claims requiring outcome review.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open. Corporate claims require independent outcome and contrary-evidence review. No artist access or campaign participation is established; availability and audience quality are unconfirmed. Current X metrics and activity were not collected.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.universalmusic.com/global-impact/",
+          "label": "UMG global impact programme",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.universalmusic.com/universal-music-group-expands-partnership-with-reverb-during-musics-biggest-weekend-to-raise-the-bar-for-environmental-sustainability-for-music-events/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The company describes environmental work and a REVERB partnership; these are corporate claims requiring outcome review. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:ninja-tune",
+      "name": "Ninja Tune",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Record label",
+      "profileUrl": "https://ninjatune.net/sustainability",
+      "connection": "Music-sector discovery spanning electronic and adjacent creative communities.",
+      "recommended": true,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The label describes emissions measures and a just-transition perspective, adding a music-business lead whose stated framing is relevant to justice-focused discussion.",
+      "role": "Explore lower-impact creative production and possible artist introductions, subject to separate consent and a clearly scoped contribution.",
+      "alignment": "The label describes emissions measures and a just-transition perspective. Its own claims need independent outcome checks.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open. Self-reported measures and justice framing require independent outcome and contrary-evidence review. No artist participation is implied; availability and audience quality are unconfirmed. Current X metrics and activity were not collected.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://ninjatune.net/sustainability",
+          "label": "Ninja Tune sustainability programme",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://ninjatune.net/about-us",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The label describes emissions measures and a just-transition perspective. Its own claims need independent outcome checks. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:reverb",
+      "name": "REVERB",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Music climate organisation",
+      "profileUrl": "https://reverb.org/news/the-music-climate-revolution-has-begun/",
+      "connection": "A documented music-and-climate delivery network, not a verified CLF partner.",
+      "recommended": true,
+      "category": "Community",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "REVERB connects touring, environmental action and fan engagement, offering potential delivery expertise between community priorities and artist-facing activity.",
+      "role": "Explore practical delivery advice and consent-based artist introductions, while keeping frontline organisations responsible for defining their own priorities.",
+      "alignment": "The organisation connects artist touring with environmental action and fan engagement.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open. No CLF partnership is verified. Independently assess outcomes, contrary evidence and delivery capacity; participation, availability and audience quality are unconfirmed. Current X metrics and activity were not collected.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://reverb.org/news/the-music-climate-revolution-has-begun/",
+          "label": "REVERB music climate programme",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://reverb.org/impact_report/hit-me-hard-and-soft-the-tour/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The organisation connects artist touring with environmental action and fan engagement. This is a research lead awaiting human review."
+    },
+    {
+      "id": "15942016",
+      "name": "Trellis",
+      "handle": "trellisgroup_",
+      "category": "Media",
+      "followers": 100011,
+      "observedPosts": 1,
+      "rationale": "Trellis's supplied episode page documents an interview with CLF's executive director, supporting a substantive editorial connection rather than assumed advocacy.",
+      "role": "Pitch an independent podcast follow-up on grant delivery, recipient perspectives and accountability, leaving editorial decisions with the publisher.",
+      "alignment": "The supplied post demonstrates substantive interview coverage of CLF's climate-justice approach, rather than only repeating the donation total.",
+      "limitation": "Review the actual episode and verify current editorial contacts. Historical interview coverage does not establish advocacy, endorsement or future access. Review the episode and verify current editors and commissioning routes. Historical coverage establishes neither endorsement nor future access; latest original X post returned: 2026-10-15.",
+      "evidence": [
+        {
+          "url": "https://x.com/trellisgroup_/status/1512461198029062149",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://trellis.net/article/episode-311-inside-rihannas-climate-foundation-mars-nudges-suppliers/",
+          "label": "GreenBiz 350 / CLF interview",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "The publisher’s episode page documents an interview with CLF executive director Justine Lucas. This supports an editorial connection and business-sustainability audience fit. Latest original X post returned by the bounded activity check: 2026-10-15.",
+      "origin": "observed",
+      "subtype": "Editorial contact",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "9720592",
+      "name": "Glenn Gamboa",
+      "handle": "GlennGamboa",
+      "category": "Media",
+      "followers": 2687,
+      "observedPosts": 1,
+      "rationale": "Gamboa's documented philanthropy reporting offers a distinct accountability perspective on the pledge's structure, delivery and regional scope.",
+      "role": "Offer an earned-media briefing with source documents and consenting grantee contacts, without requesting advocacy or favourable coverage.",
+      "alignment": "Reports the climate-justice pledge through a philanthropy lens; no personal endorsement is expressed.",
+      "limitation": "Verify identity, current remit and authorship of the linked coverage. Current biography details must not be assumed to describe the January 2022 role. No original X post within the last six months was returned. Confirm an active channel before considering X amplification. Confirm current outlet, remit and commissioning route. No original X post within six months was returned (latest: 2025-10-15); verify an active channel. Historical coverage establishes neither advocacy nor guaranteed access.",
+      "evidence": [
+        {
+          "url": "https://x.com/GlennGamboa/status/1486058349535932426",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.philanthropy.com/author/glenn-gamboa/",
+          "label": "Chronicle of Philanthropy author profile",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "The publisher identifies Glenn Gamboa as an Associated Press philanthropy reporter. Treat him as an independent editorial contact, not a campaign advocate. Latest original X post returned by the bounded activity check: 2025-10-15.",
+      "origin": "observed",
+      "subtype": "Editorial contact",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "496049389",
+      "name": "Olivia Rosane, PhD",
+      "handle": "orosane",
+      "category": "Media",
+      "followers": 1774,
+      "observedPosts": 1,
+      "rationale": "Rosane's authored EcoWatch coverage foregrounded unequal climate impacts; the supplied newsroom source supports environmental-reporting experience, not personal campaign endorsement.",
+      "role": "Pitch independent follow-up reporting on recipient priorities, funding delivery and outcomes; leave framing and conclusions to the newsroom.",
+      "alignment": "Demonstrates authored coverage of the campaign's equity framing; the quoted statement is Rihanna's, not proof of the journalist's personal endorsement.",
+      "limitation": "Review the original article and verify the current beat. The supplied current biography names a different outlet; historical authorship does not establish a present commissioning route. Verify the original article, current beat and commissioning route: the supplied current affiliation differs from the historical outlet. Coverage is not endorsement; latest original X post returned: 2026-10-06.",
+      "evidence": [
+        {
+          "url": "https://x.com/orosane/status/1488216138123292672",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.commondreams.org/our-team",
+          "label": "Common Dreams editorial team",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "The newsroom identifies Olivia Rosane as opinion editor and staff writer and documents her earlier environmental reporting at EcoWatch. Coverage is not endorsement. Latest original X post returned by the bounded activity check: 2026-10-06.",
+      "origin": "observed",
+      "subtype": "Editorial contact",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "626576679",
+      "name": "HOT 91.7 FM",
+      "handle": "HOT917FM",
+      "category": "Media",
+      "followers": 1334,
+      "observedPosts": 1,
+      "rationale": "HOT 91.7 FM's supplied site supports a Bahamas radio channel, adding a regional editorial possibility alongside its historical funding-announcement coverage.",
+      "role": "Pitch a radio explainer or interview with consenting Caribbean grantee representatives, preserving the station's editorial discretion.",
+      "alignment": "Reports the donation and introduces a quotation from CLF's statement; this is coverage, not demonstrated advocacy.",
+      "limitation": "Verify station identity, active programming and editorial interest. The supplied post is truncated; listening figures, audience geography and climate-reporting depth are unknown. No original X post within the last six months was returned. Confirm an active channel before considering X amplification. Supplied coverage is truncated; audience geography, listening figures and climate depth are unknown. No original X post within six months was returned (latest: 2024-06-21); verify current programming, contacts and an active channel.",
+      "evidence": [
+        {
+          "url": "https://x.com/HOT917FM/status/1486328850174914562",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.hot917fm.com/",
+          "label": "HOT 91.7 FM official site",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Limited",
+      "researchNote": "The station’s current site shows music and entertainment programming, including Bahamian voices. This supports a regional editorial channel; sustained climate programming is unverified. Latest original X post returned by the bounded activity check: 2024-06-21.",
+      "origin": "observed",
+      "subtype": "Editorial contact",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "15725199",
+      "name": "YR Media",
+      "handle": "itsYRmedia",
+      "category": "Creators",
+      "followers": 9667,
+      "observedPosts": 1,
+      "rationale": "YR Media describes a network of young journalists and artists; its campaign coverage names grantees, supporting an editorial creator-network role rather than individual UGC services.",
+      "role": "Pitch youth-led reporting on frontline solutions, with consenting sources and independent newsroom commissioning, framing and final editorial control.",
+      "alignment": "Frames the donation as giving back and supporting climate initiatives, naming CJA, Indigenous Environmental Network and Movement for Black Lives.",
+      "limitation": "Verify the original coverage and current commissioning capacity. A youth-oriented mission does not establish audience demographics, sustained climate coverage or willingness to collaborate. No original X post within the last six months was returned. Confirm an active channel before considering X amplification. Verify original coverage, current commissioning capacity and audience evidence. No original X post within six months was returned (latest: 2024-10-17); confirm an active channel. Professional UGC services are not established.",
+      "evidence": [
+        {
+          "url": "https://x.com/itsYRmedia/status/1489388271062949889",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://staging.yr.media/about-yr/",
+          "label": "YR Media mission",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "YR Media describes a network of young journalists and artists producing original content. Categorised as a creator network, not an individual UGC influencer; editorial independence applies. Latest original X post returned by the bounded activity check: 2024-10-17.",
+      "origin": "observed",
+      "subtype": "Content creator / network",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "1280672663611023360",
+      "name": "Kayalin Akens-Irby",
+      "handle": "KayalinSoleia",
+      "category": "Creators",
+      "followers": 1110,
+      "observedPosts": 1,
+      "rationale": "Planet FWD documents climate-related public speaking; Akens-Irby's campaign post connects funding with unequal impacts on island nations, supporting a communicator role rather than verified UGC production.",
+      "role": "Explore a hosted climate explainer shaped by grantee expertise, subject to portfolio, accuracy and availability review.",
+      "alignment": "Public speaking on climate-friendly brands and the campaign post support a professional climate-communication fit.",
+      "limitation": "Creator here means speaker and communicator; professional UGC services, availability and current channels are unverified. No original X post within the last six months was returned. Confirm an active channel before considering X amplification. Present employment, commercial services and audience quality are unverified. No original X post within six months was returned (latest: 2023-07-21); confirm an active channel and current speaking capacity.",
+      "evidence": [
+        {
+          "url": "https://x.com/KayalinSoleia/status/1491286750702219265",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.planetfwd.com/blog/catalysts-building-a-climate-friendly-food-brand",
+          "label": "Planet FWD climate event",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Planet FWD documents Kayalin Akens-Irby as a speaker on building climate-friendly brands. This supports a climate-communication role, without validating present employment or commercial availability. Latest original X post returned by the bounded activity check: 2023-07-21.",
+      "origin": "observed",
+      "subtype": "Content creator / network",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": true
+    },
+    {
+      "id": "75101064",
+      "name": "Environmental Grantmakers Association",
+      "handle": "EGAconnects",
+      "category": "Community",
+      "followers": 1787,
+      "observedPosts": 1,
+      "rationale": "Environmental Grantmakers Association (@EGAconnects) adds a philanthropy-network contribution. Its post connects the announcement to a named member, the Hive Fund for Climate & Gender Justice.",
+      "role": "Explore a funder learning session on equitable grantmaking and support for frontline organisations.",
+      "alignment": "Shares climate-justice investment news; its biography states a mission of just, effective philanthropy for people and the planet.",
+      "limitation": "The post is informational, not a pledge of participation or funding. Verify membership relationships and relevant public grantmaking work. No original X post within the last six months was returned. Confirm an active channel before considering X amplification.",
+      "evidence": [
+        {
+          "url": "https://x.com/EGAconnects/status/1486104497646624769",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://ega.org/about",
+          "label": "EGA mission",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "EGA describes a network advancing just environmental philanthropy. This supports a funder-learning role; individual members have not been assessed. Latest original X post returned by the bounded activity check: 2025-01-23.",
+      "origin": "observed",
+      "subtype": "Community voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": false
+    },
+    {
+      "id": "2794535639",
+      "name": "Dr. Mustafa Santiago Ali 🤙🏾✊🏾",
+      "handle": "EJinAction",
+      "category": "Community",
+      "followers": 61708,
+      "observedPosts": 1,
+      "rationale": "Dr. Mustafa Santiago Ali (@EJinAction) directs attention to the funded organisations and their leadership, providing a potential bridge between campaign visibility and climate-justice explanation.",
+      "role": "Explore a plain-language explainer or moderated conversation centred on frontline organisations.",
+      "alignment": "Encourages readers to examine groups led by women, youth and marginalised communities working for those at greatest risk.",
+      "limitation": "Verify identity, relevant public work and the climate-communicator description in the biography. One supplied post does not establish sustained campaign involvement.",
+      "evidence": [
+        {
+          "url": "https://x.com/EJinAction/status/1486329090001022979",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.nwf.org/About-Us/Leadership/Mustafa-Santiago-Ali",
+          "label": "National Wildlife Federation biography",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "The professional biography documents Mustafa Santiago Ali’s environmental-justice leadership. No affiliation or availability for this campaign is implied. Latest original X post returned by the bounded activity check: 2026-08-25.",
+      "origin": "observed",
+      "subtype": "Community voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": false
+    },
+    {
+      "id": "5360012",
+      "name": "Greenpeace USA",
+      "handle": "greenpeaceusa",
+      "category": "Community",
+      "followers": 209193,
+      "observedPosts": 1,
+      "rationale": "Greenpeace USA (@greenpeaceusa) supplies an explicit climate-movement response and a potential route from celebrity attention to climate education and action.",
+      "role": "Explore movement-oriented educational amplification using actions approved by the participating organisations.",
+      "alignment": "Directly thanks Rihanna and CLF for support in the fight for climate justice.",
+      "limitation": "This thanks is not evidence of grant receipt, a formal partnership or endorsement of Rihanna's commercial brands. Current priorities and campaign compatibility need review. No original X post within the last six months was returned. Confirm an active channel before considering X amplification.",
+      "evidence": [
+        {
+          "url": "https://x.com/greenpeaceusa/status/1486503799350988800",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.greenpeace.org/usa/about/",
+          "label": "Greenpeace USA mission",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "The organisation’s public environmental mission supports topical relevance. A new campaign relationship and present capacity remain unconfirmed. Latest original X post returned by the bounded activity check: 2025-05-11.",
+      "origin": "observed",
+      "subtype": "Community voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": false
+    },
+    {
+      "id": "1374698617857048589",
+      "name": "Fenty Headlines",
+      "handle": "FentyHeadlines",
+      "category": "Culture",
+      "followers": 33671,
+      "observedPosts": 2,
+      "rationale": "Fenty Headlines (@FentyHeadlines) offers a fan-community route with more context than a headline repost: it explains the 18 organisations and the campaign's focus on unequal climate impacts.",
+      "role": "Explore fan-facing explainers linking directly to verified grantee information and approved calls to action.",
+      "alignment": "Reports CLF's commitment and Rihanna's stated prioritisation of communities of colour and island nations.",
+      "limitation": "Reporting this rationale does not establish independent climate advocacy. Verify account operation and audience quality; fan status does not imply access to Rihanna or CLF.",
+      "evidence": [
+        {
+          "url": "https://x.com/FentyHeadlines/status/1486010341662330880",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://x.com/FentyHeadlines",
+          "label": "Public X profile",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Limited",
+      "researchNote": "The API profile explicitly describes a Rihanna fansite sharing and creating headlines. It is not an official Rihanna account; cause commitment and account ownership are not independently established. Latest original X post returned by the bounded activity check: 2026-10-13.",
+      "origin": "observed",
+      "subtype": "Cultural voice",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": false
+    },
+    {
+      "id": "1292482627249885187",
+      "name": "consciouslyelle",
+      "handle": "Sustainableelle",
+      "category": "Creators",
+      "followers": 118,
+      "observedPosts": 1,
+      "rationale": "consciouslyelle (@Sustainableelle) presents a clear independent eco-content proposition: the biography describes weekly positive environmental news, and the post explains the funding's equity focus.",
+      "role": "Explore a source-linked climate-justice explainer, with format and deliverables determined after portfolio review.",
+      "alignment": "Enthusiastically praises the donation and highlights support for organisations serving communities at greatest risk.",
+      "limitation": "Weekly publishing and Instagram activity are self-described, not verified here. Production quality, originality, commercial experience and audience quality remain unknown; professional UGC capability is not established. No original X post within the last six months was returned. Confirm an active channel before considering X amplification.",
+      "evidence": [
+        {
+          "url": "https://x.com/Sustainableelle/status/1493943132182007810",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://x.com/Sustainableelle",
+          "label": "Public X profile",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Limited",
+      "researchNote": "The profile self-describes positive eco-news creation and directs readers to Instagram. Independent identity, professional creator services and current audience activity were not established. Latest original X post returned by the bounded activity check: 2023-04-03.",
+      "origin": "observed",
+      "subtype": "Content creator / network",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": false
+    },
+    {
+      "id": "80069355",
+      "name": "Techonomy",
+      "handle": "techonomy",
+      "category": "Media",
+      "followers": 9913,
+      "observedPosts": 2,
+      "rationale": "Techonomy (@techonomy) provides stronger evidence than donation-only coverage: it promoted a live climate-justice discussion naming representatives from CLF, Salesforce and Environmental Defense Fund.",
+      "role": "Explore a follow-up editorial discussion on Caribbean resilience, implementation and lessons from climate-justice funding.",
+      "alignment": "Dedicated programming to 'The Climate Justice Imperative'; this establishes topical engagement, not blanket campaign endorsement.",
+      "limitation": "Verify the event's delivery, participants and historical relationship. A promoted discussion does not establish a commercial partnership or permission for renewed collaboration.",
+      "evidence": [
+        {
+          "url": "https://x.com/techonomy/status/1508943910827089923",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://worth.com/techonomy/",
+          "label": "Techonomy publisher",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "The current publisher presents Techonomy as a technology and innovation platform. The collected campaign post promotes a CLF discussion; current climate-event programming requires confirmation. Latest original X post returned by the bounded activity check: 2026-08-12.",
+      "origin": "observed",
+      "subtype": "Editorial contact",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": false
+    },
+    {
+      "id": "27677483",
+      "name": "ESSENCE",
+      "handle": "Essence",
+      "category": "Media",
+      "followers": 526118,
+      "observedPosts": 1,
+      "rationale": "ESSENCE (@Essence) offers a complementary editorial setting for culture-and-equity storytelling and published the campaign's support for 18 organisations across the US and Caribbean.",
+      "role": "Pitch grantee interviews that explain racial and gender justice dimensions beyond the celebrity announcement.",
+      "alignment": "Reports the funding announcement; the supplied post does not express an institutional advocacy commitment.",
+      "limitation": "Only announcement coverage is supplied. Verify editorial priorities and audience composition rather than inferring them from the publication's identity or follower count.",
+      "evidence": [
+        {
+          "url": "https://x.com/Essence/status/1488935320477384708",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.essence.com/unstoppablecollective",
+          "label": "ESSENCE public initiative",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "ESSENCE describes an equity initiative supporting health, education and economic opportunity. This provides contextual relevance, not proof of climate-campaign commitment. Latest original X post returned by the bounded activity check: 2026-10-15.",
+      "origin": "observed",
+      "subtype": "Editorial contact",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": false
+    },
+    {
+      "id": "250295256",
+      "name": "Frances Fisher",
+      "handle": "Frances_Fisher",
+      "category": "Culture",
+      "followers": 34635,
+      "observedPosts": 1,
+      "rationale": "An actor in the observed conversation who shared the CLF climate-justice commitment, offering a possible bridge into screen culture.",
+      "role": "Explore an actor-led conversation or an introduction to other cultural voices.",
+      "alignment": "The collected post explicitly highlights climate justice and the climate emergency. This is a relevant public expression, not a sustained-alignment assessment.",
+      "limitation": "Verify current representation, interest and sustained cause work before outreach.",
+      "evidence": [
+        {
+          "url": "https://x.com/Frances_Fisher/status/1486365211766390787",
+          "label": "Collected campaign post · 2022",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "research": [
+        {
+          "url": "https://www.membershipfirst.com/frances-fisher",
+          "label": "Frances Fisher professional profile",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "A professional union profile supports the actor identity. The collected CLF post provides a specific historical climate signal; it does not establish a partnership or long-term commitment. Latest original X post returned by the bounded activity check: 2026-09-30.",
+      "origin": "observed",
+      "subtype": "Actor",
+      "connection": "Observed in the retained X conversation; no partnership implied.",
+      "recommended": false
+    },
+    {
+      "id": "web:ay-young",
+      "name": "AY Young",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · producer / songwriter",
+      "profileUrl": "https://www.un.org/youthaffairs/en/ay-young",
+      "connection": "No direct Rihanna connection verified.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The UN describes a musician developing an album around the Sustainable Development Goals.",
+      "role": "Explore music-led educational content around specific climate goals.",
+      "alignment": "The UN describes a musician developing an album around the Sustainable Development Goals.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.un.org/youthaffairs/en/ay-young",
+          "label": "United Nations professional profile",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The UN describes a musician developing an album around the Sustainable Development Goals. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:katy-perry",
+      "name": "Katy Perry",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · pop",
+      "profileUrl": "https://www.unicef.org/goodwill-ambassadors/katy-perry",
+      "connection": "No direct campaign relationship verified.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "UNICEF documents humanitarian advocacy for children. This supports thematic adjacency, not a demonstrated climate-justice commitment.",
+      "role": "Explore a children-and-resilience communication angle if the campaign brief supports it.",
+      "alignment": "UNICEF documents humanitarian advocacy for children. This supports thematic adjacency, not a demonstrated climate-justice commitment.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. Sustained climate alignment remains unverified; proximity is not endorsement.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.unicef.org/goodwill-ambassadors/katy-perry",
+          "label": "UNICEF public profile",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.unicef.org/goodwill-ambassadors",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Limited",
+      "researchNote": "Wider-web discovery checked 2026-10-15. UNICEF documents humanitarian advocacy for children. This supports thematic adjacency, not a demonstrated climate-justice commitment. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:kendrick-lamar",
+      "name": "Kendrick Lamar",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · hip-hop",
+      "profileUrl": "https://www.globalcitizen.org/en/content/headliners-at-global-citizen-festival/",
+      "connection": "Shared 2016 festival billing; this is not proof of a personal relationship.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The organiser records his participation in the same benefit festival as Rihanna. Climate-specific alignment is not established by that appearance.",
+      "role": "Explore a cultural conversation after verifying relevant public cause work.",
+      "alignment": "The organiser records his participation in the same benefit festival as Rihanna. Climate-specific alignment is not established by that appearance.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. Sustained climate alignment remains unverified; proximity is not endorsement.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.globalcitizen.org/en/content/headliners-at-global-citizen-festival/",
+          "label": "Global Citizen festival recap · 2016",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.globalcitizen.org/en/content/the-best-moments-of-global-citizen-festival-2016/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Limited",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The organiser records his participation in the same benefit festival as Rihanna. Climate-specific alignment is not established by that appearance. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:major-lazer",
+      "name": "Major Lazer",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Music collective · electronic / dancehall",
+      "profileUrl": "https://www.globalcitizen.org/en/content/headliners-at-global-citizen-festival/",
+      "connection": "Shared festival billing with Rihanna.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The organiser records benefit-festival participation. Cause commitment beyond that appearance needs investigation.",
+      "role": "Explore a music-community activation subject to individual-member review.",
+      "alignment": "The organiser records benefit-festival participation. Cause commitment beyond that appearance needs investigation.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. Sustained climate alignment remains unverified; proximity is not endorsement.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.globalcitizen.org/en/content/headliners-at-global-citizen-festival/",
+          "label": "Global Citizen festival recap · 2016",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.globalcitizen.org/en/content/the-best-moments-of-global-citizen-festival-2016/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Limited",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The organiser records benefit-festival participation. Cause commitment beyond that appearance needs investigation. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:dj-khaled",
+      "name": "DJ Khaled",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · hip-hop / producer",
+      "profileUrl": "https://time.com/5673371/rihanna-diamond-ball-2019/",
+      "connection": "Historical CLF fundraising-event performer.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "Reporting documents participation in CLF’s fundraiser. It does not establish present climate work.",
+      "role": "Explore a reintroduction through the foundation’s existing event relationships.",
+      "alignment": "Reporting documents participation in CLF’s fundraiser. It does not establish present climate work.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. Sustained climate alignment remains unverified; proximity is not endorsement.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://time.com/5673371/rihanna-diamond-ball-2019/",
+          "label": "Diamond Ball reporting · 2019",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.vogue.com/slideshow/rihanna-diamond-ball-2019",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Limited",
+      "researchNote": "Wider-web discovery checked 2026-10-15. Reporting documents participation in CLF’s fundraiser. It does not establish present climate work. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:tame-impala",
+      "name": "Tame Impala / Kevin Parker",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Musician · psychedelic pop",
+      "profileUrl": "https://www.nme.com/news/music/tame-impala-15-1195395",
+      "connection": "Rihanna recorded a version of a Tame Impala song; not a verified duet.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The interview concerns Rihanna’s adaptation of his song. Musical connection is documented; climate alignment was not established.",
+      "role": "Explore creative compatibility only after cause research.",
+      "alignment": "The interview concerns Rihanna’s adaptation of his song. Musical connection is documented; climate alignment was not established.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. Sustained climate alignment remains unverified; proximity is not endorsement.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.nme.com/news/music/tame-impala-15-1195395",
+          "label": "Kevin Parker interview · 2016",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.nme.com/features/tame-impala-currents-fifth-anniversary-interview-2020-rihanna-2706819",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Limited",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The interview concerns Rihanna’s adaptation of his song. Musical connection is documented; climate alignment was not established. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:sony-music",
+      "name": "Sony Music Group",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Record company",
+      "profileUrl": "https://www.sonymusic.com/inside-sony-music/earth-day-2026-driving-a-more-sustainable-future-for-music/",
+      "connection": "Industry organisation; no Rihanna campaign role established.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The company describes environmental frameworks and industry collaboration. Commitments do not verify every artist or business unit.",
+      "role": "Explore a defined industry collaboration with measurable deliverables.",
+      "alignment": "The company describes environmental frameworks and industry collaboration. Commitments do not verify every artist or business unit.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.sonymusic.com/inside-sony-music/earth-day-2026-driving-a-more-sustainable-future-for-music/",
+          "label": "Sony Music environmental programme · 2026",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.sonymusic.com/sonymusic/global-impact-report-2025/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The company describes environmental frameworks and industry collaboration. Commitments do not verify every artist or business unit. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:warner-music",
+      "name": "Warner Music Group",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Record company",
+      "profileUrl": "https://www.wmg.com/news/warner-music-groups-greenhouse-gas-reduction-targets-validated-by-the-science-based-targets-initiative",
+      "connection": "Industry organisation; no Rihanna campaign role established.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The company reports validated emissions targets and music-sector climate initiatives. Verify delivery against commitments.",
+      "role": "Explore music-industry climate education and distribution support.",
+      "alignment": "The company reports validated emissions targets and music-sector climate initiatives. Verify delivery against commitments.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.wmg.com/news/warner-music-groups-greenhouse-gas-reduction-targets-validated-by-the-science-based-targets-initiative",
+          "label": "WMG emissions-target announcement",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.wmg.com/news/mit-warner-music-group-live-nation-and-coldplay-join-forces-to-study-environmental-impact-of-concerts-and-provide-open-source-solutions-to-live-music-industry",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The company reports validated emissions targets and music-sector climate initiatives. Verify delivery against commitments. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:beggars",
+      "name": "Beggars Group",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Independent label group",
+      "profileUrl": "https://beggars.com/sustainability/",
+      "connection": "Independent music-sector discovery; no direct Rihanna tie verified.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The group describes operational climate action and funding through Murmur.",
+      "role": "Explore an independent-label contribution to climate funding and creative content.",
+      "alignment": "The group describes operational climate action and funding through Murmur.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://beggars.com/sustainability/",
+          "label": "Beggars sustainability programme",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://beggars.com/introducing-murmur/",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The group describes operational climate action and funding through Murmur. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:secretly",
+      "name": "Secretly Group",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Independent label group",
+      "profileUrl": "https://secretlygroup.com/sustainability/",
+      "connection": "Independent music-sector discovery.",
+      "recommended": false,
+      "category": "Culture",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The group states environmental commitments. Check current performance against its targets before recommendation.",
+      "role": "Explore a focused label collaboration with evidence-backed environmental messaging.",
+      "alignment": "The group states environmental commitments. Check current performance against its targets before recommendation.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://secretlygroup.com/sustainability/",
+          "label": "Secretly sustainability programme",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.musicclimatepact.com/the-pact",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The group states environmental commitments. Check current performance against its targets before recommendation. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:music-climate-pact",
+      "name": "Music Climate Pact",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Industry coalition",
+      "profileUrl": "https://www.musicclimatepact.com/the-pact",
+      "connection": "Industry coalition with a defined climate remit.",
+      "recommended": false,
+      "category": "Community",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The coalition lists music businesses committed to collective emissions action. Membership is not proof of achieved outcomes.",
+      "role": "Explore a coordinated label conversation around measurable action.",
+      "alignment": "The coalition lists music businesses committed to collective emissions action. Membership is not proof of achieved outcomes.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.musicclimatepact.com/the-pact",
+          "label": "Music Climate Pact commitments",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.musicclimatepact.com/news-25/the-music-climate-pact-publishes-its-annual-report",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The coalition lists music businesses committed to collective emissions action. Membership is not proof of achieved outcomes. This is a research lead awaiting human review."
+    },
+    {
+      "id": "web:earthpercent",
+      "name": "EarthPercent",
+      "handle": "",
+      "origin": "discovered",
+      "subtype": "Music climate foundation",
+      "profileUrl": "https://www.earthpercent.org/",
+      "connection": "Music-and-cause discovery; no direct CLF partnership verified.",
+      "recommended": false,
+      "category": "Community",
+      "followers": null,
+      "observedPosts": 0,
+      "rationale": "The foundation links music income with environmental grantmaking and expert assessment.",
+      "role": "Explore an artist-supported funding mechanism alongside frontline stories.",
+      "alignment": "The foundation links music income with environmental grantmaking and expert assessment.",
+      "limitation": "No participation, availability or audience quality confirmed. Current X metrics and activity were not collected for this web-discovered candidate. The reviewed sources support topical relevance; independent outcome checks and contrary-evidence review remain open.",
+      "evidence": [],
+      "research": [
+        {
+          "url": "https://www.earthpercent.org/",
+          "label": "EarthPercent mission and funding model",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.musicclimatepact.com/the-pact",
+          "label": "Additional public context",
+          "checkedAt": "2026-10-15T22:58:47.450259+00:00",
+          "publishedAt": null
+        }
+      ],
+      "confidence": "Supported",
+      "researchNote": "Wider-web discovery checked 2026-10-15. The foundation links music income with environmental grantmaking and expert assessment. This is a research lead awaiting human review."
+    }
+  ],
+  "revision": "clf-network-v2-2026-10-16",
+  "campaignIdentity": "[\"clara lionel foundation (clf)\",\"rihanna\",[\"@claralionelfdn\",\"@rihanna\",\"climate justice\",\"sustainability\"],\"2022-01-01\",\"2022-04-30\",\"2022-01-25\"]"
+}

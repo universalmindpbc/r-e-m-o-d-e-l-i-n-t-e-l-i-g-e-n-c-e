@@ -1,0 +1,41 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "rmu-intelligence-staging",
+  "main": "./dist/server/index.js",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": [
+        "**/*.js",
+        "**/*.mjs"
+      ]
+    }
+  ],
+  "assets": {
+    "directory": "./dist/client"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "workers_dev": false,
+  "preview_urls": false,
+  "triggers": { "crons": ["0 16 * * *"] },
+  "routes": [
+    {
+      "pattern": "rmu.universalmind.tv/*",
+      "zone_id": "ac43ba0f45080327f5ead469c64e2899"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "CAMPAIGN_DB",
+      "database_name": "rmu-campaign-settings",
+      "database_id": "fac64b3b-7620-4fd2-9e73-2bfa27299ba0"
+    }
+  ]
+}
